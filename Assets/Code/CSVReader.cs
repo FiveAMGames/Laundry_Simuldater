@@ -80,29 +80,34 @@ public class CSVReader : ScriptableObject
     {
         for (int i = 0; i < _char.AllDialogs.Count; i++)
         {
-            for (int j = 0; j < _char.AllDialogs[i].AllDayDialogs.Count; j++) 
+            for (int j = 0; j < _char.AllDialogs[i].DialogParts.Count; j++) 
             {
-                for (int m = 0; m < _char.AllDialogs[i].AllDayDialogs[j].DialogPart.Count; m++) 
+                for (int m = 0; m < _char.AllDialogs[i].DialogParts[j].VariantDialogs.Count; m++) 
                 {
-                    for (int k = 0; k < _char.AllDialogs[i].AllDayDialogs[j].DialogPart[m].TextPartResponses.Count; k++) 
+                    for (int k = 0; k < _char.AllDialogs[i].DialogParts[j].VariantDialogs[m].DialogPart.Count; k++) 
                     {
-                        foreach (Texts.SmallText t in AllTexts.SmallTexts)
+                        for (int l = 0; l < _char.AllDialogs[i].DialogParts[j].VariantDialogs[m].DialogPart[k].TextPartResponses.Count; l ++)
                         {
-                            if (t.ID == _char.AllDialogs[i].AllDayDialogs[j].DialogPart[m].TextPartResponses[k].ResponceTextID)
+                            foreach (Texts.SmallText t in AllTexts.SmallTexts)
                             {
-                                _char.AllDialogs[i].AllDayDialogs[j].DialogPart[m].TextPartResponses[k].SetText(t.Text);
-                                break;
+                                if (t.ID == _char.AllDialogs[i].DialogParts[j].VariantDialogs[m].DialogPart[k].TextPartResponses[l].ResponceTextID)
+                                {
+                                    _char.AllDialogs[i].DialogParts[j].VariantDialogs[m].DialogPart[k].TextPartResponses[l].SetText(t.Text);
+                                    break;
+                                }
                             }
+                            
                         }
-                    }
-                    foreach(Texts.SmallText t in AllTexts.SmallTexts) 
-                    {
-                        if (t.ID == _char.AllDialogs[i].AllDayDialogs[j].DialogPart[m].TextPartID) 
-                        {
-                            _char.AllDialogs[i].AllDayDialogs[j].DialogPart[m].SetText(t.Text);
-                            break;
-                        }                    
-                    }               
+                        foreach (Texts.SmallText t in AllTexts.SmallTexts)
+                            {
+                                if (t.ID == _char.AllDialogs[i].DialogParts[j].VariantDialogs[m].DialogPart[k].TextPartID)
+                                {
+                                    _char.AllDialogs[i].DialogParts[j].VariantDialogs[m].DialogPart[k].SetText(t.Text);
+                                    break;
+                                }
+                            }
+
+                    }                                
                 }            
             }
         }
