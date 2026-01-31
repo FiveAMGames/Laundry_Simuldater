@@ -1314,7 +1314,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 14a2fa722bc014e7e946eb19d0567cd8, type: 3}
+  m_Sprite: {fileID: -4410105694217846772, guid: 14a2fa722bc014e7e946eb19d0567cd8, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1341,10 +1341,10 @@ MonoBehaviour:
   Waaeschetype: 0
   Img: {fileID: 7901062880625848275}
   ImgSprite: {fileID: 0}
-  defaultSprite: {fileID: 21300000, guid: 14a2fa722bc014e7e946eb19d0567cd8, type: 3}
-  HoverSprite: {fileID: 21300000, guid: abb87e128b01df248b32492e10e05a33, type: 3}
-  SelectedSprite: {fileID: 21300000, guid: abb87e128b01df248b32492e10e05a33, type: 3}
-  GreySprite: {fileID: 21300000, guid: be56e9ba277e2a04790384d2c3d934cc, type: 3}
+  defaultSprite: {fileID: -4410105694217846772, guid: 14a2fa722bc014e7e946eb19d0567cd8, type: 3}
+  HoverSprite: {fileID: -5816747929582852475, guid: abb87e128b01df248b32492e10e05a33, type: 3}
+  SelectedSprite: {fileID: -5816747929582852475, guid: abb87e128b01df248b32492e10e05a33, type: 3}
+  GreySprite: {fileID: 3062072172007997235, guid: be56e9ba277e2a04790384d2c3d934cc, type: 3}
   Other:
   - {fileID: 319268514944400455}
   - {fileID: 4476723210949852605}
