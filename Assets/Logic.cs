@@ -13,6 +13,8 @@ public class Logic : MonoBehaviour
     int char1Points = 0;
     int char2Points = 0;
 
+    public GameObject Intro;
+
     [Header("Dialog stuff")]
     public GameObject DialogObject;
     public Image DialogPortrait;
@@ -38,6 +40,11 @@ public class Logic : MonoBehaviour
     public CharacterDialog.DayDialogs currentDialog;
     public CharacterDialog currentCharacter;
 
+    public CharacterDialog char1;
+    public CharacterDialog char2;
+
+    [Header("Scratching")]
+    public GameObject ScratchingGameObject;
 
     [ContextMenu("Test")]
     public void Test() 
@@ -45,10 +52,30 @@ public class Logic : MonoBehaviour
         StartDialogue(currentCharacter);
     }
 
+    private void Start()
+    {
+        currentState = State.menu;
+        Intro.SetActive(true);
+        DialogObject.SetActive(false);
+        ScratchingGameObject.SetActive(false);
+        
+    }
+
+    private void Update()
+    {
+        if (currentState == State.menu && Input.anyKeyDown) 
+        {
+            StartDialogue(char1);
+        }
+    }
+
 
     public void StartDialogue(CharacterDialog character) 
     {
         currentState = State.dialogue;
+
+        Intro.SetActive(false);
+        DialogObject.SetActive(true);
 
         dayPartIndex = 0;
         variantIndex = 0;
@@ -128,7 +155,7 @@ public class Logic : MonoBehaviour
             }
             else 
             {
-                Debug.Log("End of day dialog");           
+                OpenScratching();
             }
         }
     }
@@ -155,6 +182,14 @@ public class Logic : MonoBehaviour
             textPartIndex++;
             UpdateDialogue();
         }
+    
+    }
+
+    public void OpenScratching() 
+    {
+        currentState = State.scratching;
+        DialogObject.SetActive(false);
+        ScratchingGameObject.SetActive(true);
     
     }
 }
