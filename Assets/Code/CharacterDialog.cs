@@ -6,6 +6,7 @@ using System.Collections.Generic;
 public class CharacterDialog : ScriptableObject
 {
     public string CharName;
+    public int CharIndex;
 
     public Sprite CharPortraitDefault;
     public Sprite CharPortraitHappy;
@@ -13,29 +14,38 @@ public class CharacterDialog : ScriptableObject
     public Sprite CharPortraitFlirty;
 
     [System.Serializable]
-    public struct Response
+    public class Response
     {
         public string ResponceTextID;
         public string text;
         public int ResponcePoints;
+        public void SetText(string s)
+        {
+            text = s;
+        }
     }
     [System.Serializable]
-    public struct TextParts
+    public class TextParts
     {
         public int PointsForTextPart;
         public string TextPartID;
         public string text;
         public List<Response> TextPartResponses;
+
+        public void SetText(string s) 
+        {
+            text = s;
+        }
     }
     [System.Serializable]
-    public struct Dialogs
+    public class Dialogs
     {
-        public int MinPointsForDialog;
-        public List<TextParts> DialogsVariant;
+        public Vector2Int MinPointsForDialog;
+        public List<TextParts> DialogPart;
     }
 
     [System.Serializable]
-    public struct DayDialogs
+    public class DayDialogs
     {
         public int dayIndex;
         public List<Dialogs> AllDayDialogs;

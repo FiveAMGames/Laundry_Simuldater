@@ -14,4 +14,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TextCsv: {fileID: 4900000, guid: 1fa8153937d04ec4682923ef9be6ea36, type: 3}
   AllTexts:
-    SmallTexts: []
+    SmallTexts:
+    - ID: dialogue ID
+      Text: Text
+    - ID: char1_day1_part1
+      Text: Greetings, mortal. My servants tell me I can get my attire cleaned in
+        this esteemed... establishment?
+    - ID: char1_day1_part1_responce1
+      Text: (Dry) Correct, I clean clothes.
+    - ID: char1_day1_part1_responce2
+      Text: (Bubbly) Yes, silly! Didn't you see the huge neon sign that says "Clean
+        for the Mean"?
+    - ID: char1_day1_part1_responce3
+      Text: (Fresh) Nice, looks like word of my "esteemed establishment" got around.
+    - ID: char1_day1_part2
+      Text: Indeed. Would you be able to return this here shirt to it's original,
+        pristine condition?
+    - ID: char1_day1_part3
+      Text: As you can see it is stained with blood.
+    - ID: char1_day1_part3_responce1
+      Text: (Dry) I'm in business with evil. Getting rid of blood is my bread and
+        butter.
+    - ID: char1_day1_part3_responce2
+      Text: (Bubbly) Oh, that's a big one! The other guy didn't live to tell the
+        tale, I imagine. Good on you!
+    - ID: char1_day1_part3_responce3
+      Text: (Fresh) Blood? That's looks more like wine to me, Pookie.
+  char1: {fileID: 11400000, guid: bbf3a01f656b1a4429b4bfd7c1be7706, type: 2}
+  char2: {fileID: 0}

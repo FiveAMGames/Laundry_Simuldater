@@ -26,6 +26,11 @@ public class CSVLoader : MonoBehaviour
         onDialogueDownload = true;
         Load();
     }
+    [ContextMenu("Populate")]
+    public void Populate() 
+    {
+        CSVReader.PopulateCharDialogs(CSVReader.char1);
+    }
 
     [ContextMenu("Set Up Texts")]
     public void SetUpTexts()
