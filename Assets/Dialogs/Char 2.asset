@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CharName: Char 1
   CharIndex: 1
-  CharPortraitDefault: {fileID: 2032535046760159307, guid: 4ebd7f248f7ae4239aeed5c76fc95c10, type: 3}
-  CharPortraitHappy: {fileID: 2032535046760159307, guid: 4ebd7f248f7ae4239aeed5c76fc95c10, type: 3}
-  CharPortraitSad: {fileID: 2032535046760159307, guid: 4ebd7f248f7ae4239aeed5c76fc95c10, type: 3}
-  CharPortraitFlirty: {fileID: 2032535046760159307, guid: 4ebd7f248f7ae4239aeed5c76fc95c10, type: 3}
+  CharPortraitDefault: {fileID: 21300000, guid: b27152bc53a894aff9204c0ce406890f, type: 3}
+  CharPortraitHappy: {fileID: 21300000, guid: 05d58173a8320824cadaafb4477f30b5, type: 3}
+  CharPortraitSad: {fileID: 21300000, guid: 505e05d049103ce43aa140f3aaa30100, type: 3}
+  CharPortraitFlirty: {fileID: 21300000, guid: 82d1d50ae56e06646b53464f00f28cee, type: 3}
   GoodWork: Yay
   BadWork: Nope
   AllDialogs:
@@ -28,11 +28,11 @@ MonoBehaviour:
         DialogPart:
         - TextPartID: char2_day1_part1
           text: Hey, you the one doin' laundry, right?
-          animation: 
+          animation: default
           TextPartResponses: []
         - TextPartID: char2_day1_part2
           text: I got some oil on this work-overall. Can you get it out?
-          animation: 
+          animation: sad
           TextPartResponses:
           - ResponceTextID: char2_day1_part2_responce1
             text: (Dry) Certainly. Looks like motor oil. Shouldn't be a problem.
@@ -46,7 +46,7 @@ MonoBehaviour:
             ResponcePoints: 1
         - TextPartID: char2_day1_part2
           text: I got some oil on this work-overall. Can you get it out?
-          animation: 
+          animation: sad
           TextPartResponses:
           - ResponceTextID: char2_day1_part3
             text: Yeah, I needed to fix somethin' on my Mistress's orbital laser.
@@ -62,11 +62,11 @@ MonoBehaviour:
         DialogPart:
         - TextPartID: char2_day1_part6_lowPoints
           text: 'Yeah, whatever... I need this overall cleaned. '
-          animation: 
+          animation: default
           TextPartResponses: []
         - TextPartID: char2_day1_part8_lowPoints
           text: She is quite...
-          animation: 
+          animation: happy
           TextPartResponses:
           - ResponceTextID: char2_day1_part8_lowPoints_responce1
             text: (Dry) ...
@@ -81,21 +81,21 @@ MonoBehaviour:
         DialogPart:
         - TextPartID: char2_day1_part6_highPoints
           text: You sound like you know what you're talking about. I respect that.
-          animation: 
+          animation: flirty
           TextPartResponses: []
         - TextPartID: char2_day1_part7_highPoints
           text: These higher-ups act like they are the shit but they don't know that
             people like us make the world go round.
-          animation: 
+          animation: sad
           TextPartResponses: []
         - TextPartID: char2_day1_part8_highPoints
           text: I'll be a good customer for you, ya know. My Mistress has me climb
             in all sort of shit.
-          animation: 
+          animation: default
           TextPartResponses: []
         - TextPartID: char2_day1_part9_highPoints
           text: So I have a lot of laundry that needs taking care of.
-          animation: 
+          animation: flirty
           TextPartResponses:
           - ResponceTextID: char2_day1_part9_highPoints_responce1
             text: (Dry) I always take care of my customers.
@@ -109,9 +109,9 @@ MonoBehaviour:
             ResponcePoints: -1
         - TextPartID: char2_day1_part10_highPoints
           text: Right. Just get that oil stain out and I'll be happy as a clam.
-          animation: 
+          animation: happy
           TextPartResponses: []
         - TextPartID: char2_day1_part11_highPoints
           text: And trust me, you don't want to see me unhappy.
-          animation: 
+          animation: default
           TextPartResponses: []

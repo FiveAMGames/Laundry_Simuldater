@@ -7,9 +7,21 @@ public class TouchDraw : MonoBehaviour
 {
     Coroutine drawing;
     public GameObject linePrefab;
+    public List<GameObject> allTheLines = new List<GameObject>();
     public Camera mainCam;
     public static List<LineRenderer> drawnLineRenderers = new List<LineRenderer>();
     public Scratch scratchScript;
+
+    private void OnEnable()
+    {
+        foreach(GameObject go in allTheLines) 
+        {            
+            Destroy(go);
+        }
+        allTheLines.Clear();
+    }
+
+
 
     void Update(){
         if(Input.GetMouseButtonDown(0)){
@@ -31,6 +43,7 @@ public class TouchDraw : MonoBehaviour
     }
     IEnumerator DrawLine(){
         GameObject newGameObject = Instantiate(linePrefab, new Vector3(0,0,0), Quaternion.identity);
+        allTheLines.Add(newGameObject);
         LineRenderer line =  newGameObject.GetComponent<LineRenderer>();
         drawnLineRenderers.Add(line);
         line.positionCount = 0;
