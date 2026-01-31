@@ -7,7 +7,7 @@ using TMPro;
 public class Logic : MonoBehaviour
 {
     public static Logic Instance;
-    public enum State { menu, dialogue, scratching, wasching, drying, finale}
+    public enum State { menu, dialogue, scratching, wasching, abgabe, finale}
     public State currentState;
 
     public int currentDay;
@@ -77,8 +77,33 @@ public class Logic : MonoBehaviour
 
     public GameObject ScratchMoreObject;
     bool vorwaescheselected = false;
+    bool badVorwaesche = false;
 
     public RenderTextureColorCheck TextureCheckScript;
+
+
+    [Header("Washing")]
+    public GameObject WashingObject;
+    public GameObject MashineOpenedDoor;
+    public GameObject MashineClosedDoor;
+
+    public GameObject ChooseMittelWashenObject;
+    public GameObject ChooseTempretureWashenObject;
+
+    public List<GameObject> TemperatureButtons;
+
+    public GameObject WashingDone;
+
+    [Header("Abgabe")]
+    public GameObject AbgabeObject;
+    public TextMeshProUGUI AbgabeText;
+    public Image AbgabeCharacterImage;
+    public Image AbgabeOutfitImage;
+    public Image AbgabeStain1Image;
+    public Image AbgabeStain2Image;
+
+    bool badWaeschemittel;
+    bool badTemperature;
 
     [ContextMenu("Test")]
     public void Test() 
@@ -93,6 +118,8 @@ public class Logic : MonoBehaviour
         Intro.SetActive(true);
         DialogObject.SetActive(false);
         ScratchingGameObject.SetActive(false);
+        WashingObject.SetActive(false);
+        AbgabeObject.SetActive(false);
         
     }
 
@@ -159,6 +186,19 @@ public class Logic : MonoBehaviour
 
             DialogText.text = currentDialog.DialogParts[dayPartIndex].VariantDialogs[variantIndex].DialogPart[textPartIndex].text;
 
+            Sprite emotion = currentCharacter.CharPortraitDefault;
+            if (currentDialog.DialogParts[dayPartIndex].VariantDialogs[variantIndex].DialogPart[textPartIndex].animation == "sad") 
+            {
+                DialogPortrait.sprite = currentCharacter.CharPortraitSad;
+            }
+            if (currentDialog.DialogParts[dayPartIndex].VariantDialogs[variantIndex].DialogPart[textPartIndex].animation == "happy")
+            {
+                DialogPortrait.sprite = currentCharacter.CharPortraitHappy;
+            }
+            if (currentDialog.DialogParts[dayPartIndex].VariantDialogs[variantIndex].DialogPart[textPartIndex].animation == "flirty")
+            {
+                DialogPortrait.sprite = currentCharacter.CharPortraitFlirty;
+            }
             if (currentDialog.DialogParts[dayPartIndex].VariantDialogs[variantIndex].DialogPart[textPartIndex].TextPartResponses.Count > 0)
             {
                 hasResponses = true;
@@ -179,8 +219,6 @@ public class Logic : MonoBehaviour
                         currentDialog.DialogParts[dayPartIndex].VariantDialogs[i].MinPointsForDialog.y > points)
                     {
                         variantIndex = i;
-                        Debug.Log(currentDialog.DialogParts[dayPartIndex].VariantDialogs[i].MinPointsForDialog);
-
                     }
                     
                 }
@@ -258,6 +296,7 @@ public class Logic : MonoBehaviour
         {
             if (currentCharacter.CharIndex == 0) char1Points--;
             else char2Points--;
+            badVorwaesche = true;
         }
         vorwaescheselected = true;
     }
@@ -268,17 +307,124 @@ public class Logic : MonoBehaviour
         {
             if (currentCharacter.CharIndex == 0) char1Points--;
             else char2Points--;
+            badVorwaesche = true;
         }
         bool enough = TextureCheckScript.SamplePanorama();
         if (enough) 
         {
-        
+            OpenWasching();
         }
         else ScratchMoreObject.SetActive(true);
     }
 
     public void CloseScratchMore() 
     {
-        ScratchMoreObject.SetActive(false);
+        ScratchMoreObject.SetActive(false);        
     }
+
+    public void OpenWasching() 
+    {
+        currentState = State.wasching;
+        ScratchingGameObject.SetActive(false);
+        WashingObject.SetActive(true);
+
+        ChooseMittelWashenObject.SetActive(true);
+        ChooseTempretureWashenObject.SetActive(false);
+
+        MashineClosedDoor.SetActive(false);
+        MashineOpenedDoor.SetActive(true);
+
+        foreach(GameObject go in TemperatureButtons) 
+        {
+            go.SetActive(false);
+        }
+    }
+    public void ClickWaschMittel(Outfit.Waesche type) 
+    {
+        Outfit o = currentCharacter.CharIndex == 0 ? char1Outfits[currentDay] : char2Outfits[currentDay];
+        if (o.waescheType == type)
+        {
+            if (currentCharacter.CharIndex == 0) char1Points++;
+            else char2Points++;
+        }
+        else
+        {
+            if (currentCharacter.CharIndex == 0) char1Points--;
+            else char2Points--;
+            badWaeschemittel = true;
+        }
+
+        MashineOpenedDoor.SetActive(false);
+        MashineClosedDoor.SetActive(true);
+        ChooseTempretureWashenObject.SetActive(true);
+        ChooseMittelWashenObject.SetActive(false);
+        foreach (GameObject go in TemperatureButtons)
+        {
+            go.SetActive(true);
+        }
+    }
+
+    public void ClickTemperature(int i) 
+    {
+        Outfit o = currentCharacter.CharIndex == 0 ? char1Outfits[currentDay] : char2Outfits[currentDay];
+
+        Outfit.Temperatur type = Outfit.Temperatur.thirty;
+        if (i == 40) type = Outfit.Temperatur.forty;
+        if (i == 60) type = Outfit.Temperatur.sixty;
+
+        if (o.temperatureType == type)
+        {
+            if (currentCharacter.CharIndex == 0) char1Points++;
+            else char2Points++;
+        }
+        else
+        {
+            if (currentCharacter.CharIndex == 0) char1Points--;
+            else char2Points--;
+            badTemperature = true;
+        }
+        WashingDone.SetActive(true);
+    }
+
+    public void CloseWashingDone() 
+    {
+        WashingDone.SetActive(false);
+        WashingObject.SetActive(false);
+        OpenAbgabe();
+    }
+
+    public void OpenAbgabe() 
+    {
+        currentState = State.abgabe;
+        AbgabeObject.SetActive(true);
+        AbgabeText.text = (badWaeschemittel || badVorwaesche || badTemperature) ? currentCharacter.BadWork : currentCharacter.GoodWork;
+        AbgabeCharacterImage.sprite = (badWaeschemittel || badVorwaesche || badTemperature) ? currentCharacter.CharPortraitSad : currentCharacter.CharPortraitHappy;
+
+        Outfit o = currentCharacter.CharIndex == 0 ? char1Outfits[currentDay] : char2Outfits[currentDay];
+
+        AbgabeOutfitImage.sprite = o.Sprite;
+        AbgabeStain1Image.sprite = o.Stain1Bad;
+        AbgabeStain2Image.sprite = o.Stain2Bad;
+
+        AbgabeStain1Image.gameObject.SetActive(false);
+        AbgabeStain2Image.gameObject.SetActive(false);
+        if (badWaeschemittel || badVorwaesche || badTemperature) 
+        {
+            AbgabeStain1Image.gameObject.SetActive(true);
+            AbgabeStain2Image.gameObject.SetActive(o.Stain2 != null);
+        }
+    }
+    public void CloseAbgabe() 
+    {
+        badTemperature = false;
+        badVorwaesche = false;
+        badWaeschemittel = false;
+        vorwaescheselected = false;
+
+        if (currentCharacter.CharIndex == 0) 
+        {
+            StartDialogue(char2);
+        }
+    }
+
 }

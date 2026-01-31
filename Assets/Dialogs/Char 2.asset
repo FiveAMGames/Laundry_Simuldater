@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3020ea3d401a75418e3c9e0b18e13aa, type: 3}
+  m_Name: Char 2
+  m_EditorClassIdentifier: 
+  CharName: Char 1
+  CharIndex: 1
+  CharPortraitDefault: {fileID: 2032535046760159307, guid: 4ebd7f248f7ae4239aeed5c76fc95c10, type: 3}
+  CharPortraitHappy: {fileID: 2032535046760159307, guid: 4ebd7f248f7ae4239aeed5c76fc95c10, type: 3}
+  CharPortraitSad: {fileID: 2032535046760159307, guid: 4ebd7f248f7ae4239aeed5c76fc95c10, type: 3}
+  CharPortraitFlirty: {fileID: 2032535046760159307, guid: 4ebd7f248f7ae4239aeed5c76fc95c10, type: 3}
+  GoodWork: Yay
+  BadWork: Nope
+  AllDialogs:
+  - dayIndex: 0
+    DialogParts:
+    - VariantDialogs:
+      - MinPointsForDialog: {x: 0, y: 0}
+        DialogPart:
+        - TextPartID: char2_day1_part1
+          text: Hey, you the one doin' laundry, right?
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char2_day1_part2
+          text: I got some oil on this work-overall. Can you get it out?
+          animation: 
+          TextPartResponses:
+          - ResponceTextID: char2_day1_part2_responce1
+            text: (Dry) Certainly. Looks like motor oil. Shouldn't be a problem.
+            ResponcePoints: 0
+          - ResponceTextID: char2_day1_part2_responce2
+            text: (Bubbly) Sticky stuff, but I can get it out. I don't want a cutie
+              like you running around with motor oil stains.
+            ResponcePoints: -1
+          - ResponceTextID: char2_day1_part2_responce3
+            text: (Fresh) Motor oil, synthetic blend. Stubborn, but I'll get it out.
+            ResponcePoints: 1
+        - TextPartID: char2_day1_part2
+          text: I got some oil on this work-overall. Can you get it out?
+          animation: 
+          TextPartResponses:
+          - ResponceTextID: char2_day1_part3
+            text: Yeah, I needed to fix somethin' on my Mistress's orbital laser.
+            ResponcePoints: 0
+          - ResponceTextID: char2_day1_part4
+            text: Got quite dirty in the process.
+            ResponcePoints: 0
+          - ResponceTextID: char2_day1_part5
+            text: 'You know how Super Villains are: The bigger the laser, the better.'
+            ResponcePoints: 0
+    - VariantDialogs:
+      - MinPointsForDialog: {x: 0, y: 0}
+        DialogPart:
+        - TextPartID: char2_day1_part6_lowPoints
+          text: 'Yeah, whatever... I need this overall cleaned. '
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char2_day1_part8_lowPoints
+          text: She is quite...
+          animation: 
+          TextPartResponses:
+          - ResponceTextID: char2_day1_part8_lowPoints_responce1
+            text: (Dry) ...
+            ResponcePoints: 0
+          - ResponceTextID: char2_day1_part8_lowPoints_responce2
+            text: (Bubbly) Cool?
+            ResponcePoints: -1
+          - ResponceTextID: char2_day1_part8_lowPoints_responce3
+            text: (Fresh) Incompetent? Annoying?
+            ResponcePoints: 1
+      - MinPointsForDialog: {x: 1, y: 10}
+        DialogPart:
+        - TextPartID: char2_day1_part6_highPoints
+          text: You sound like you know what you're talking about. I respect that.
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char2_day1_part7_highPoints
+          text: These higher-ups act like they are the shit but they don't know that
+            people like us make the world go round.
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char2_day1_part8_highPoints
+          text: I'll be a good customer for you, ya know. My Mistress has me climb
+            in all sort of shit.
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char2_day1_part9_highPoints
+          text: So I have a lot of laundry that needs taking care of.
+          animation: 
+          TextPartResponses:
+          - ResponceTextID: char2_day1_part9_highPoints_responce1
+            text: (Dry) I always take care of my customers.
+            ResponcePoints: 0
+          - ResponceTextID: char2_day1_part9_highPoints_responce2
+            text: (Bubbly) I'd love to take care of you- ehm... Of your clothing.
+            ResponcePoints: 1
+          - ResponceTextID: char2_day1_part9_highPoints_responce3
+            text: (Fresh) Just don't bring in anything too nasty. I don't do contagious
+              stuff.
+            ResponcePoints: -1
+        - TextPartID: char2_day1_part10_highPoints
+          text: Right. Just get that oil stain out and I'll be happy as a clam.
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char2_day1_part11_highPoints
+          text: And trust me, you don't want to see me unhappy.
+          animation: 
+          TextPartResponses: []

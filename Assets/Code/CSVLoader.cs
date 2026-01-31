@@ -30,6 +30,7 @@ public class CSVLoader : MonoBehaviour
     public void Populate() 
     {
         CSVReader.PopulateCharDialogs(CSVReader.char1);
+        CSVReader.PopulateCharDialogs(CSVReader.char2);
     }
 
     [ContextMenu("Set Up Texts")]

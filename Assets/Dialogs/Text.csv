@@ -3,36 +3,36 @@ char1_day1_part1,default,"Greetings, Mortal. My servants tell me I can get my at
 char1_day1_part1_responce1,default,"(Dry) Correct, I clean clothes.",+
 char1_day1_part1_responce2,default,"(Bubbly) Yes, silly! Didn't you see the huge neon sign that says ""Clean for the Mean""?",-
 char1_day1_part1_responce3,default,"(Fresh) Nice, looks like word of my ""esteemed establishment"" got around.",
-char1_day1_part2,sad,"Indeed. Would you be able to return this here shirt to it's original, pristine condition?",
-char1_day1_part3,happy,As you can see it is stained with blood.,
+char1_day1_part2,sad,"Indeed. Would you be able to return this shirt to its original, pristine condition?",
+char1_day1_part3,happy,"Tell me, are you experienced in cleaning blood stains?",
 char1_day1_part3_responce1,default,(Dry) I'm in business with evil. Getting rid of blood is my bread and butter.,
 char1_day1_part3_responce2,default,"(Bubbly) Oh, that's a big one! The other guy didn't live to tell the tale, I imagine. Good on you!",+
 char1_day1_part3_responce3,default,"(Fresh) Blood? That looks more like wine to me, Pookie.",-
 char1_day1_part4_lowPoints,default,It's a big stain and I can assure you it's blood. Blood indeed.,
-char1_day1_part5_lowPoints,sad,And wine at all...,
+char1_day1_part5_lowPoints,sad,And not wine at all...,
 char1_day1_part6_lowPoints,flirty,"I should know, I'm a Vampire Elder. Baronex Duskmantle of Midnight's Keep to be exact.",
 char1_day1_part6_lowPoints_responce1,default,"(Dry) It smells like wine, it looks like wine. I will treat it like wine.",-
-char1_day1_part6_lowPoints_responce2,default,"(Bubbly) But it smells like... Oooh, got it. Of course dear Baronex, I will totally get rid of this BLOOD stain for you!",+
+char1_day1_part6_lowPoints_responce2,default,"(Bubbly) But it smells like... Ooh, got it. Of course dear Baronex, I will totally get rid of this BLOOD stain for you!",+
 char1_day1_part6_lowPoints_responce3,default,"(Fresh) Whatever the stain, I'll make sure to get that shirt back on you asap.",
 char1_day1_part7_lowPoints,flirty,I shall return to collect the garment tomorrow. I hope your services will please my sophisticated taste.,
 char1_day1_part4_highPoints,default,It's a big stain and I can assure you it's blood. Blood indeed.,
-char1_day1_part5_highPoints,flirty,"My victim lost a lot of when I fed on them last night. I'm a Vampire Elder, you see.",
+char1_day1_part5_highPoints,flirty,"My victim lost a lot of it when I fed on them last night. I'm a Vampire Elder, you see.",
 char1_day1_part6_highPoints,happy,Baronex Duskmantle of Midnight's Keep to be exact. Enchanté...,
-char1_day1_part7_highPoints,flirty,"Pray do tell, have you ever worked for a Vampire before? Most common folk find us most... frightning.",
-char1_day1_part7_highPoints_responce1,default,(Dry) Most my clientel is dangerous. I am confident my excellent services will keep me in business. And alive.,-
+char1_day1_part7_highPoints,flirty,"Pray do tell, have you ever worked for a Vampire before? Most common folk find us most... frightening.",
+char1_day1_part7_highPoints_responce1,default,(Dry) Most my clientele is dangerous. I am confident my excellent services will keep me in business. And alive.,-
 char1_day1_part7_highPoints_responce2,default,(Bubbly) A real Vampire Elder? I'm positively thrilled! But don't worry. I'm not scared. Most my clients are kinda dangerous.,
 char1_day1_part7_highPoints_responce3,default,(Fresh) I got many dangerous customers but none look as sharp as you. The bloodlust suits you well.,+
 char1_day1_part8_highPoints,happy,You are a gutsy one! Living here amongst such murderous creatures can't be easy.,
-char1_day1_part9_highPoints,default,Sometimes even a Vampire can feel discouraged around such marvelous villainry.,
+char1_day1_part9_highPoints,default,Sometimes even a Vampire can feel discouraged around such marvelous villainy.,
 char1_day1_part10_highPoints,sad,Especially if this theoretical Vampire was inept at hunting prey...,
 char1_day1_part11_highPoints,happy,"Which is not me, of course! I'm an exceptional hunterex! Confirmed by the blood stains on my shirt which are NOT wine at all.",
 char1_day1_part12_highPoints,flirty,"I'm looking forward to collect my garment tomorrow. And to see you again, dear Mortal.",
 char2_day1_part1,default,"Hey, you the one doin' laundry, right?",
 char2_day1_part2,sad,I got some oil on this work-overall. Can you get it out?,
-char2_day1_part2_responce1,default,(Dry) Certainly. Looks like motoroil. Shouldn't be a problem.,
-char2_day1_part2_responce2,default,"(Bubbly) Sticky stuff, but I can get it out. I don't want a cutie like you running around with motoroil stains.",-
-char2_day1_part2_responce3,default,"(Fresh) Motoroil, synthetic blend. Stubborn, but I'll get it out.",+
-char2_day1_part3,happy,"Yeah, I needed to fix somethin' on my Mistresse's orbital laser.",
+char2_day1_part2_responce1,default,(Dry) Certainly. Looks like motor oil. Shouldn't be a problem.,
+char2_day1_part2_responce2,default,"(Bubbly) Sticky stuff, but I can get it out. I don't want a cutie like you running around with motor oil stains.",-
+char2_day1_part2_responce3,default,"(Fresh) Motor oil, synthetic blend. Stubborn, but I'll get it out.",+
+char2_day1_part3,happy,"Yeah, I needed to fix somethin' on my Mistress's orbital laser.",
 char2_day1_part4,flirty,Got quite dirty in the process.,
 char2_day1_part5,default,"You know how Super Villains are: The bigger the laser, the better.",
 char2_day1_part5_responce1,default,"(Dry) Super Villains. Most of them are just rich brats, not understanding the intricacies of crime.",+
@@ -60,8 +60,8 @@ char1_day2_part1_responce1,default,(Dry) Hello.,
 char1_day2_part1_responce2,default,"(Bubbly) Are you okay? Do you need a glass of water? Or uhm, a goblet of blood?",+
 char1_day2_part1_responce3,default,"(Fresh) Damn, what got you lookin' all sweaty?",-
 char1_day2_part2,default,I ju... I just went for a nice evening... stroll.,
-char1_day2_part3,sad,A stroll that included vigurous running and jumping. And a very small tumble on my part.,
-char1_day2_part3,happy,"If you could take care of my hunting cloak, I would be most oblidged.",
+char1_day2_part3,sad,A stroll that included vigorous running and jumping. And a very small tumble on my part.,
+char1_day2_part3,happy,"If you could take care of my hunting cloak, I would be most obliged.",
 char1_day2_part3_responce1,default,(Dry) Maybe you shouldn't hunt. Successful vampires let their prey come to them.,-
 char1_day2_part3_responce2,default,(Bubbly) Oh gosh... Maybe you should let people come to you in the future instead of running after them.,
 char1_day2_part3_responce3,default,(Fresh) Why do you need to go hunting anyway? Throw a party or something. I'm sure people would come in flocks.,+
@@ -70,17 +70,18 @@ char1_day2_part5_lowPoints,sad,There are some grass stains on it and sweat.,
 char1_day2_part6_lowPoints,flirty,But it's not my sweat! That would be quite unbecoming of a Vampire Elder of my standing.,
 char1_day2_part6_lowPoints_responce1,default,"(Dry) The sweat of your victim, perhaps?",+
 char1_day2_part6_lowPoints_responce2,default,"(Bubbly) Awww, but it's not embarrassing to be a little sweaty. It happens to all of us.",
-char1_day2_part6_lowPoints_responce3,default,"(Fresh) Yeah, sure. That's also why your forhead is NOT covered in sweat.",-
+char1_day2_part6_lowPoints_responce3,default,"(Fresh) Yeah, sure. That's also why your forehead is NOT covered in sweat.",-
 char1_day2_part7_lowPoints,default,"Just clean it please. That's what I'm paying you for, isn't it.",
 char1_day2_part4_highPoints,flirty,"My sweet Mortal, that is indeed a splendid suggestion!",
 char1_day2_part5_highPoints,happy,"I shall try it. A dinner party perhaps, or a soirée, or even... a cheeky get-together.",
-char1_day2_part6_highPoints,sad,"I'd invite YOU of course but alas, you need to clean my cloak. I apologize, dear one.",
+char1_day2_part6_highPoints,sad,"I'd invite YOU of course but alas, you need to clean my cloak. I apologize, dear One.",
 char1_day2_part7_highPoints,default,I think there is a grass stain from my tumble and some sweat.,
 char1_day2_part8_highPoints,sad,"Please don't tell anyone that I can actually sweat. That would break my dark, unbeating heart.",
 char1_day2_part8_highPoints_responce1,default,(Dry) I have no interest in gossiping.,+
 char1_day2_part8_highPoints_responce2,default,"(Bubbly) Aww, but why not? I think it would make you more approachable!",-
 char1_day2_part8_highPoints_responce3,default,"(Fresh) Yeah, I won't tell anyone. Probably...",
-char1_day2_part9_highPoints,happy,"I trust you won't tell anyone. See you soon, my Dear.",
+char1_day2_part9_highPoints,happy,I trust you won't tell anyone for you haven't given me any reason to doubt you.,
+char1_day2_part10_highPoints,flirty,"I can't wait to see you again, my Dear.",
 char2_day2_part1,sad,Ugh...,
 char2_day2_part1_responce1,default,(Dry) Hello.,-
 char2_day2_part1_responce2,default,"(Bubbly) Oh, you look kinda sad. What's wrong?",
@@ -90,5 +91,88 @@ char2_day2_part3,sad,But the evil schemes this woman comes up with... They're ju
 char2_day2_part3_responce1,default,(Dry) Sounds like you should get rid of her. Or replace her.,+
 char2_day2_part3_responce2,default,"(Bubbly) Oh, that's horrible. I'm sorry to hear... You should switch roles with her. That'll teach her.",
 char2_day2_part3_responce3,default,(Fresh) Usually henchwomen don't complain so much. Maybe you should become a villain instead.,-
-char2_day2_part4_lowPoints,default,Thank you for your... input. But let's focus on the task at hand. My hunting cloak!,
-char2_day2_part5_lowPoints,sad,There are some grass stains on it and sweat.,
+char2_day2_part4_lowPoints,happy,"Me replacing her? Tss, that's not how it works, soap-nerd.",
+char2_day2_part5_lowPoints,happy,"Anyway, my Mistress' last ingenious plan was to punish the pizza-guy next to our secret lair.",
+char2_day2_part6_lowPoints,default,"He discontinued her favorite pizza, so she kidnapped his baby.",
+char2_day2_part7_lowPoints,sad,"Now I have to watch that brat until the guy surrenders or dies or whatever. Fucking GREAT idea, if you ask me. ",
+char2_day2_part7_lowPoints_responce1,default,(Dry) I didn't ask. But that explains the stains.,
+char2_day2_part7_lowPoints_responce2,default,(Bubbly) Ah baby?! Omg that's sooo cute!,-
+char2_day2_part7_lowPoints_responce3,default,(Fresh) So you have to take care of the baby now? Gross...,+
+char2_day2_part8_lowPoints,sad,It's fucking annyoing... I got drool and babyfood stains all over my work-clothes.,
+char2_day2_part9_lowPoints,happy,"But that's your problem now. Take care of it for me, okay sweetcheeks?",
+char2_day2_part4_highPoints,flirty,You think I should become a Super Villain? That's insane... But maybe you're on to something.,
+char2_day2_part5_highPoints,happy,I sure as fuck would be better at making evil plans. You know what she did?,
+char2_day2_part6_highPoints,default,She was angry at the pizza-guy next door because he discontinued her favorite pizza.,
+char2_day2_part7_highPoints,happy,"She could've blown up the shop, poisoned the marinara sauce, cut off his fingers, anything...",
+char2_day2_part8_highPoints,default,But she decided to kidnap his baby. And now I have to take care of it.,
+char2_day2_part9_highPoints,sad,"I mean, look at my clothes! They're full of baby food and drool!!!",
+char2_day2_part9_highPoints_responce1,default,"(Dry) I'll just clean the stains for you, I don't need a backstory.",-
+char2_day2_part9_highPoints_responce2,default,(Bubbly) That's horrible! Your evil plans are a million times more wicked than hers.,+
+char2_day2_part9_highPoints_responce3,default,"(Fresh) Well, that's a stupid fucking idea. But cutting off his fingers? Come on...",
+char2_day2_part10_highPoints,default,"Anyway, what's done is done. And I need you to get these stains out.",
+char2_day2_part11_highPoints,happy,"I'm glad I can count on you. You really are good at your job, soap-nerd.",
+char2_day2_part12_highPoints,flirty,"I got a thing for nerds, ya know. I like how they get nervous and shit. It's cute.",
+char1_day3_part1,flirty,"You are a proper genius, sweet Mortal. I did what you recommended.",
+char1_day3_part2,default,I hosted a lavishly decadent tupperware party. They practically BEGGED me to grant them entrance.,
+char1_day3_part3,happy,Like sheep to the slaughter. It was positively divine!,
+char1_day3_part4,flirty,And I picked the plumpest one to join me for the after party... The blood on my silken night-blouse is that was left of her.,
+char1_day3_part4_responce1,default,(Dry) Sounds like a successful night.,
+char1_day3_part4_responce2,default,"(Bubbly) Oh, it sounds wonderful! I'm so sad I missed it. Especially the after party.",+
+char1_day3_part4_responce3,default,"(Fresh) Your silken night-blouse? A tupperware party??? Come on dude, where's the carnage?",-
+char1_day3_part5,default,It was a titillating night... I haven't indulged in the pleasures of flesh and blood in a long time.,
+char1_day3_part6,flirty,"You'll discover stains of my favorite massage oils on there too. We were utterly naughty before, well... I killed her.",
+char1_day3_part6_responce1,default,"(Dry) I really, REALLY do not wish to hear more about your titillating night.",-
+char1_day3_part6_responce2,default,"(Bubbly) Sounds like you had a lovely night. Her too, up until the end at least.",
+char1_day3_part6_responce3,default,"(Fresh) Yeah, that's more like it! Tell me more about the blood. Was it gushing? Splattering?",+
+char1_day3_part7_lowPoints,default,"I don't want to bore you with any more details. Just know, the night was a big success, thanks to you.",
+char1_day3_part8_lowPoints,flirty,Maybe I'll invite you to one of my parties one day.,
+char1_day3_part8_lowPoints_responce1,default,(Dry) I will decline.,-
+char1_day3_part8_lowPoints_responce2,default,"(Bubbly) That would be amazing. I love parties, tupperware, and sexy vampires! ",+
+char1_day3_part8_lowPoints_responce3,default,"(Fresh) I might show up, as long as it isn't a fucking tupperware party.",
+char1_day3_part9_lowPoints,happy,"We'll see what the future brings... Or at least I will. You humans have preposterously short life-spans, right?",
+char1_day3_part10_lowPoints,flirty,Especially if there are ravenous vampires lurking around. Vampires that just got reminded of the sweet taste of blood.,
+char1_day3_part7_highPoints,happy,"I don't want to bore you with any more details. Just know, the night was a big success. Thanks to you, my Dear.",
+char1_day3_part8_highPoints,sad,There was a one thing though that left a bad taste in my mouth after all.,
+char1_day3_part9_highPoints,default,"I was missing you, my Dear. Your wit, your dauntlessness, your bewitching eyes...",
+char1_day3_part10_highPoints,flirty,"Thoughts of you follow me, wherever I go. Like the scent of detergent, softly lingering in the ether.",
+char1_day3_part10_highPoints_responce1,default,"(Dry) And just like ink on a white shirt, you will never get rid of me.",+
+char1_day3_part10_highPoints_responce2,default,(Bubbly) Did you just compare me to... laundry detergent? That's not how you romance a hottie like me.,-
+char1_day3_part10_highPoints_responce3,default,"(Fresh) You lost me with the detergent thing, sorry. Don't you wanna talk about blood again?",
+char1_day3_part11_highPoints,happy,That is the dauntlessness I was talking about. Who would dare to speak to a Vampire Elder that way?,
+char1_day3_part12_highPoints,flirty,I take great delight in your company and in being your customer. I am certain that you will get rid of these oil and blood stains.,
+char1_day3_part13_highPoints,sad,"But I'm also plagued by dark thoughts, my Dear.",
+char1_day3_part14_highPoints,sad,"To know that you, a human, will have to perish one day... Accepting that feels almost insurmountable.",
+char1_day3_part15_highPoints,flirty,"But regardless, I will leave you to your work. I'm sure I will be greatly satisfied as always, dear One.",
+char2_day3_part1,happy,"Yo, I did it! I got rid of that incompetent roach of a Super Villain.",
+char2_day3_part2,sad,I didn't kill her or anything. I just locked her in one of her torture-labyrinths. Which I built FIY.,
+char2_day3_part3,flirty,"She'll never find her way out of it, ha! And I'm the new Villain in town.",
+char2_day3_part4,happy,I got a Super Villain overall now too. I don't fuck with spandex.,
+char2_day3_part4_responce1,default,(Dry) A bit uninspired but overalls are easier to clean anyway.,
+char2_day3_part4_responce2,default,(Bubbly) An overall? Really? Isn't that a bit boring? There are such cool spandex suits out there...,-
+char2_day3_part4_responce3,default,(Fresh) So what do you fuck with?,+
+char2_day3_part5,default,"Well, I... Wanted to talk about the stains on my overall, actually. Look, there's a bunch of sweat and blood on it.",
+char2_day3_part6,happy,I like the look of it but this thing reaks. I need it cleaned before I execute my next evil plan. Which...,
+char2_day3_part6_responce1,default,(Dry) I do not wish to hear your evil plan. I will not be an accessory to a crime.,-
+char2_day3_part6_responce2,default,"(Bubbly) Oh, yes! Tell me your evil plan. I NEED to know!!!",+
+char2_day3_part6_responce3,default,"(Fresh) Oh sick, are you seriously gonna tell me your evil plan? Isn't that usually a secret or something?",
+char2_day3_part7_lowPoints,default,"You know what, nevermind. I'm not gonna tell you my plan.",
+char2_day3_part8_lowPoints,sad,Which I definitely have. And that is super elaborate and like super dark and twisted...,
+char2_day3_part8_lowPoints_responce1,default,(Dry) Okay.,
+char2_day3_part8_lowPoints_responce2,default,(Bubbly) Aw man... You sure? I bet it IS really cool and elaborate and twisted.,+
+char2_day3_part8_lowPoints_responce3,default,"(Fresh) That's so lame, dude. Why tease it then?",-
+char2_day3_part9_lowPoints,happy,"Maybe it was my PLAN to have you guess. Ya know, another scheme from the Blue Collared Menace.",
+char2_day3_part10_lowPoints,flirty,Which is my Super Villain name btw. Blue... Collared... Menace...,
+char2_day3_part11_lowPoints,default,So get these stains out or my next plan might involve a certain laundry shop.,
+char2_day3_part7_highPoints,default,"Actually, I don't really have an evil plan yet.",
+char2_day3_part8_highPoints,sad,"Turns out, I'm a great henchwoman but a fucking horrible schemer.",
+char2_day3_part9_highPoints,default,"My old Mistress was terrible at it too, don't get me wrong. But it's actually a lot harder than I thought.",
+char2_day3_part10_highPoints,happy,That's also the reason I came to you. I feel like you're smart.,
+char2_day3_part11_highPoints,default,And being a business-person or whatever is not easy. Not in this shit economy.,
+char2_day3_part12_highPoints,flirty,"Sooo, what I'm saying is... Do you maybe wanna work together sometime?",
+char2_day3_part13_highPoints,default,I know you got your laundry thing going and I still need you to get rid of these blood and sweat stains.,
+char2_day3_part14_highPoints,happy,But maybe you have time for a little side hustle?,
+char2_day3_part14_highPoints_responce1,default,(Dry) Interesting proposition. Maybe I do have time for a side hustle in crime.,+
+char2_day3_part14_highPoints_responce2,default,"(Bubbly) Working together with you sounds fun! But I'm more of a lover than a fighter, I think.",
+char2_day3_part14_highPoints_responce3,default,(Fresh) So I'm supposed to be your henchling? Fuck no...,-
+char2_day3_part15_highPoints,default,"In any case, you helped me out last time. Saying I should replace my Ex-Mistress and all.",
+char2_day3_part16_highPoints,happy,"For a nerd, you're kinda cool. And you smell like soap. I like that.",

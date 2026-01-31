@@ -13,6 +13,9 @@ public class CharacterDialog : ScriptableObject
     public Sprite CharPortraitSad;
     public Sprite CharPortraitFlirty;
 
+    public string GoodWork;
+    public string BadWork;
+
     [System.Serializable]
     public class Response
     {
@@ -29,11 +32,13 @@ public class CharacterDialog : ScriptableObject
     {
         public string TextPartID;
         public string text;
+        public string animation;
         public List<Response> TextPartResponses;
 
-        public void SetText(string s) 
+        public void SetText(string s, string _animations) 
         {
             text = s;
+            animation = _animations;
         }
     }
     [System.Serializable]

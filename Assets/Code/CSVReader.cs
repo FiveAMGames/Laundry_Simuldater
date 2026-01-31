@@ -18,11 +18,12 @@ public class Texts
     {
         public string ID;
         public string Text;
-
-        public SmallText(string _ID, string _Text) 
+        public string animation;
+        public SmallText(string _ID, string _Text, string _Animation) 
         {
             ID = _ID;
             Text = _Text;
+            animation = _Animation;
         }
     }
     [SerializeField]
@@ -60,15 +61,14 @@ public class CSVReader : ScriptableObject
                 {
                     string ID = lines[0, i];
                     string text = lines[2, i];
+                    string anim = lines[1, i];
 
-                    Texts.SmallText smalltext = new Texts.SmallText(ID, text);
+                    Texts.SmallText smalltext = new Texts.SmallText(ID, text, anim);
                     newText.SmallTexts.Add(smalltext);
                 }           
             }
             AllTexts = newText;
-        PopulateCharDialogs(char1);
-
-
+     
 #if UNITY_EDITOR
         EditorUtility.SetDirty(this);
 #endif
@@ -102,7 +102,7 @@ public class CSVReader : ScriptableObject
                             {
                                 if (t.ID == _char.AllDialogs[i].DialogParts[j].VariantDialogs[m].DialogPart[k].TextPartID)
                                 {
-                                    _char.AllDialogs[i].DialogParts[j].VariantDialogs[m].DialogPart[k].SetText(t.Text);
+                                    _char.AllDialogs[i].DialogParts[j].VariantDialogs[m].DialogPart[k].SetText(t.Text, t.animation);
                                     break;
                                 }
                             }

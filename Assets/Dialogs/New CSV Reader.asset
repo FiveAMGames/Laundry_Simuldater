@@ -17,159 +17,224 @@ MonoBehaviour:
     SmallTexts:
     - ID: dialogue ID
       Text: Text
+      animation: Emotion
     - ID: char1_day1_part1
       Text: Greetings, Mortal. My servants tell me I can get my attire cleaned in
         this esteemed... establishment?
+      animation: default
     - ID: char1_day1_part1_responce1
       Text: (Dry) Correct, I clean clothes.
+      animation: default
     - ID: char1_day1_part1_responce2
       Text: (Bubbly) Yes, silly! Didn't you see the huge neon sign that says "Clean
         for the Mean"?
+      animation: default
     - ID: char1_day1_part1_responce3
       Text: (Fresh) Nice, looks like word of my "esteemed establishment" got around.
+      animation: default
     - ID: char1_day1_part2
-      Text: Indeed. Would you be able to return this here shirt to it's original,
-        pristine condition?
+      Text: Indeed. Would you be able to return this shirt to its original, pristine
+        condition?
+      animation: sad
     - ID: char1_day1_part3
-      Text: As you can see it is stained with blood.
+      Text: Tell me, are you experienced in cleaning blood stains?
+      animation: happy
     - ID: char1_day1_part3_responce1
       Text: (Dry) I'm in business with evil. Getting rid of blood is my bread and
         butter.
+      animation: default
     - ID: char1_day1_part3_responce2
       Text: (Bubbly) Oh, that's a big one! The other guy didn't live to tell the
         tale, I imagine. Good on you!
+      animation: default
     - ID: char1_day1_part3_responce3
       Text: (Fresh) Blood? That looks more like wine to me, Pookie.
+      animation: default
     - ID: char1_day1_part4_lowPoints
       Text: It's a big stain and I can assure you it's blood. Blood indeed.
+      animation: default
     - ID: char1_day1_part5_lowPoints
-      Text: And wine at all...
+      Text: And not wine at all...
+      animation: sad
     - ID: char1_day1_part6_lowPoints
       Text: I should know, I'm a Vampire Elder. Baronex Duskmantle of Midnight's
         Keep to be exact.
+      animation: flirty
     - ID: char1_day1_part6_lowPoints_responce1
       Text: (Dry) It smells like wine, it looks like wine. I will treat it like wine.
+      animation: default
     - ID: char1_day1_part6_lowPoints_responce2
-      Text: (Bubbly) But it smells like... Oooh, got it. Of course dear Baronex,
-        I will totally get rid of this BLOOD stain for you!
+      Text: (Bubbly) But it smells like... Ooh, got it. Of course dear Baronex, I
+        will totally get rid of this BLOOD stain for you!
+      animation: default
     - ID: char1_day1_part6_lowPoints_responce3
       Text: (Fresh) Whatever the stain, I'll make sure to get that shirt back on
         you asap.
+      animation: default
     - ID: char1_day1_part7_lowPoints
       Text: I shall return to collect the garment tomorrow. I hope your services
         will please my sophisticated taste.
+      animation: flirty
     - ID: char1_day1_part4_highPoints
       Text: It's a big stain and I can assure you it's blood. Blood indeed.
+      animation: default
     - ID: char1_day1_part5_highPoints
-      Text: My victim lost a lot of when I fed on them last night. I'm a Vampire
+      Text: My victim lost a lot of it when I fed on them last night. I'm a Vampire
         Elder, you see.
+      animation: flirty
     - ID: char1_day1_part6_highPoints
       Text: "Baronex Duskmantle of Midnight's Keep to be exact. Enchant\xE9..."
+      animation: happy
     - ID: char1_day1_part7_highPoints
       Text: Pray do tell, have you ever worked for a Vampire before? Most common
-        folk find us most... frightning.
+        folk find us most... frightening.
+      animation: flirty
     - ID: char1_day1_part7_highPoints_responce1
-      Text: (Dry) Most my clientel is dangerous. I am confident my excellent services
+      Text: (Dry) Most my clientele is dangerous. I am confident my excellent services
         will keep me in business. And alive.
+      animation: default
     - ID: char1_day1_part7_highPoints_responce2
       Text: (Bubbly) A real Vampire Elder? I'm positively thrilled! But don't worry.
         I'm not scared. Most my clients are kinda dangerous.
+      animation: default
     - ID: char1_day1_part7_highPoints_responce3
       Text: (Fresh) I got many dangerous customers but none look as sharp as you.
         The bloodlust suits you well.
+      animation: default
     - ID: char1_day1_part8_highPoints
       Text: You are a gutsy one! Living here amongst such murderous creatures can't
         be easy.
+      animation: happy
     - ID: char1_day1_part9_highPoints
-      Text: Sometimes even a Vampire can feel discouraged around such marvelous villainry.
+      Text: Sometimes even a Vampire can feel discouraged around such marvelous villainy.
+      animation: default
     - ID: char1_day1_part10_highPoints
       Text: Especially if this theoretical Vampire was inept at hunting prey...
+      animation: sad
     - ID: char1_day1_part11_highPoints
       Text: Which is not me, of course! I'm an exceptional hunterex! Confirmed by
         the blood stains on my shirt which are NOT wine at all.
+      animation: happy
     - ID: char1_day1_part12_highPoints
       Text: I'm looking forward to collect my garment tomorrow. And to see you again,
         dear Mortal.
+      animation: flirty
     - ID: char2_day1_part1
       Text: Hey, you the one doin' laundry, right?
+      animation: default
     - ID: char2_day1_part2
       Text: I got some oil on this work-overall. Can you get it out?
+      animation: sad
     - ID: char2_day1_part2_responce1
-      Text: (Dry) Certainly. Looks like motoroil. Shouldn't be a problem.
+      Text: (Dry) Certainly. Looks like motor oil. Shouldn't be a problem.
+      animation: default
     - ID: char2_day1_part2_responce2
       Text: (Bubbly) Sticky stuff, but I can get it out. I don't want a cutie like
-        you running around with motoroil stains.
+        you running around with motor oil stains.
+      animation: default
     - ID: char2_day1_part2_responce3
-      Text: (Fresh) Motoroil, synthetic blend. Stubborn, but I'll get it out.
+      Text: (Fresh) Motor oil, synthetic blend. Stubborn, but I'll get it out.
+      animation: default
     - ID: char2_day1_part3
-      Text: Yeah, I needed to fix somethin' on my Mistresse's orbital laser.
+      Text: Yeah, I needed to fix somethin' on my Mistress's orbital laser.
+      animation: happy
     - ID: char2_day1_part4
       Text: Got quite dirty in the process.
+      animation: flirty
     - ID: char2_day1_part5
       Text: 'You know how Super Villains are: The bigger the laser, the better.'
+      animation: default
     - ID: char2_day1_part5_responce1
       Text: (Dry) Super Villains. Most of them are just rich brats, not understanding
         the intricacies of crime.
+      animation: default
     - ID: char2_day1_part5_responce2
       Text: (Bubbly) Gotta love a big laser! And a dirty henchwoman.
+      animation: default
     - ID: char2_day1_part5_responce3
       Text: (Fresh) Well, you need a big laser to scare the shit out of these plebs.
+      animation: default
     - ID: char2_day1_part6_lowPoints
       Text: 'Yeah, whatever... I need this overall cleaned. '
+      animation: default
     - ID: char2_day1_part7_lowPoints
       Text: If you don't suck, I'll come back. I'm sure my Mistress will have me
         crawl inside some machinery again soon.
+      animation: sad
     - ID: char2_day1_part8_lowPoints
       Text: She is quite...
+      animation: happy
     - ID: char2_day1_part8_lowPoints_responce1
       Text: (Dry) ...
+      animation: default
     - ID: char2_day1_part8_lowPoints_responce2
       Text: (Bubbly) Cool?
+      animation: default
     - ID: char2_day1_part8_lowPoints_responce3
       Text: (Fresh) Incompetent? Annoying?
+      animation: default
     - ID: char2_day1_part9_lowPoints
       Text: Demanding.
+      animation: flirty
     - ID: char2_day1_part10_lowPoints
       Text: Anyway, I'm out. Do your job well and I'll return with more shit to clean.
+      animation: default
     - ID: char2_day1_part6_highPoints
       Text: You sound like you know what you're talking about. I respect that.
+      animation: flirty
     - ID: char2_day1_part7_highPoints
       Text: These higher-ups act like they are the shit but they don't know that
         people like us make the world go round.
+      animation: sad
     - ID: char2_day1_part8_highPoints
       Text: I'll be a good customer for you, ya know. My Mistress has me climb in
         all sort of shit.
+      animation: default
     - ID: char2_day1_part9_highPoints
       Text: So I have a lot of laundry that needs taking care of.
+      animation: flirty
     - ID: char2_day1_part9_highPoints_responce1
       Text: (Dry) I always take care of my customers.
+      animation: default
     - ID: char2_day1_part9_highPoints_responce2
       Text: (Bubbly) I'd love to take care of you- ehm... Of your clothing.
+      animation: default
     - ID: char2_day1_part9_highPoints_responce3
       Text: (Fresh) Just don't bring in anything too nasty. I don't do contagious
         stuff.
+      animation: default
     - ID: char2_day1_part10_highPoints
       Text: Right. Just get that oil stain out and I'll be happy as a clam.
+      animation: happy
     - ID: char2_day1_part11_highPoints
       Text: And trust me, you don't want to see me unhappy.
+      animation: default
     - ID: char1_day2_part1
       Text: Gree...tings. Mo- mo... ortal...
+      animation: sad
     - ID: char1_day2_part1_responce1
       Text: (Dry) Hello.
+      animation: default
     - ID: char1_day2_part1_responce2
       Text: (Bubbly) Are you okay? Do you need a glass of water? Or uhm, a goblet
         of blood?
+      animation: default
     - ID: char1_day2_part1_responce3
       Text: (Fresh) Damn, what got you lookin' all sweaty?
+      animation: default
     - ID: char1_day2_part2
       Text: I ju... I just went for a nice evening... stroll.
+      animation: default
     - ID: char1_day2_part3
-      Text: A stroll that included vigurous running and jumping. And a very small
+      Text: A stroll that included vigorous running and jumping. And a very small
         tumble on my part.
+      animation: sad
     - ID: char1_day2_part3
-      Text: If you could take care of my hunting cloak, I would be most oblidged.
+      Text: If you could take care of my hunting cloak, I would be most obliged.
+      animation: happy
     - ID: char1_day2_part3_responce1
       Text: (Dry) Maybe you shouldn't hunt. Successful vampires let their prey come
         to them.
+      animation: default
   char1: {fileID: 11400000, guid: bbf3a01f656b1a4429b4bfd7c1be7706, type: 2}
-  char2: {fileID: 0}
+  char2: {fileID: 11400000, guid: b7f76945b20d817448832a1f5532fbd3, type: 2}

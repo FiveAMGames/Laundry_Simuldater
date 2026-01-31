@@ -14,10 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CharName: Char 1
   CharIndex: 0
-  CharPortraitDefault: {fileID: 0}
-  CharPortraitHappy: {fileID: 0}
-  CharPortraitSad: {fileID: 0}
-  CharPortraitFlirty: {fileID: 0}
+  CharPortraitDefault: {fileID: 8888996141017380241, guid: 2148ff7172cbe473f8d010dde1ff4dee, type: 3}
+  CharPortraitHappy: {fileID: 8888996141017380241, guid: 2148ff7172cbe473f8d010dde1ff4dee, type: 3}
+  CharPortraitSad: {fileID: 8888996141017380241, guid: 2148ff7172cbe473f8d010dde1ff4dee, type: 3}
+  CharPortraitFlirty: {fileID: 8888996141017380241, guid: 2148ff7172cbe473f8d010dde1ff4dee, type: 3}
+  GoodWork: Good job!
+  BadWork: Bad Job!
   AllDialogs:
   - dayIndex: 0
     DialogParts:
@@ -27,6 +29,7 @@ MonoBehaviour:
         - TextPartID: char1_day1_part1
           text: Greetings, Mortal. My servants tell me I can get my attire cleaned
             in this esteemed... establishment?
+          animation: 
           TextPartResponses:
           - ResponceTextID: char1_day1_part1_responce1
             text: (Dry) Correct, I clean clothes.
@@ -40,11 +43,13 @@ MonoBehaviour:
               around.
             ResponcePoints: 0
         - TextPartID: char1_day1_part2
-          text: Indeed. Would you be able to return this here shirt to it's original,
-            pristine condition?
+          text: Indeed. Would you be able to return this shirt to its original, pristine
+            condition?
+          animation: 
           TextPartResponses: []
         - TextPartID: char1_day1_part3
-          text: As you can see it is stained with blood.
+          text: Tell me, are you experienced in cleaning blood stains?
+          animation: 
           TextPartResponses:
           - ResponceTextID: char1_day1_part3_responce1
             text: (Dry) I'm in business with evil. Getting rid of blood is my bread
@@ -62,20 +67,23 @@ MonoBehaviour:
         DialogPart:
         - TextPartID: char1_day1_part4_lowPoints
           text: It's a big stain and I can assure you it's blood. Blood indeed.
+          animation: 
           TextPartResponses: []
         - TextPartID: char1_day1_part5_lowPoints
-          text: And wine at all...
+          text: And not wine at all...
+          animation: 
           TextPartResponses: []
         - TextPartID: char1_day1_part6_lowPoints
           text: I should know, I'm a Vampire Elder. Baronex Duskmantle of Midnight's
             Keep to be exact.
+          animation: 
           TextPartResponses:
           - ResponceTextID: char1_day1_part6_lowPoints_responce1
             text: (Dry) It smells like wine, it looks like wine. I will treat it
               like wine.
             ResponcePoints: -1
           - ResponceTextID: char1_day1_part6_lowPoints_responce2
-            text: (Bubbly) But it smells like... Oooh, got it. Of course dear Baronex,
+            text: (Bubbly) But it smells like... Ooh, got it. Of course dear Baronex,
               I will totally get rid of this BLOOD stain for you!
             ResponcePoints: 1
           - ResponceTextID: char1_day1_part6_lowPoints_responce3
@@ -85,25 +93,30 @@ MonoBehaviour:
         - TextPartID: char1_day1_part7_lowPoints
           text: I shall return to collect the garment tomorrow. I hope your services
             will please my sophisticated taste.
+          animation: 
           TextPartResponses: []
-      - MinPointsForDialog: {x: 1, y: 3}
+      - MinPointsForDialog: {x: 1, y: 10}
         DialogPart:
         - TextPartID: char1_day1_part4_highPoints
           text: It's a big stain and I can assure you it's blood. Blood indeed.
+          animation: 
           TextPartResponses: []
         - TextPartID: char1_day1_part5_highPoints
-          text: My victim lost a lot of when I fed on them last night. I'm a Vampire
+          text: My victim lost a lot of it when I fed on them last night. I'm a Vampire
             Elder, you see.
+          animation: 
           TextPartResponses: []
         - TextPartID: char1_day1_part6_highPoints
           text: "Baronex Duskmantle of Midnight's Keep to be exact. Enchant\xE9..."
+          animation: 
           TextPartResponses: []
         - TextPartID: char1_day1_part7_highPoints
           text: Pray do tell, have you ever worked for a Vampire before? Most common
-            folk find us most... frightning.
+            folk find us most... frightening.
+          animation: 
           TextPartResponses:
           - ResponceTextID: char1_day1_part7_highPoints_responce1
-            text: (Dry) Most my clientel is dangerous. I am confident my excellent
+            text: (Dry) Most my clientele is dangerous. I am confident my excellent
               services will keep me in business. And alive.
             ResponcePoints: 1
           - ResponceTextID: char1_day1_part7_highPoints_responce2
@@ -117,19 +130,24 @@ MonoBehaviour:
         - TextPartID: char1_day1_part8_highPoints
           text: You are a gutsy one! Living here amongst such murderous creatures
             can't be easy.
+          animation: 
           TextPartResponses: []
         - TextPartID: char1_day1_part9_highPoints
           text: Sometimes even a Vampire can feel discouraged around such marvelous
-            villainry.
+            villainy.
+          animation: 
           TextPartResponses: []
         - TextPartID: char1_day1_part10_highPoints
           text: Especially if this theoretical Vampire was inept at hunting prey...
+          animation: 
           TextPartResponses: []
         - TextPartID: char1_day1_part11_highPoints
           text: Which is not me, of course! I'm an exceptional hunterex! Confirmed
             by the blood stains on my shirt which are NOT wine at all.
+          animation: 
           TextPartResponses: []
         - TextPartID: char1_day1_part12_highPoints
           text: I'm looking forward to collect my garment tomorrow. And to see you
             again, dear Mortal.
+          animation: 
           TextPartResponses: []

@@ -6,8 +6,15 @@ using System.Collections.Generic;
 
 public class MittelImage : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler, IPointerDownHandler
 {
+    public bool isVorwaesche = true;
+
+
     public Logic.Outfit.Vorwaeasche type;
+    public Logic.Outfit.Waesche Waaeschetype;
     public Image Img;
+    public SpriteRenderer ImgSprite;
+
+
 
     public Sprite defaultSprite;
     public Sprite HoverSprite;
@@ -27,7 +34,8 @@ public class MittelImage : MonoBehaviour, IPointerExitHandler, IPointerEnterHand
     {
         if (_enabled)
         {
-            Img.sprite = defaultSprite;
+           if (Img) Img.sprite = defaultSprite;
+            if (ImgSprite) ImgSprite.sprite = defaultSprite;
         }
     }
 
@@ -35,10 +43,12 @@ public class MittelImage : MonoBehaviour, IPointerExitHandler, IPointerEnterHand
     {
         if (_enabled)
         {
-            Img.sprite = HoverSprite;
+            if (Img) Img.sprite = HoverSprite;
+            if (ImgSprite) ImgSprite.sprite = HoverSprite;
             foreach (MittelImage mi in Other)
             {
-                mi.Img.sprite = mi.defaultSprite;
+                if (mi.Img) mi.Img.sprite = mi.defaultSprite;
+                else mi.ImgSprite.sprite = mi.defaultSprite;
             }
         }
     }
@@ -46,12 +56,18 @@ public class MittelImage : MonoBehaviour, IPointerExitHandler, IPointerEnterHand
     {
         if (_enabled)
         {
-            Logic.Instance.SelectVorwaesche(type);
+            if (isVorwaesche)
+            {
+                Logic.Instance.SelectVorwaesche(type);
+            }
+            else Logic.Instance.ClickWaschMittel(Waaeschetype);
             _enabled = false;
-            Img.sprite = SelectedSprite;
+            if (Img) Img.sprite = SelectedSprite;
+            if (ImgSprite) ImgSprite.sprite = SelectedSprite;
             foreach (MittelImage mi in Other)
             {
-                mi.Img.sprite = mi.GreySprite;
+                if (mi.Img) mi.Img.sprite = mi.GreySprite;
+                else mi.ImgSprite.sprite = mi.GreySprite;
                 mi._enabled = false;
             }
         }
