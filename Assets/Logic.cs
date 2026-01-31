@@ -187,6 +187,8 @@ public class Logic : MonoBehaviour
             DialogText.text = currentDialog.DialogParts[dayPartIndex].VariantDialogs[variantIndex].DialogPart[textPartIndex].text;
 
             Sprite emotion = currentCharacter.CharPortraitDefault;
+            DialogPortrait.sprite = currentCharacter.CharPortraitDefault;
+
             if (currentDialog.DialogParts[dayPartIndex].VariantDialogs[variantIndex].DialogPart[textPartIndex].animation == "sad") 
             {
                 DialogPortrait.sprite = currentCharacter.CharPortraitSad;
@@ -396,6 +398,7 @@ public class Logic : MonoBehaviour
     public void OpenAbgabe() 
     {
         currentState = State.abgabe;
+        WashingObject.SetActive(false);
         AbgabeObject.SetActive(true);
         AbgabeText.text = (badWaeschemittel || badVorwaesche || badTemperature) ? currentCharacter.BadWork : currentCharacter.GoodWork;
         AbgabeCharacterImage.sprite = (badWaeschemittel || badVorwaesche || badTemperature) ? currentCharacter.CharPortraitSad : currentCharacter.CharPortraitHappy;
@@ -416,6 +419,8 @@ public class Logic : MonoBehaviour
     }
     public void CloseAbgabe() 
     {
+        AbgabeObject.SetActive(false);
+
         badTemperature = false;
         badVorwaesche = false;
         badWaeschemittel = false;
