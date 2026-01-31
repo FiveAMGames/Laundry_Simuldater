@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3020ea3d401a75418e3c9e0b18e13aa, type: 3}
+  m_Name: Char1
+  m_EditorClassIdentifier: 
+  CharName: Char 1
+  CharPortraitDefault: {fileID: 0}
+  CharPortraitHappy: {fileID: 0}
+  CharPortraitSad: {fileID: 0}
+  CharPortraitFlirty: {fileID: 0}
+  AllDialogs:
+  - dayIndex: 0
+    AllDayDialogs:
+    - MinPointsForDialog: 0
+      DialogsVariant:
+      - PointsForTextPart: 0
+        TextPartID: 
+        text: 
+        TextPartResponses: []
