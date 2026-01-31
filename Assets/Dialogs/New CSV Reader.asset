@@ -236,5 +236,405 @@ MonoBehaviour:
       Text: (Dry) Maybe you shouldn't hunt. Successful vampires let their prey come
         to them.
       animation: default
+    - ID: char1_day2_part3_responce2
+      Text: (Bubbly) Oh gosh... Maybe you should let people come to you in the future
+        instead of running after them.
+      animation: default
+    - ID: char1_day2_part3_responce3
+      Text: (Fresh) Why do you need to go hunting anyway? Throw a party or something.
+        I'm sure people would come in flocks.
+      animation: default
+    - ID: char1_day2_part4_lowPoints
+      Text: Thank you for your... input. But let's focus on the task at hand. My
+        hunting cloak!
+      animation: default
+    - ID: char1_day2_part5_lowPoints
+      Text: There are some grass stains on it and sweat.
+      animation: sad
+    - ID: char1_day2_part6_lowPoints
+      Text: But it's not my sweat! That would be quite unbecoming of a Vampire Elder
+        of my standing.
+      animation: flirty
+    - ID: char1_day2_part6_lowPoints_responce1
+      Text: (Dry) The sweat of your victim, perhaps?
+      animation: default
+    - ID: char1_day2_part6_lowPoints_responce2
+      Text: (Bubbly) Awww, but it's not embarrassing to be a little sweaty. It happens
+        to all of us.
+      animation: default
+    - ID: char1_day2_part6_lowPoints_responce3
+      Text: (Fresh) Yeah, sure. That's also why your forehead is NOT covered in sweat.
+      animation: default
+    - ID: char1_day2_part7_lowPoints
+      Text: Just clean it please. That's what I'm paying you for, isn't it.
+      animation: default
+    - ID: char1_day2_part4_highPoints
+      Text: My sweet Mortal, that is indeed a splendid suggestion!
+      animation: flirty
+    - ID: char1_day2_part5_highPoints
+      Text: "I shall try it. A dinner party perhaps, or a soir\xE9e, or even... a
+        cheeky get-together."
+      animation: happy
+    - ID: char1_day2_part6_highPoints
+      Text: I'd invite YOU of course but alas, you need to clean my cloak. I apologize,
+        dear One.
+      animation: sad
+    - ID: char1_day2_part7_highPoints
+      Text: I think there is a grass stain from my tumble and some sweat.
+      animation: default
+    - ID: char1_day2_part8_highPoints
+      Text: Please don't tell anyone that I can actually sweat. That would break
+        my dark, unbeating heart.
+      animation: sad
+    - ID: char1_day2_part8_highPoints_responce1
+      Text: (Dry) I have no interest in gossiping.
+      animation: default
+    - ID: char1_day2_part8_highPoints_responce2
+      Text: (Bubbly) Aww, but why not? I think it would make you more approachable!
+      animation: default
+    - ID: char1_day2_part8_highPoints_responce3
+      Text: (Fresh) Yeah, I won't tell anyone. Probably...
+      animation: default
+    - ID: char1_day2_part9_highPoints
+      Text: I trust you won't tell anyone for you haven't given me any reason to
+        doubt you.
+      animation: happy
+    - ID: char1_day2_part10_highPoints
+      Text: I can't wait to see you again, my Dear.
+      animation: flirty
+    - ID: char2_day2_part1
+      Text: Ugh...
+      animation: sad
+    - ID: char2_day2_part1_responce1
+      Text: (Dry) Hello.
+      animation: default
+    - ID: char2_day2_part1_responce2
+      Text: (Bubbly) Oh, you look kinda sad. What's wrong?
+      animation: default
+    - ID: char2_day2_part1_responce3
+      Text: (Fresh) You look like shit. What happened?
+      animation: default
+    - ID: char2_day2_part2
+      Text: Being a henchwoman is just the fucking worst. I can deal with the dirt,
+        the insults, the violence, even the irregular working hours.
+      animation: default
+    - ID: char2_day2_part3
+      Text: But the evil schemes this woman comes up with... They're just dumb!
+      animation: sad
+    - ID: char2_day2_part3_responce1
+      Text: (Dry) Sounds like you should get rid of her. Or replace her.
+      animation: default
+    - ID: char2_day2_part3_responce2
+      Text: (Bubbly) Oh, that's horrible. I'm sorry to hear... You should switch
+        roles with her. That'll teach her.
+      animation: default
+    - ID: char2_day2_part3_responce3
+      Text: (Fresh) Usually henchwomen don't complain so much. Maybe you should become
+        a villain instead.
+      animation: default
+    - ID: char2_day2_part4_lowPoints
+      Text: Me replacing her? Tss, that's not how it works, soap-nerd.
+      animation: happy
+    - ID: char2_day2_part5_lowPoints
+      Text: Anyway, my Mistress' last ingenious plan was to punish the pizza-guy
+        next to our secret lair.
+      animation: happy
+    - ID: char2_day2_part6_lowPoints
+      Text: He discontinued her favorite pizza, so she kidnapped his baby.
+      animation: default
+    - ID: char2_day2_part7_lowPoints
+      Text: 'Now I have to watch that brat until the guy surrenders or dies or whatever.
+        Fucking GREAT idea, if you ask me. '
+      animation: sad
+    - ID: char2_day2_part7_lowPoints_responce1
+      Text: (Dry) I didn't ask. But that explains the stains.
+      animation: default
+    - ID: char2_day2_part7_lowPoints_responce2
+      Text: (Bubbly) Ah baby?! Omg that's sooo cute!
+      animation: default
+    - ID: char2_day2_part7_lowPoints_responce3
+      Text: (Fresh) So you have to take care of the baby now? Gross...
+      animation: default
+    - ID: char2_day2_part8_lowPoints
+      Text: It's fucking annyoing... I got drool and babyfood stains all over my
+        work-clothes.
+      animation: sad
+    - ID: char2_day2_part9_lowPoints
+      Text: But that's your problem now. Take care of it for me, okay sweetcheeks?
+      animation: happy
+    - ID: char2_day2_part4_highPoints
+      Text: You think I should become a Super Villain? That's insane... But maybe
+        you're on to something.
+      animation: flirty
+    - ID: char2_day2_part5_highPoints
+      Text: I sure as fuck would be better at making evil plans. You know what she
+        did?
+      animation: happy
+    - ID: char2_day2_part6_highPoints
+      Text: She was angry at the pizza-guy next door because he discontinued her
+        favorite pizza.
+      animation: default
+    - ID: char2_day2_part7_highPoints
+      Text: She could've blown up the shop, poisoned the marinara sauce, cut off
+        his fingers, anything...
+      animation: happy
+    - ID: char2_day2_part8_highPoints
+      Text: But she decided to kidnap his baby. And now I have to take care of it.
+      animation: default
+    - ID: char2_day2_part9_highPoints
+      Text: I mean, look at my clothes! They're full of baby food and drool!!!
+      animation: sad
+    - ID: char2_day2_part9_highPoints_responce1
+      Text: (Dry) I'll just clean the stains for you, I don't need a backstory.
+      animation: default
+    - ID: char2_day2_part9_highPoints_responce2
+      Text: (Bubbly) That's horrible! Your evil plans are a million times more wicked
+        than hers.
+      animation: default
+    - ID: char2_day2_part9_highPoints_responce3
+      Text: (Fresh) Well, that's a stupid fucking idea. But cutting off his fingers?
+        Come on...
+      animation: default
+    - ID: char2_day2_part10_highPoints
+      Text: Anyway, what's done is done. And I need you to get these stains out.
+      animation: default
+    - ID: char2_day2_part11_highPoints
+      Text: I'm glad I can count on you. You really are good at your job, soap-nerd.
+      animation: happy
+    - ID: char2_day2_part12_highPoints
+      Text: I got a thing for nerds, ya know. I like how they get nervous and shit.
+        It's cute.
+      animation: flirty
+    - ID: char1_day3_part1
+      Text: You are a proper genius, sweet Mortal. I did what you recommended.
+      animation: flirty
+    - ID: char1_day3_part2
+      Text: I hosted a lavishly decadent tupperware party. They practically BEGGED
+        me to grant them entrance.
+      animation: default
+    - ID: char1_day3_part3
+      Text: Like sheep to the slaughter. It was positively divine!
+      animation: happy
+    - ID: char1_day3_part4
+      Text: And I picked the plumpest one to join me for the after party... The blood
+        on my silken night-blouse is that was left of her.
+      animation: flirty
+    - ID: char1_day3_part4_responce1
+      Text: (Dry) Sounds like a successful night.
+      animation: default
+    - ID: char1_day3_part4_responce2
+      Text: (Bubbly) Oh, it sounds wonderful! I'm so sad I missed it. Especially
+        the after party.
+      animation: default
+    - ID: char1_day3_part4_responce3
+      Text: (Fresh) Your silken night-blouse? A tupperware party??? Come on dude,
+        where's the carnage?
+      animation: default
+    - ID: char1_day3_part5
+      Text: It was a titillating night... I haven't indulged in the pleasures of
+        flesh and blood in a long time.
+      animation: default
+    - ID: char1_day3_part6
+      Text: You'll discover stains of my favorite massage oils on there too. We were
+        utterly naughty before, well... I killed her.
+      animation: flirty
+    - ID: char1_day3_part6_responce1
+      Text: (Dry) I really, REALLY do not wish to hear more about your titillating
+        night.
+      animation: default
+    - ID: char1_day3_part6_responce2
+      Text: (Bubbly) Sounds like you had a lovely night. Her too, up until the end
+        at least.
+      animation: default
+    - ID: char1_day3_part6_responce3
+      Text: (Fresh) Yeah, that's more like it! Tell me more about the blood. Was
+        it gushing? Splattering?
+      animation: default
+    - ID: char1_day3_part7_lowPoints
+      Text: I don't want to bore you with any more details. Just know, the night
+        was a big success, thanks to you.
+      animation: default
+    - ID: char1_day3_part8_lowPoints
+      Text: Maybe I'll invite you to one of my parties one day.
+      animation: flirty
+    - ID: char1_day3_part8_lowPoints_responce1
+      Text: (Dry) I will decline.
+      animation: default
+    - ID: char1_day3_part8_lowPoints_responce2
+      Text: '(Bubbly) That would be amazing. I love parties, tupperware, and sexy
+        vampires! '
+      animation: default
+    - ID: char1_day3_part8_lowPoints_responce3
+      Text: (Fresh) I might show up, as long as it isn't a fucking tupperware party.
+      animation: default
+    - ID: char1_day3_part9_lowPoints
+      Text: We'll see what the future brings... Or at least I will. You humans have
+        preposterously short life-spans, right?
+      animation: happy
+    - ID: char1_day3_part10_lowPoints
+      Text: Especially if there are ravenous vampires lurking around. Vampires that
+        just got reminded of the sweet taste of blood.
+      animation: flirty
+    - ID: char1_day3_part7_highPoints
+      Text: I don't want to bore you with any more details. Just know, the night
+        was a big success. Thanks to you, my Dear.
+      animation: happy
+    - ID: char1_day3_part8_highPoints
+      Text: There was a one thing though that left a bad taste in my mouth after
+        all.
+      animation: sad
+    - ID: char1_day3_part9_highPoints
+      Text: I was missing you, my Dear. Your wit, your dauntlessness, your bewitching
+        eyes...
+      animation: default
+    - ID: char1_day3_part10_highPoints
+      Text: Thoughts of you follow me, wherever I go. Like the scent of detergent,
+        softly lingering in the ether.
+      animation: flirty
+    - ID: char1_day3_part10_highPoints_responce1
+      Text: (Dry) And just like ink on a white shirt, you will never get rid of me.
+      animation: default
+    - ID: char1_day3_part10_highPoints_responce2
+      Text: (Bubbly) Did you just compare me to... laundry detergent? That's not
+        how you romance a hottie like me.
+      animation: default
+    - ID: char1_day3_part10_highPoints_responce3
+      Text: (Fresh) You lost me with the detergent thing, sorry. Don't you wanna
+        talk about blood again?
+      animation: default
+    - ID: char1_day3_part11_highPoints
+      Text: That is the dauntlessness I was talking about. Who would dare to speak
+        to a Vampire Elder that way?
+      animation: happy
+    - ID: char1_day3_part12_highPoints
+      Text: I take great delight in your company and in being your customer. I am
+        certain that you will get rid of these oil and blood stains.
+      animation: flirty
+    - ID: char1_day3_part13_highPoints
+      Text: But I'm also plagued by dark thoughts, my Dear.
+      animation: sad
+    - ID: char1_day3_part14_highPoints
+      Text: To know that you, a human, will have to perish one day... Accepting that
+        feels almost insurmountable.
+      animation: sad
+    - ID: char1_day3_part15_highPoints
+      Text: But regardless, I will leave you to your work. I'm sure I will be greatly
+        satisfied as always, dear One.
+      animation: flirty
+    - ID: char2_day3_part1
+      Text: Yo, I did it! I got rid of that incompetent roach of a Super Villain.
+      animation: happy
+    - ID: char2_day3_part2
+      Text: I didn't kill her or anything. I just locked her in one of her torture-labyrinths.
+        Which I built FIY.
+      animation: sad
+    - ID: char2_day3_part3
+      Text: She'll never find her way out of it, ha! And I'm the new Villain in town.
+      animation: flirty
+    - ID: char2_day3_part4
+      Text: I got a Super Villain overall now too. I don't fuck with spandex.
+      animation: happy
+    - ID: char2_day3_part4_responce1
+      Text: (Dry) A bit uninspired but overalls are easier to clean anyway.
+      animation: default
+    - ID: char2_day3_part4_responce2
+      Text: (Bubbly) An overall? Really? Isn't that a bit boring? There are such
+        cool spandex suits out there...
+      animation: default
+    - ID: char2_day3_part4_responce3
+      Text: (Fresh) So what do you fuck with?
+      animation: default
+    - ID: char2_day3_part5
+      Text: Well, I... Wanted to talk about the stains on my overall, actually. Look,
+        there's a bunch of sweat and blood on it.
+      animation: default
+    - ID: char2_day3_part6
+      Text: I like the look of it but this thing reaks. I need it cleaned before
+        I execute my next evil plan. Which...
+      animation: happy
+    - ID: char2_day3_part6_responce1
+      Text: (Dry) I do not wish to hear your evil plan. I will not be an accessory
+        to a crime.
+      animation: default
+    - ID: char2_day3_part6_responce2
+      Text: (Bubbly) Oh, yes! Tell me your evil plan. I NEED to know!!!
+      animation: default
+    - ID: char2_day3_part6_responce3
+      Text: (Fresh) Oh sick, are you seriously gonna tell me your evil plan? Isn't
+        that usually a secret or something?
+      animation: default
+    - ID: char2_day3_part7_lowPoints
+      Text: You know what, nevermind. I'm not gonna tell you my plan.
+      animation: default
+    - ID: char2_day3_part8_lowPoints
+      Text: Which I definitely have. And that is super elaborate and like super dark
+        and twisted...
+      animation: sad
+    - ID: char2_day3_part8_lowPoints_responce1
+      Text: (Dry) Okay.
+      animation: default
+    - ID: char2_day3_part8_lowPoints_responce2
+      Text: (Bubbly) Aw man... You sure? I bet it IS really cool and elaborate and
+        twisted.
+      animation: default
+    - ID: char2_day3_part8_lowPoints_responce3
+      Text: (Fresh) That's so lame, dude. Why tease it then?
+      animation: default
+    - ID: char2_day3_part9_lowPoints
+      Text: Maybe it was my PLAN to have you guess. Ya know, another scheme from
+        the Blue Collared Menace.
+      animation: happy
+    - ID: char2_day3_part10_lowPoints
+      Text: Which is my Super Villain name btw. Blue... Collared... Menace...
+      animation: flirty
+    - ID: char2_day3_part11_lowPoints
+      Text: So get these stains out or my next plan might involve a certain laundry
+        shop.
+      animation: default
+    - ID: char2_day3_part7_highPoints
+      Text: Actually, I don't really have an evil plan yet.
+      animation: default
+    - ID: char2_day3_part8_highPoints
+      Text: Turns out, I'm a great henchwoman but a fucking horrible schemer.
+      animation: sad
+    - ID: char2_day3_part9_highPoints
+      Text: My old Mistress was terrible at it too, don't get me wrong. But it's
+        actually a lot harder than I thought.
+      animation: default
+    - ID: char2_day3_part10_highPoints
+      Text: That's also the reason I came to you. I feel like you're smart.
+      animation: happy
+    - ID: char2_day3_part11_highPoints
+      Text: And being a business-person or whatever is not easy. Not in this shit
+        economy.
+      animation: default
+    - ID: char2_day3_part12_highPoints
+      Text: Sooo, what I'm saying is... Do you maybe wanna work together sometime?
+      animation: flirty
+    - ID: char2_day3_part13_highPoints
+      Text: I know you got your laundry thing going and I still need you to get rid
+        of these blood and sweat stains.
+      animation: default
+    - ID: char2_day3_part14_highPoints
+      Text: But maybe you have time for a little side hustle?
+      animation: happy
+    - ID: char2_day3_part14_highPoints_responce1
+      Text: (Dry) Interesting proposition. Maybe I do have time for a side hustle
+        in crime.
+      animation: default
+    - ID: char2_day3_part14_highPoints_responce2
+      Text: (Bubbly) Working together with you sounds fun! But I'm more of a lover
+        than a fighter, I think.
+      animation: default
+    - ID: char2_day3_part14_highPoints_responce3
+      Text: (Fresh) So I'm supposed to be your henchling? Fuck no...
+      animation: default
+    - ID: char2_day3_part15_highPoints
+      Text: In any case, you helped me out last time. Saying I should replace my
+        Ex-Mistress and all.
+      animation: default
+    - ID: char2_day3_part16_highPoints
+      Text: For a nerd, you're kinda cool. And you smell like soap. I like that.
+      animation: happy
   char1: {fileID: 11400000, guid: bbf3a01f656b1a4429b4bfd7c1be7706, type: 2}
   char2: {fileID: 11400000, guid: b7f76945b20d817448832a1f5532fbd3, type: 2}

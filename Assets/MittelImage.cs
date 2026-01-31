@@ -56,19 +56,24 @@ public class MittelImage : MonoBehaviour, IPointerExitHandler, IPointerEnterHand
     {
         if (_enabled)
         {
+            bool donDisable = false;
             if (isVorwaesche)
             {
                 Logic.Instance.SelectVorwaesche(type);
+                donDisable = Logic.Instance.CheckIfAllVorwaescheAreSelected();
             }
             else Logic.Instance.ClickWaschMittel(Waaeschetype);
             _enabled = false;
             if (Img) Img.sprite = SelectedSprite;
             if (ImgSprite) ImgSprite.sprite = SelectedSprite;
-            foreach (MittelImage mi in Other)
+            if (!donDisable)
             {
-                if (mi.Img) mi.Img.sprite = mi.GreySprite;
-                else mi.ImgSprite.sprite = mi.GreySprite;
-                mi._enabled = false;
+                foreach (MittelImage mi in Other)
+                {
+                    if (mi.Img) mi.Img.sprite = mi.GreySprite;
+                    else mi.ImgSprite.sprite = mi.GreySprite;
+                    mi._enabled = false;
+                }
             }
         }
     }

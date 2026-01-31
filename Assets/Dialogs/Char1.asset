@@ -151,3 +151,118 @@ MonoBehaviour:
             again, dear Mortal.
           animation: flirty
           TextPartResponses: []
+  - dayIndex: 1
+    DialogParts:
+    - VariantDialogs:
+      - MinPointsForDialog: {x: 0, y: 100}
+        DialogPart:
+        - TextPartID: char1_day2_part1
+          text: 
+          animation: 
+          TextPartResponses:
+          - ResponceTextID: char1_day2_part1_responce1
+            text: 
+            ResponcePoints: 0
+          - ResponceTextID: char1_day2_part1_responce2
+            text: 
+            ResponcePoints: 1
+          - ResponceTextID: char1_day2_part1_responce3
+            text: 
+            ResponcePoints: -1
+        - TextPartID: char1_day2_part2
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char1_day2_part3
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char1_day2_part3_1
+          text: 
+          animation: 
+          TextPartResponses:
+          - ResponceTextID: char1_day2_part3_responce1
+            text: 
+            ResponcePoints: -1
+          - ResponceTextID: char1_day2_part3_responce2
+            text: 
+            ResponcePoints: 0
+          - ResponceTextID: char1_day2_part3_responce3
+            text: 
+            ResponcePoints: 1
+    - VariantDialogs:
+      - MinPointsForDialog: {x: 0, y: 4}
+        DialogPart:
+        - TextPartID: char1_day2_part4_lowPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char1_day2_part5_lowPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char1_day2_part6_lowPoints
+          text: 
+          animation: 
+          TextPartResponses:
+          - ResponceTextID: char1_day2_part6_lowPoints_responce1
+            text: 
+            ResponcePoints: 1
+          - ResponceTextID: char1_day2_part6_lowPoints_responce2
+            text: 
+            ResponcePoints: 0
+          - ResponceTextID: char1_day2_part6_lowPoints_responce3
+            text: 
+            ResponcePoints: -1
+        - TextPartID: char1_day2_part7_lowPoints
+          text: 
+          animation: 
+          TextPartResponses:
+          - ResponceTextID: char1_day2_part6_lowPoints_responce1
+            text: 
+            ResponcePoints: 1
+          - ResponceTextID: char1_day2_part6_lowPoints_responce2
+            text: 
+            ResponcePoints: 0
+          - ResponceTextID: char1_day2_part6_lowPoints_responce3
+            text: 
+            ResponcePoints: -1
+      - MinPointsForDialog: {x: 4, y: 100}
+        DialogPart:
+        - TextPartID: char1_day2_part4_highPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char1_day2_part5_highPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char1_day2_part6_highPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char1_day2_part7_highPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char1_day2_part8_highPoints
+          text: 
+          animation: 
+          TextPartResponses:
+          - ResponceTextID: char1_day2_part8_highPoints_responce1
+            text: 
+            ResponcePoints: 1
+          - ResponceTextID: char1_day2_part8_highPoints_responce2
+            text: 
+            ResponcePoints: -1
+          - ResponceTextID: char1_day2_part8_highPoints_responce3
+            text: 
+            ResponcePoints: 0
+        - TextPartID: char1_day2_part9_highPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char1_day2_part10_highPoints
+          text: 
+          animation: 
+          TextPartResponses: []
