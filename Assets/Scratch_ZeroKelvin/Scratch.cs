@@ -7,6 +7,11 @@ public class Scratch : MonoBehaviour
     public SpriteMask spriteMask;
     public Camera spriteCam;
 
+    private void OnEnable()
+    {
+        spriteMask.sprite = null;
+    }
+
     public void AssignScreenAsMask() 
     {
         int height = Screen.height;

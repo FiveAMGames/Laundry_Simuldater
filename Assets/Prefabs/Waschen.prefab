@@ -1190,15 +1190,15 @@ RectTransform:
   m_GameObject: {fileID: 4623173075744102314}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.58752, y: 0.58752, z: 0.58752}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4458368870471354970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6.457, y: 3.2}
-  m_SizeDelta: {x: 5, y: 5}
+  m_AnchoredPosition: {x: -6.47, y: 3.19}
+  m_SizeDelta: {x: 2.64, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &487380914119646446
 CanvasRenderer:
@@ -1228,7 +1228,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b3e47a3b542044fa2bc198e49f6ea9dd, type: 3}
+  m_Sprite: {fileID: 7459221684382513294, guid: b3e47a3b542044fa2bc198e49f6ea9dd, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1255,10 +1255,10 @@ MonoBehaviour:
   Waaeschetype: 1
   Img: {fileID: 8222113379102992347}
   ImgSprite: {fileID: 0}
-  defaultSprite: {fileID: 21300000, guid: b3e47a3b542044fa2bc198e49f6ea9dd, type: 3}
-  HoverSprite: {fileID: 21300000, guid: b3e47a3b542044fa2bc198e49f6ea9dd, type: 3}
-  SelectedSprite: {fileID: 21300000, guid: b3e47a3b542044fa2bc198e49f6ea9dd, type: 3}
-  GreySprite: {fileID: 21300000, guid: b3e47a3b542044fa2bc198e49f6ea9dd, type: 3}
+  defaultSprite: {fileID: 7459221684382513294, guid: b3e47a3b542044fa2bc198e49f6ea9dd, type: 3}
+  HoverSprite: {fileID: 4050688983052966540, guid: f19aa0b376327a6489fe565086c57ec9, type: 3}
+  SelectedSprite: {fileID: 4050688983052966540, guid: f19aa0b376327a6489fe565086c57ec9, type: 3}
+  GreySprite: {fileID: 1130464920088160494, guid: 2576785111d77694993924105367abf6, type: 3}
   Other:
   - {fileID: 4224240018922093173}
   - {fileID: 6059995233309471174}
@@ -1428,15 +1428,15 @@ RectTransform:
   m_GameObject: {fileID: 5059959924700740101}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.58752, y: 0.58752, z: 0.58752}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4458368870471354970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8.33, y: 3.2}
-  m_SizeDelta: {x: 5, y: 5}
+  m_AnchoredPosition: {x: -8.29, y: 3.19}
+  m_SizeDelta: {x: 2.88, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8125138325841586573
 CanvasRenderer:
@@ -1466,7 +1466,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 20a49ca5a22794419be38711521b6de0, type: 3}
+  m_Sprite: {fileID: 6783293337143292648, guid: 20a49ca5a22794419be38711521b6de0, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1493,10 +1493,10 @@ MonoBehaviour:
   Waaeschetype: 0
   Img: {fileID: 5134471309646713583}
   ImgSprite: {fileID: 0}
-  defaultSprite: {fileID: 21300000, guid: 20a49ca5a22794419be38711521b6de0, type: 3}
-  HoverSprite: {fileID: 21300000, guid: 20a49ca5a22794419be38711521b6de0, type: 3}
-  SelectedSprite: {fileID: 21300000, guid: 20a49ca5a22794419be38711521b6de0, type: 3}
-  GreySprite: {fileID: 21300000, guid: 20a49ca5a22794419be38711521b6de0, type: 3}
+  defaultSprite: {fileID: 6783293337143292648, guid: 20a49ca5a22794419be38711521b6de0, type: 3}
+  HoverSprite: {fileID: 8145408574668761909, guid: c302a5e2ecdc99442824fbaba9c5fa0e, type: 3}
+  SelectedSprite: {fileID: 8145408574668761909, guid: c302a5e2ecdc99442824fbaba9c5fa0e, type: 3}
+  GreySprite: {fileID: 2125250694235713096, guid: 61acd9adf04176246a6f31799ffb81cd, type: 3}
   Other:
   - {fileID: 6521213170609022977}
   - {fileID: 6059995233309471174}
@@ -1644,15 +1644,15 @@ RectTransform:
   m_GameObject: {fileID: 5622123429643548700}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.58752, y: 0.58752, z: 0.58752}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4458368870471354970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.5899997, y: 3.2}
-  m_SizeDelta: {x: 5, y: 5}
+  m_AnchoredPosition: {x: -4.64, y: 3.19}
+  m_SizeDelta: {x: 3.04, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8990790219459735181
 CanvasRenderer:
@@ -1682,7 +1682,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c46562684b5724d1c85beac8ff2bfc76, type: 3}
+  m_Sprite: {fileID: 4814561671515971011, guid: c46562684b5724d1c85beac8ff2bfc76, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -1709,10 +1709,10 @@ MonoBehaviour:
   Waaeschetype: 2
   Img: {fileID: 5080705387211858950}
   ImgSprite: {fileID: 0}
-  defaultSprite: {fileID: 21300000, guid: c46562684b5724d1c85beac8ff2bfc76, type: 3}
-  HoverSprite: {fileID: 21300000, guid: c46562684b5724d1c85beac8ff2bfc76, type: 3}
-  SelectedSprite: {fileID: 21300000, guid: c46562684b5724d1c85beac8ff2bfc76, type: 3}
-  GreySprite: {fileID: 21300000, guid: c46562684b5724d1c85beac8ff2bfc76, type: 3}
+  defaultSprite: {fileID: 4814561671515971011, guid: c46562684b5724d1c85beac8ff2bfc76, type: 3}
+  HoverSprite: {fileID: -8256421207292770687, guid: dc0172903c6e55a42b5b207ab8b20b0a, type: 3}
+  SelectedSprite: {fileID: -8256421207292770687, guid: dc0172903c6e55a42b5b207ab8b20b0a, type: 3}
+  GreySprite: {fileID: -9220804274467713990, guid: c1e58413361cb8d4d84ee4cb37e8966c, type: 3}
   Other:
   - {fileID: 4224240018922093173}
   - {fileID: 6521213170609022977}
@@ -2544,15 +2544,15 @@ RectTransform:
   m_GameObject: {fileID: 7060292480207038391}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.0033282, y: 1.0033282, z: 1.0033282}
+  m_LocalScale: {x: 0.5894754, y: 0.5894754, z: 0.5894754}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4458368870471354970}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.12, y: 3.16}
-  m_SizeDelta: {x: 5, y: 5}
+  m_AnchoredPosition: {x: -2.12, y: 2.88}
+  m_SizeDelta: {x: 4.43, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6530547904541268420
 CanvasRenderer:
@@ -2576,13 +2576,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5567d8535dac14fe69a1337156de3172, type: 3}
+  m_Sprite: {fileID: 5286179313167937541, guid: 5567d8535dac14fe69a1337156de3172, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -2609,10 +2609,10 @@ MonoBehaviour:
   Waaeschetype: 3
   Img: {fileID: 1607358448972011634}
   ImgSprite: {fileID: 0}
-  defaultSprite: {fileID: 21300000, guid: 5567d8535dac14fe69a1337156de3172, type: 3}
-  HoverSprite: {fileID: 21300000, guid: 5567d8535dac14fe69a1337156de3172, type: 3}
-  SelectedSprite: {fileID: 21300000, guid: 5567d8535dac14fe69a1337156de3172, type: 3}
-  GreySprite: {fileID: 21300000, guid: 5567d8535dac14fe69a1337156de3172, type: 3}
+  defaultSprite: {fileID: 5286179313167937541, guid: 5567d8535dac14fe69a1337156de3172, type: 3}
+  HoverSprite: {fileID: -7654581975303261018, guid: 7b75115c4f8191642adacc0aaad9cffe, type: 3}
+  SelectedSprite: {fileID: -7654581975303261018, guid: 7b75115c4f8191642adacc0aaad9cffe, type: 3}
+  GreySprite: {fileID: -1399025294437672765, guid: f10eb568c5aa0fa409bf287856e31bb3, type: 3}
   Other:
   - {fileID: 4224240018922093173}
   - {fileID: 6521213170609022977}

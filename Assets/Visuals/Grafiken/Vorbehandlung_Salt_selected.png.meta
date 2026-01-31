@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c46562684b5724d1c85beac8ff2bfc76
+guid: b175bcc9d76327247a79a5d72deea1f0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4814561671515971011
-    second: Waschmittel_Wolle_0
+      213: -4717821108237889202
+    second: Vorbehandlung_Salt_selected_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -84,7 +84,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Standalone
+    buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -110,20 +110,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -165,13 +152,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Waschmittel_Wolle_0
+      name: Vorbehandlung_Salt_selected_0
       rect:
         serializedVersion: 2
-        x: 161
-        y: 108
-        width: 182
-        height: 308
+        x: 136
+        y: 87
+        width: 249
+        height: 294
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,8 +167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3cd9be3e452c0d240800000000000000
-      internalID: 4814561671515971011
+      spriteID: e4114a9b2bee68eb0800000000000000
+      internalID: -4717821108237889202
       vertices: []
       indices: 
       edges: []
@@ -190,7 +177,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -200,7 +187,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Waschmittel_Wolle_0: 4814561671515971011
+      Vorbehandlung_Salt_selected_0: -4717821108237889202
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

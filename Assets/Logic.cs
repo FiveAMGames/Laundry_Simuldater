@@ -326,6 +326,7 @@ public class Logic : MonoBehaviour
 
     public void OpenWasching() 
     {
+        Debug.Log("open washing");
         currentState = State.wasching;
         ScratchingGameObject.SetActive(false);
         WashingObject.SetActive(true);
@@ -393,6 +394,7 @@ public class Logic : MonoBehaviour
         WashingDone.SetActive(false);
         WashingObject.SetActive(false);
         OpenAbgabe();
+        Debug.Log("close washing");
     }
 
     public void OpenAbgabe() 
