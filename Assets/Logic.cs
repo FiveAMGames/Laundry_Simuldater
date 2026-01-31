@@ -313,7 +313,6 @@ public class Logic : MonoBehaviour
             else char2Points++;
 
             Stain1BadWashingObject.gameObject.SetActive(false);
-            Stain2BadWashingObject.gameObject.SetActive(false);
             vorwaesche1selected = true;
         }
         else if (o.vorwaescheType2 == type) 
@@ -322,7 +321,6 @@ public class Logic : MonoBehaviour
             else char2Points++;
 
             Stain1BadWashingObject.gameObject.SetActive(false);
-            Stain2BadWashingObject.gameObject.SetActive(false);
             vorwaesche2selected = true;
         }
         else 
