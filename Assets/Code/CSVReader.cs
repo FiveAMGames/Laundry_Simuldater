@@ -54,7 +54,7 @@ public class CSVReader : ScriptableObject
             Texts newText = new Texts();
             string[,] lines = CSVReader.SplitCsvGrid(TextCsv.text);
 
-            for (int i = 0; i < 65; i++)  //look through the lines with new ID
+            for (int i = 0; i < 178; i++)  //look through the lines with new ID
             {
                 if (lines[0, i].Length == 0) break;
                 else

@@ -53,7 +53,8 @@ public class Logic : MonoBehaviour
         public Sprite Stain2;
         public Sprite Stain2Bad;
         public enum Vorwaeasche {acid, soap, salt }
-        public Vorwaeasche vorwaescheType;
+        public Vorwaeasche vorwaescheType1;
+        public Vorwaeasche vorwaescheType2;
 
         public enum Temperatur {thirty, forty, sixty}
         public Temperatur temperatureType;
@@ -76,10 +77,19 @@ public class Logic : MonoBehaviour
     public SpriteRenderer Stain2BadWashingObject;
 
     public GameObject ScratchMoreObject;
-    bool vorwaescheselected = false;
+    bool vorwaesche1selected = false;
+    bool vorwaesche2selected = false;
     bool badVorwaesche = false;
 
     public RenderTextureColorCheck TextureCheckScript;
+    public Image TemprtureTag;
+    public Image WolleSportTag;
+
+    public Sprite Degree30;
+    public Sprite Degree40;
+    public Sprite Degree60;
+    public Sprite Wolle;
+    public Sprite Sport;
 
 
     [Header("Washing")]
@@ -263,7 +273,8 @@ public class Logic : MonoBehaviour
         currentState = State.scratching;
         DialogObject.SetActive(false);
         ScratchingGameObject.SetActive(true);
-        vorwaescheselected = false;
+        vorwaesche1selected = false;
+        vorwaesche2selected = false;
         Stain1BadWashingObject.gameObject.SetActive(true);
         Stain2BadWashingObject.gameObject.SetActive(true);
 
@@ -281,31 +292,53 @@ public class Logic : MonoBehaviour
             Stain2BadWashingObject.sprite = o.Stain2Bad;
 
         }
+
+        TemprtureTag.sprite = Degree30;
+        if (o.temperatureType == Outfit.Temperatur.forty) TemprtureTag.sprite = Degree40;
+        if (o.temperatureType == Outfit.Temperatur.sixty) TemprtureTag.sprite = Degree60;
+
+        WolleSportTag.gameObject.SetActive(true);
+        if (o.waescheType == Outfit.Waesche.wolle) WolleSportTag.sprite = Wolle;
+        else if (o.waescheType == Outfit.Waesche.sport) WolleSportTag.sprite = Sport;
+        else if (o.waescheType == Outfit.Waesche.weiss || o.waescheType == Outfit.Waesche.farbe) WolleSportTag.gameObject.SetActive(false);
+
     }
 
     public void SelectVorwaesche(Outfit.Vorwaeasche type) 
     {
         Outfit o = currentCharacter.CharIndex == 0 ? char1Outfits[currentDay] : char2Outfits[currentDay];       
-        if (o.vorwaescheType == type) 
+        if (o.vorwaescheType1 == type) 
         {
             if (currentCharacter.CharIndex == 0) char1Points++;
             else char2Points++;
 
             Stain1BadWashingObject.gameObject.SetActive(false);
-            Stain2BadWashingObject.gameObject.SetActive(false);
+            vorwaesche1selected = true;
+        }
+        else if (o.vorwaescheType2 == type) 
+        {
+            if (currentCharacter.CharIndex == 0) char1Points++;
+            else char2Points++;
+
+            Stain1BadWashingObject.gameObject.SetActive(false);
+            vorwaesche2selected = true;
         }
         else 
         {
             if (currentCharacter.CharIndex == 0) char1Points--;
             else char2Points--;
-            badVorwaesche = true;
         }
-        vorwaescheselected = true;
+        if (o.Stain2 == null) vorwaesche2selected = true;
+    }
+
+    public bool CheckIfAllVorwaescheAreSelected() 
+    {
+        return (vorwaesche1selected == true && vorwaesche2selected == true);
     }
 
     public void ClickDoneVorwaesche() 
     {
-        if (!vorwaescheselected) 
+        if (!vorwaesche1selected || !vorwaesche2selected) 
         {
             if (currentCharacter.CharIndex == 0) char1Points--;
             else char2Points--;
@@ -428,11 +461,24 @@ public class Logic : MonoBehaviour
         badTemperature = false;
         badVorwaesche = false;
         badWaeschemittel = false;
-        vorwaescheselected = false;
+        vorwaesche1selected = false;
+        vorwaesche2selected = false;
 
         if (currentCharacter.CharIndex == 0) 
         {
             StartDialogue(char2);
+        }
+        else 
+        {
+            currentDay++;
+            if (currentDay < 3) 
+            {
+                StartDialogue(char1);
+            }
+            else 
+            {
+            //TODO OUTRO
+            }
         }
     }
 

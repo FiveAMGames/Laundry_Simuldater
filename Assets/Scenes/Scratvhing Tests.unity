@@ -162,6 +162,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &230089555 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7412250171299979848, guid: aa30ab0a25807424a84fbc0cf21948f0, type: 3}
+  m_PrefabInstance: {fileID: 4068884927210100121}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &564564071 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 1498546327050914190, guid: aa30ab0a25807424a84fbc0cf21948f0, type: 3}
@@ -205,6 +216,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7323126018118473340, guid: faa42efe5a02bd34690a75e35cce6063, type: 3}
   m_PrefabInstance: {fileID: 341388338232734839}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &768758478 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2057786521334126856, guid: aa30ab0a25807424a84fbc0cf21948f0, type: 3}
+  m_PrefabInstance: {fileID: 4068884927210100121}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &809856585 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 242599642945972745, guid: 09cd5dd4d504c9d42aad2fcdf5c2edc0, type: 3}
@@ -418,14 +440,60 @@ MonoBehaviour:
   char2: {fileID: 11400000, guid: b7f76945b20d817448832a1f5532fbd3, type: 2}
   char1Outfits:
   - Sprite: {fileID: 8888996141017380241, guid: 2148ff7172cbe473f8d010dde1ff4dee, type: 3}
-    Stain1: {fileID: 21300000, guid: 8a09cdaa4dc5b5246ad56042657645d4, type: 3}
-    Stain1Bad: {fileID: 21300000, guid: 8a09cdaa4dc5b5246ad56042657645d4, type: 3}
+    Stain1: {fileID: 600646084827346658, guid: ef3b015328b0e9f49b246cc9821f481f, type: 3}
+    Stain1Bad: {fileID: -4650111472305965856, guid: 467701ca14cfa2645ab7c0c964040d89, type: 3}
     Stain2: {fileID: 0}
     Stain2Bad: {fileID: 21300000, guid: 8a09cdaa4dc5b5246ad56042657645d4, type: 3}
-    vorwaescheType: 0
+    vorwaescheType1: 0
+    vorwaescheType2: 0
     temperatureType: 1
     waescheType: 3
-  char2Outfits: []
+  - Sprite: {fileID: 4636054231177400546, guid: 6ce0a248a9e7d9541a3fe7a4dd1c69a3, type: 3}
+    Stain1: {fileID: -7796676392676968424, guid: beaf7848d69703d439283981ed77aa12, type: 3}
+    Stain1Bad: {fileID: -6901211439356667311, guid: 3f63cc6597d3a5a4db15d7cc94978bf4, type: 3}
+    Stain2: {fileID: -1140320935568439685, guid: 47debc3e6f3805544b8db7a8be442db0, type: 3}
+    Stain2Bad: {fileID: 1682475948666908633, guid: e4d4b9b99ac7d0940ab1456bbd00481d, type: 3}
+    vorwaescheType1: 0
+    vorwaescheType2: 1
+    temperatureType: 2
+    waescheType: 0
+  - Sprite: {fileID: -1990355779710518117, guid: 00c90efd5a83cfc4f91bc75b0e29e309, type: 3}
+    Stain1: {fileID: -7796676392676968424, guid: beaf7848d69703d439283981ed77aa12, type: 3}
+    Stain1Bad: {fileID: -6901211439356667311, guid: 3f63cc6597d3a5a4db15d7cc94978bf4, type: 3}
+    Stain2: {fileID: -1140320935568439685, guid: 47debc3e6f3805544b8db7a8be442db0, type: 3}
+    Stain2Bad: {fileID: 1682475948666908633, guid: e4d4b9b99ac7d0940ab1456bbd00481d, type: 3}
+    vorwaescheType1: 1
+    vorwaescheType2: 2
+    temperatureType: 2
+    waescheType: 0
+  char2Outfits:
+  - Sprite: {fileID: 2032535046760159307, guid: 4ebd7f248f7ae4239aeed5c76fc95c10, type: 3}
+    Stain1: {fileID: 600646084827346658, guid: ef3b015328b0e9f49b246cc9821f481f, type: 3}
+    Stain1Bad: {fileID: 600646084827346658, guid: ef3b015328b0e9f49b246cc9821f481f, type: 3}
+    Stain2: {fileID: 0}
+    Stain2Bad: {fileID: 0}
+    vorwaescheType1: 0
+    vorwaescheType2: 0
+    temperatureType: 1
+    waescheType: 1
+  - Sprite: {fileID: 1587246072492043763, guid: 9d4906f8784bdb843a91e3f11345c619, type: 3}
+    Stain1: {fileID: -1140320935568439685, guid: 47debc3e6f3805544b8db7a8be442db0, type: 3}
+    Stain1Bad: {fileID: 1682475948666908633, guid: e4d4b9b99ac7d0940ab1456bbd00481d, type: 3}
+    Stain2: {fileID: 600646084827346658, guid: ef3b015328b0e9f49b246cc9821f481f, type: 3}
+    Stain2Bad: {fileID: -4650111472305965856, guid: 467701ca14cfa2645ab7c0c964040d89, type: 3}
+    vorwaescheType1: 0
+    vorwaescheType2: 2
+    temperatureType: 2
+    waescheType: 3
+  - Sprite: {fileID: 2980846874215865535, guid: 86cebb6e1c1764f4b8b9b4233654e7c1, type: 3}
+    Stain1: {fileID: -1140320935568439685, guid: 47debc3e6f3805544b8db7a8be442db0, type: 3}
+    Stain1Bad: {fileID: 1682475948666908633, guid: e4d4b9b99ac7d0940ab1456bbd00481d, type: 3}
+    Stain2: {fileID: 6237132591061308645, guid: 5b0c7d7b2687c3c46b72c7ba82500dcc, type: 3}
+    Stain2Bad: {fileID: 1957854046333164249, guid: d284097761eff75439c8f20685251efa, type: 3}
+    vorwaescheType1: 2
+    vorwaescheType2: 1
+    temperatureType: 1
+    waescheType: 0
   ScratchingGameObject: {fileID: 1844006061}
   OutfitImage: {fileID: 938088886545394129}
   Stain1Object: {fileID: 1792818234}
@@ -434,6 +502,13 @@ MonoBehaviour:
   Stain2BadWashingObject: {fileID: 1105134370}
   ScratchMoreObject: {fileID: 1756477346}
   TextureCheckScript: {fileID: 1051438775}
+  TemprtureTag: {fileID: 768758478}
+  WolleSportTag: {fileID: 230089555}
+  Degree30: {fileID: -7875634429582970097, guid: 98e88b69b48ca4ac1a66a236d7c5248a, type: 3}
+  Degree40: {fileID: -9126509742676956379, guid: 9b5cd0974d89f4e4389cfb00069ca38b, type: 3}
+  Degree60: {fileID: 7495875162413053418, guid: f8767fc668baa4f37b3214df8ed8944f, type: 3}
+  Wolle: {fileID: -6706463542986527316, guid: 4bff4b602a9884abbb32112fe4e23bdb, type: 3}
+  Sport: {fileID: 3543949998321506985, guid: d5ff7169d92564092b9ec30ebeca0e58, type: 3}
   WashingObject: {fileID: 840402953}
   MashineOpenedDoor: {fileID: 912605048}
   MashineClosedDoor: {fileID: 135649999}
@@ -1102,6 +1177,34 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1051438777}
+    - target: {fileID: 6919936788837058349, guid: aa30ab0a25807424a84fbc0cf21948f0, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6919936788837058349, guid: aa30ab0a25807424a84fbc0cf21948f0, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6919936788837058349, guid: aa30ab0a25807424a84fbc0cf21948f0, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7854479141107220110, guid: aa30ab0a25807424a84fbc0cf21948f0, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7854479141107220110, guid: aa30ab0a25807424a84fbc0cf21948f0, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7854479141107220110, guid: aa30ab0a25807424a84fbc0cf21948f0, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8813727236201296613, guid: aa30ab0a25807424a84fbc0cf21948f0, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8863099800834468062, guid: aa30ab0a25807424a84fbc0cf21948f0, type: 3}
       propertyPath: mainCam
       value: 
@@ -1306,7 +1409,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9161857680470542713, guid: 07998386c9c6fc440a1d8659313972e6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
