@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Char1
   m_EditorClassIdentifier: 
   CharName: Char 1
+  CharIndex: 0
   CharPortraitDefault: {fileID: 0}
   CharPortraitHappy: {fileID: 0}
   CharPortraitSad: {fileID: 0}
@@ -20,9 +21,15 @@ MonoBehaviour:
   AllDialogs:
   - dayIndex: 0
     AllDayDialogs:
-    - MinPointsForDialog: 0
-      DialogsVariant:
+    - MinPointsForDialog: {x: 0, y: 0}
+      DialogPart:
       - PointsForTextPart: 0
-        TextPartID: 
+        TextPartID: char1_day1_part1
         text: 
-        TextPartResponses: []
+        TextPartResponses:
+        - ResponceTextID: char1_day1_part1_responce1
+          text: 
+          ResponcePoints: 0
+        - ResponceTextID: char1_day1_part1_responce2
+          text: 
+          ResponcePoints: 0

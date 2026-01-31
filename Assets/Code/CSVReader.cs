@@ -41,6 +41,8 @@ public class CSVReader : ScriptableObject
     public TextAsset TextCsv;
     public Texts AllTexts;
 
+    public CharacterDialog char1;
+    public CharacterDialog char2;
 
     [ExecuteInEditMode]
     [ContextMenu("Set Up Texts")]
@@ -51,24 +53,61 @@ public class CSVReader : ScriptableObject
             Texts newText = new Texts();
             string[,] lines = CSVReader.SplitCsvGrid(TextCsv.text);
 
-            for (int i = 0; i < lines.GetLength(1); i++)  //look through the lines with new ID
+            for (int i = 0; i < 65; i++)  //look through the lines with new ID
             {
                 if (lines[0, i].Length == 0) break;
+                else
+                {
+                    string ID = lines[0, i];
+                    string text = lines[2, i];
 
-                string ID = lines[0, i];
-                string text = lines[1, i];
+                    Texts.SmallText smalltext = new Texts.SmallText(ID, text);
+                    newText.SmallTexts.Add(smalltext);
+                }           
+            }
+            AllTexts = newText;
+        PopulateCharDialogs(char1);
 
-                Texts.SmallText smalltext = new Texts.SmallText(ID, text);
-                newText.SmallTexts.Add(smalltext);
 
-            }                 
 #if UNITY_EDITOR
         EditorUtility.SetDirty(this);
 #endif
         Debug.Log("Texts are set");
     }
 
-
+    
+    public void PopulateCharDialogs(CharacterDialog _char) 
+    {
+        for (int i = 0; i < _char.AllDialogs.Count; i++)
+        {
+            for (int j = 0; j < _char.AllDialogs[i].AllDayDialogs.Count; j++) 
+            {
+                for (int m = 0; m < _char.AllDialogs[i].AllDayDialogs[j].DialogPart.Count; m++) 
+                {
+                    for (int k = 0; k < _char.AllDialogs[i].AllDayDialogs[j].DialogPart[m].TextPartResponses.Count; k++) 
+                    {
+                        foreach (Texts.SmallText t in AllTexts.SmallTexts)
+                        {
+                            if (t.ID == _char.AllDialogs[i].AllDayDialogs[j].DialogPart[m].TextPartResponses[k].ResponceTextID)
+                            {
+                                _char.AllDialogs[i].AllDayDialogs[j].DialogPart[m].TextPartResponses[k].SetText(t.Text);
+                                break;
+                            }
+                        }
+                    }
+                    foreach(Texts.SmallText t in AllTexts.SmallTexts) 
+                    {
+                        if (t.ID == _char.AllDialogs[i].AllDayDialogs[j].DialogPart[m].TextPartID) 
+                        {
+                            _char.AllDialogs[i].AllDayDialogs[j].DialogPart[m].SetText(t.Text);
+                            break;
+                        }                    
+                    }               
+                }            
+            }
+        }
+        EditorUtility.SetDirty(this);
+    }
 
 
     // splits a CSV file into a 2D string array
