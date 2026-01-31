@@ -18,7 +18,7 @@ public class RenderTextureColorCheck : MonoBehaviour
         }
     }
 
-    private void SamplePanorama()
+    public bool SamplePanorama()
     {
         RenderTexture rt = panoramaRT;
         var tex = new Texture2D(rt.width, rt.height, TextureFormat.RGB24, false);
@@ -37,6 +37,7 @@ public class RenderTextureColorCheck : MonoBehaviour
             }
             else invalidColors.Add(c);
         }
-        Debug.Log("valid " + goodColors.Count + " invalid " + invalidColors.Count);
+        Debug.Log("percent scrathing " + (float)invalidColors.Count / (float)colors.Length);
+        return ((float)invalidColors.Count / (float)colors.Length) < 0.005f;
     }
 }

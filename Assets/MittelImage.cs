@@ -6,8 +6,7 @@ using System.Collections.Generic;
 
 public class MittelImage : MonoBehaviour, IPointerExitHandler, IPointerEnterHandler, IPointerDownHandler
 {
-    public enum Type{ acid, soap, salt}
-    public Type type;
+    public Logic.Outfit.Vorwaeasche type;
     public Image Img;
 
     public Sprite defaultSprite;
@@ -47,6 +46,7 @@ public class MittelImage : MonoBehaviour, IPointerExitHandler, IPointerEnterHand
     {
         if (_enabled)
         {
+            Logic.Instance.SelectVorwaesche(type);
             _enabled = false;
             Img.sprite = SelectedSprite;
             foreach (MittelImage mi in Other)
