@@ -402,6 +402,8 @@ public class Logic : MonoBehaviour
         currentState = State.abgabe;
         WashingObject.SetActive(false);
         AbgabeObject.SetActive(true);
+        WashingDone.SetActive(false);
+
         AbgabeText.text = (badWaeschemittel || badVorwaesche || badTemperature) ? currentCharacter.BadWork : currentCharacter.GoodWork;
         AbgabeCharacterImage.sprite = (badWaeschemittel || badVorwaesche || badTemperature) ? currentCharacter.CharPortraitSad : currentCharacter.CharPortraitHappy;
 
