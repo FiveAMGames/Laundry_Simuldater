@@ -13,10 +13,14 @@ public class Logic : MonoBehaviour
     int char1Points = 0;
     int char2Points = 0;
 
+    public GameObject Intro;
+
     [Header("Dialog stuff")]
     public GameObject DialogObject;
     public Image DialogPortrait;
     public TextMeshProUGUI DialogText;
+
+    public GameObject ButtonNext;
 
     [System.Serializable]
     public class DialogResponse 
@@ -27,7 +31,7 @@ public class Logic : MonoBehaviour
     }
     public List<DialogResponse> Responses;
 
-    int dialogueIndex = 0;
+    int dayPartIndex = 0;
     int variantIndex = 0;
     int textPartIndex = 0;
 
@@ -36,6 +40,11 @@ public class Logic : MonoBehaviour
     public CharacterDialog.DayDialogs currentDialog;
     public CharacterDialog currentCharacter;
 
+    public CharacterDialog char1;
+    public CharacterDialog char2;
+
+    [Header("Scratching")]
+    public GameObject ScratchingGameObject;
 
     [ContextMenu("Test")]
     public void Test() 
@@ -43,52 +52,144 @@ public class Logic : MonoBehaviour
         StartDialogue(currentCharacter);
     }
 
+    private void Start()
+    {
+        currentState = State.menu;
+        Intro.SetActive(true);
+        DialogObject.SetActive(false);
+        ScratchingGameObject.SetActive(false);
+        
+    }
+
+    private void Update()
+    {
+        if (currentState == State.menu && Input.anyKeyDown) 
+        {
+            StartDialogue(char1);
+        }
+    }
+
 
     public void StartDialogue(CharacterDialog character) 
     {
         currentState = State.dialogue;
 
-        dialogueIndex = 0;
+        Intro.SetActive(false);
+        DialogObject.SetActive(true);
+
+        dayPartIndex = 0;
         variantIndex = 0;
         textPartIndex = 0;
         hasResponses = false;
         
-        foreach (DialogResponse dr in Responses)
-        {
-            dr.ResponseGameObject.SetActive(false);
-        }
+        
         currentCharacter = character;
         currentDialog = character.AllDialogs[currentDay];
         int points = character.CharIndex == 0 ? char1Points : char2Points;
 
-        for (int i = 0; i < currentDialog.AllDayDialogs.Count; i++) 
+        for (int i = 0; i < currentDialog.DialogParts[dayPartIndex].VariantDialogs.Count; i++) 
         {
-            if (currentDialog.AllDayDialogs[i].MinPointsForDialog.x >= points && currentDialog.AllDayDialogs[i].MinPointsForDialog.y <= points)
+            if (currentDialog.DialogParts[dayPartIndex].VariantDialogs[i].MinPointsForDialog.x >= points &&
+                currentDialog.DialogParts[dayPartIndex].VariantDialogs[i].MinPointsForDialog.y < points)
             {
                 variantIndex = i;
                 break;
             }
         }
-
-
-        DialogText.text = currentDialog.AllDayDialogs[dialogueIndex].DialogPart[variantIndex].text;
-
-        if (currentDialog.AllDayDialogs[dialogueIndex].DialogPart[variantIndex].TextPartResponses.Count > 0) 
-        {
-            hasResponses = true;
-            SetUpResponses();
-        }
-
+        UpdateDialogue();
     }
 
     void SetUpResponses() 
     {
-        for (int i = 0; i < currentDialog.AllDayDialogs[dialogueIndex].DialogPart[variantIndex].TextPartResponses.Count; i++) 
+        ButtonNext.SetActive(false);
+        for (int i = 0; i < currentDialog.DialogParts[dayPartIndex].VariantDialogs[variantIndex].DialogPart[textPartIndex].TextPartResponses.Count; i++) 
         {
             Responses[i].ResponseGameObject.SetActive(true);
-            Responses[i].ResponseText.text = currentDialog.AllDayDialogs[dialogueIndex].DialogPart[variantIndex].TextPartResponses[i].text;
-            Responses[i].points = currentDialog.AllDayDialogs[dialogueIndex].DialogPart[variantIndex].TextPartResponses[i].ResponcePoints;
+            Responses[i].ResponseText.text = currentDialog.DialogParts[dayPartIndex].VariantDialogs[variantIndex].DialogPart[textPartIndex].TextPartResponses[i].text;
+            Responses[i].points = currentDialog.DialogParts[dayPartIndex].VariantDialogs[variantIndex].DialogPart[textPartIndex].TextPartResponses[i].ResponcePoints;
         }
         
+    }
+
+    public void UpdateDialogue() 
+    {
+        ButtonNext.SetActive(true);
+        foreach (DialogResponse dr in Responses)
+        {
+            dr.ResponseGameObject.SetActive(false);
+            dr.points = 0;
+        }
+        Debug.Log(dayPartIndex + " " + variantIndex + " " + textPartIndex);
+        if (currentDialog.DialogParts[dayPartIndex].VariantDialogs[variantIndex].DialogPart.Count > textPartIndex)
+        {
+
+            DialogText.text = currentDialog.DialogParts[dayPartIndex].VariantDialogs[variantIndex].DialogPart[textPartIndex].text;
+
+            if (currentDialog.DialogParts[dayPartIndex].VariantDialogs[variantIndex].DialogPart[textPartIndex].TextPartResponses.Count > 0)
+            {
+                hasResponses = true;
+                SetUpResponses();
+            }
+        }
+        else 
+        {
+            textPartIndex = 0;
+            dayPartIndex++;
+            if (currentDialog.DialogParts.Count > dayPartIndex) 
+            {
+                int points = currentCharacter.CharIndex == 0 ? char1Points : char2Points;
+                Debug.Log("points are " + points);
+                for (int i = 0; i < currentDialog.DialogParts[dayPartIndex].VariantDialogs.Count; i++)
+                {
+                    
+                    if (currentDialog.DialogParts[dayPartIndex].VariantDialogs[i].MinPointsForDialog.x <= points &&
+                        currentDialog.DialogParts[dayPartIndex].VariantDialogs[i].MinPointsForDialog.y > points)
+                    {
+                        variantIndex = i;
+                        Debug.Log(currentDialog.DialogParts[dayPartIndex].VariantDialogs[i].MinPointsForDialog);
+
+                    }
+                    
+                }
+                UpdateDialogue();
+            }
+            else 
+            {
+                OpenScratching();
+            }
+        }
+    }
+
+
+    public void DialogClickNext() 
+    {
+        if (!hasResponses) 
+        {
+            textPartIndex++;
+            UpdateDialogue();
+        }        
+    }
+
+    public void ClickOnResponse(int index) 
+    {
+        if (hasResponses) 
+        {
+            bool char1 = currentCharacter.CharIndex == 0;
+            if (char1) char1Points += Responses[index].points;
+            else char2Points += Responses[index].points;
+
+            hasResponses = false;
+            textPartIndex++;
+            UpdateDialogue();
+        }
+    
+    }
+
+    public void OpenScratching() 
+    {
+        currentState = State.scratching;
+        DialogObject.SetActive(false);
+        ScratchingGameObject.SetActive(true);
+    
     }
 }

@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1ce7e6b2aaa1fb408b54e6f771d8d4f, type: 3}
   m_Name: New CSV Reader
   m_EditorClassIdentifier: 
-  TextCsv: {fileID: 4900000, guid: 1fa8153937d04ec4682923ef9be6ea36, type: 3}
+  TextCsv: {fileID: 4900000, guid: 02bbaa12a92db3c4a974ae105d095e25, type: 3}
   AllTexts:
     SmallTexts:
     - ID: dialogue ID
       Text: Text
     - ID: char1_day1_part1
-      Text: Greetings, mortal. My servants tell me I can get my attire cleaned in
+      Text: Greetings, Mortal. My servants tell me I can get my attire cleaned in
         this esteemed... establishment?
     - ID: char1_day1_part1_responce1
       Text: (Dry) Correct, I clean clothes.
@@ -39,6 +39,137 @@ MonoBehaviour:
       Text: (Bubbly) Oh, that's a big one! The other guy didn't live to tell the
         tale, I imagine. Good on you!
     - ID: char1_day1_part3_responce3
-      Text: (Fresh) Blood? That's looks more like wine to me, Pookie.
+      Text: (Fresh) Blood? That looks more like wine to me, Pookie.
+    - ID: char1_day1_part4_lowPoints
+      Text: It's a big stain and I can assure you it's blood. Blood indeed.
+    - ID: char1_day1_part5_lowPoints
+      Text: And wine at all...
+    - ID: char1_day1_part6_lowPoints
+      Text: I should know, I'm a Vampire Elder. Baronex Duskmantle of Midnight's
+        Keep to be exact.
+    - ID: char1_day1_part6_lowPoints_responce1
+      Text: (Dry) It smells like wine, it looks like wine. I will treat it like wine.
+    - ID: char1_day1_part6_lowPoints_responce2
+      Text: (Bubbly) But it smells like... Oooh, got it. Of course dear Baronex,
+        I will totally get rid of this BLOOD stain for you!
+    - ID: char1_day1_part6_lowPoints_responce3
+      Text: (Fresh) Whatever the stain, I'll make sure to get that shirt back on
+        you asap.
+    - ID: char1_day1_part7_lowPoints
+      Text: I shall return to collect the garment tomorrow. I hope your services
+        will please my sophisticated taste.
+    - ID: char1_day1_part4_highPoints
+      Text: It's a big stain and I can assure you it's blood. Blood indeed.
+    - ID: char1_day1_part5_highPoints
+      Text: My victim lost a lot of when I fed on them last night. I'm a Vampire
+        Elder, you see.
+    - ID: char1_day1_part6_highPoints
+      Text: "Baronex Duskmantle of Midnight's Keep to be exact. Enchant\xE9..."
+    - ID: char1_day1_part7_highPoints
+      Text: Pray do tell, have you ever worked for a Vampire before? Most common
+        folk find us most... frightning.
+    - ID: char1_day1_part7_highPoints_responce1
+      Text: (Dry) Most my clientel is dangerous. I am confident my excellent services
+        will keep me in business. And alive.
+    - ID: char1_day1_part7_highPoints_responce2
+      Text: (Bubbly) A real Vampire Elder? I'm positively thrilled! But don't worry.
+        I'm not scared. Most my clients are kinda dangerous.
+    - ID: char1_day1_part7_highPoints_responce3
+      Text: (Fresh) I got many dangerous customers but none look as sharp as you.
+        The bloodlust suits you well.
+    - ID: char1_day1_part8_highPoints
+      Text: You are a gutsy one! Living here amongst such murderous creatures can't
+        be easy.
+    - ID: char1_day1_part9_highPoints
+      Text: Sometimes even a Vampire can feel discouraged around such marvelous villainry.
+    - ID: char1_day1_part10_highPoints
+      Text: Especially if this theoretical Vampire was inept at hunting prey...
+    - ID: char1_day1_part11_highPoints
+      Text: Which is not me, of course! I'm an exceptional hunterex! Confirmed by
+        the blood stains on my shirt which are NOT wine at all.
+    - ID: char1_day1_part12_highPoints
+      Text: I'm looking forward to collect my garment tomorrow. And to see you again,
+        dear Mortal.
+    - ID: char2_day1_part1
+      Text: Hey, you the one doin' laundry, right?
+    - ID: char2_day1_part2
+      Text: I got some oil on this work-overall. Can you get it out?
+    - ID: char2_day1_part2_responce1
+      Text: (Dry) Certainly. Looks like motoroil. Shouldn't be a problem.
+    - ID: char2_day1_part2_responce2
+      Text: (Bubbly) Sticky stuff, but I can get it out. I don't want a cutie like
+        you running around with motoroil stains.
+    - ID: char2_day1_part2_responce3
+      Text: (Fresh) Motoroil, synthetic blend. Stubborn, but I'll get it out.
+    - ID: char2_day1_part3
+      Text: Yeah, I needed to fix somethin' on my Mistresse's orbital laser.
+    - ID: char2_day1_part4
+      Text: Got quite dirty in the process.
+    - ID: char2_day1_part5
+      Text: 'You know how Super Villains are: The bigger the laser, the better.'
+    - ID: char2_day1_part5_responce1
+      Text: (Dry) Super Villains. Most of them are just rich brats, not understanding
+        the intricacies of crime.
+    - ID: char2_day1_part5_responce2
+      Text: (Bubbly) Gotta love a big laser! And a dirty henchwoman.
+    - ID: char2_day1_part5_responce3
+      Text: (Fresh) Well, you need a big laser to scare the shit out of these plebs.
+    - ID: char2_day1_part6_lowPoints
+      Text: 'Yeah, whatever... I need this overall cleaned. '
+    - ID: char2_day1_part7_lowPoints
+      Text: If you don't suck, I'll come back. I'm sure my Mistress will have me
+        crawl inside some machinery again soon.
+    - ID: char2_day1_part8_lowPoints
+      Text: She is quite...
+    - ID: char2_day1_part8_lowPoints_responce1
+      Text: (Dry) ...
+    - ID: char2_day1_part8_lowPoints_responce2
+      Text: (Bubbly) Cool?
+    - ID: char2_day1_part8_lowPoints_responce3
+      Text: (Fresh) Incompetent? Annoying?
+    - ID: char2_day1_part9_lowPoints
+      Text: Demanding.
+    - ID: char2_day1_part10_lowPoints
+      Text: Anyway, I'm out. Do your job well and I'll return with more shit to clean.
+    - ID: char2_day1_part6_highPoints
+      Text: You sound like you know what you're talking about. I respect that.
+    - ID: char2_day1_part7_highPoints
+      Text: These higher-ups act like they are the shit but they don't know that
+        people like us make the world go round.
+    - ID: char2_day1_part8_highPoints
+      Text: I'll be a good customer for you, ya know. My Mistress has me climb in
+        all sort of shit.
+    - ID: char2_day1_part9_highPoints
+      Text: So I have a lot of laundry that needs taking care of.
+    - ID: char2_day1_part9_highPoints_responce1
+      Text: (Dry) I always take care of my customers.
+    - ID: char2_day1_part9_highPoints_responce2
+      Text: (Bubbly) I'd love to take care of you- ehm... Of your clothing.
+    - ID: char2_day1_part9_highPoints_responce3
+      Text: (Fresh) Just don't bring in anything too nasty. I don't do contagious
+        stuff.
+    - ID: char2_day1_part10_highPoints
+      Text: Right. Just get that oil stain out and I'll be happy as a clam.
+    - ID: char2_day1_part11_highPoints
+      Text: And trust me, you don't want to see me unhappy.
+    - ID: char1_day2_part1
+      Text: Gree...tings. Mo- mo... ortal...
+    - ID: char1_day2_part1_responce1
+      Text: (Dry) Hello.
+    - ID: char1_day2_part1_responce2
+      Text: (Bubbly) Are you okay? Do you need a glass of water? Or uhm, a goblet
+        of blood?
+    - ID: char1_day2_part1_responce3
+      Text: (Fresh) Damn, what got you lookin' all sweaty?
+    - ID: char1_day2_part2
+      Text: I ju... I just went for a nice evening... stroll.
+    - ID: char1_day2_part3
+      Text: A stroll that included vigurous running and jumping. And a very small
+        tumble on my part.
+    - ID: char1_day2_part3
+      Text: If you could take care of my hunting cloak, I would be most oblidged.
+    - ID: char1_day2_part3_responce1
+      Text: (Dry) Maybe you shouldn't hunt. Successful vampires let their prey come
+        to them.
   char1: {fileID: 11400000, guid: bbf3a01f656b1a4429b4bfd7c1be7706, type: 2}
   char2: {fileID: 0}

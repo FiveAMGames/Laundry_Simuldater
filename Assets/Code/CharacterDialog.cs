@@ -27,7 +27,6 @@ public class CharacterDialog : ScriptableObject
     [System.Serializable]
     public class TextParts
     {
-        public int PointsForTextPart;
         public string TextPartID;
         public string text;
         public List<Response> TextPartResponses;
@@ -45,10 +44,17 @@ public class CharacterDialog : ScriptableObject
     }
 
     [System.Serializable]
+    public class DayDialogParts
+    {        
+        public List<Dialogs> VariantDialogs;
+    }
+
+    [System.Serializable]
     public class DayDialogs
     {
         public int dayIndex;
-        public List<Dialogs> AllDayDialogs;
+        public List<DayDialogParts> DialogParts;
+        
     }
     [SerializeField]
     public List<DayDialogs> AllDialogs;
