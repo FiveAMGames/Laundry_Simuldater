@@ -61,7 +61,7 @@ char1_day2_part1_responce2,default,"(Bubbly) Are you okay? Do you need a glass o
 char1_day2_part1_responce3,default,"(Fresh) Damn, what got you lookin' all sweaty?",-
 char1_day2_part2,default,I ju... I just went for a nice evening... stroll.,
 char1_day2_part3,sad,A stroll that included vigorous running and jumping. And a very small tumble on my part.,
-char1_day2_part3,happy,"If you could take care of my hunting cloak, I would be most obliged.",
+char1_day2_part3_1,happy,"If you could take care of my hunting cloak, I would be most obliged.",
 char1_day2_part3_responce1,default,(Dry) Maybe you shouldn't hunt. Successful vampires let their prey come to them.,-
 char1_day2_part3_responce2,default,(Bubbly) Oh gosh... Maybe you should let people come to you in the future instead of running after them.,
 char1_day2_part3_responce3,default,(Fresh) Why do you need to go hunting anyway? Throw a party or something. I'm sure people would come in flocks.,+

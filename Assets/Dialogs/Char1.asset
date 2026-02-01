@@ -18,8 +18,8 @@ MonoBehaviour:
   CharPortraitHappy: {fileID: 21300000, guid: bd56b9f129c20c1478503fd7af2e001b, type: 3}
   CharPortraitSad: {fileID: 21300000, guid: eaaa97d24254a004da8c872928ddd41e, type: 3}
   CharPortraitFlirty: {fileID: 21300000, guid: 29d35bf810421de409150cb541af3f77, type: 3}
-  GoodWork: Good job!
-  BadWork: Bad Job!
+  GoodWork: Positively divine! You did a wonderful job, my Dear!
+  BadWork: Sloppy handywork, my Dear. Let's hope you'll do better next time.
   AllDialogs:
   - dayIndex: 0
     DialogParts:
@@ -157,112 +157,249 @@ MonoBehaviour:
       - MinPointsForDialog: {x: 0, y: 100}
         DialogPart:
         - TextPartID: char1_day2_part1
-          text: 
-          animation: 
+          text: Gree...tings. Mo- mo... ortal...
+          animation: sad
           TextPartResponses:
           - ResponceTextID: char1_day2_part1_responce1
-            text: 
+            text: (Dry) Hello.
             ResponcePoints: 0
           - ResponceTextID: char1_day2_part1_responce2
-            text: 
+            text: (Bubbly) Are you okay? Do you need a glass of water? Or uhm, a
+              goblet of blood?
             ResponcePoints: 1
           - ResponceTextID: char1_day2_part1_responce3
-            text: 
+            text: (Fresh) Damn, what got you lookin' all sweaty?
             ResponcePoints: -1
         - TextPartID: char1_day2_part2
-          text: 
-          animation: 
+          text: I ju... I just went for a nice evening... stroll.
+          animation: default
           TextPartResponses: []
         - TextPartID: char1_day2_part3
-          text: 
-          animation: 
+          text: A stroll that included vigorous running and jumping. And a very small
+            tumble on my part.
+          animation: sad
           TextPartResponses: []
         - TextPartID: char1_day2_part3_1
           text: 
           animation: 
           TextPartResponses:
           - ResponceTextID: char1_day2_part3_responce1
-            text: 
+            text: (Dry) Maybe you shouldn't hunt. Successful vampires let their prey
+              come to them.
             ResponcePoints: -1
           - ResponceTextID: char1_day2_part3_responce2
-            text: 
+            text: (Bubbly) Oh gosh... Maybe you should let people come to you in
+              the future instead of running after them.
             ResponcePoints: 0
           - ResponceTextID: char1_day2_part3_responce3
-            text: 
+            text: (Fresh) Why do you need to go hunting anyway? Throw a party or
+              something. I'm sure people would come in flocks.
             ResponcePoints: 1
     - VariantDialogs:
       - MinPointsForDialog: {x: 0, y: 4}
         DialogPart:
         - TextPartID: char1_day2_part4_lowPoints
-          text: 
-          animation: 
+          text: Thank you for your... input. But let's focus on the task at hand.
+            My hunting cloak!
+          animation: default
           TextPartResponses: []
         - TextPartID: char1_day2_part5_lowPoints
-          text: 
-          animation: 
+          text: There are some grass stains on it and sweat.
+          animation: sad
           TextPartResponses: []
         - TextPartID: char1_day2_part6_lowPoints
-          text: 
-          animation: 
+          text: But it's not my sweat! That would be quite unbecoming of a Vampire
+            Elder of my standing.
+          animation: flirty
           TextPartResponses:
           - ResponceTextID: char1_day2_part6_lowPoints_responce1
-            text: 
+            text: (Dry) The sweat of your victim, perhaps?
             ResponcePoints: 1
           - ResponceTextID: char1_day2_part6_lowPoints_responce2
-            text: 
+            text: (Bubbly) Awww, but it's not embarrassing to be a little sweaty.
+              It happens to all of us.
             ResponcePoints: 0
           - ResponceTextID: char1_day2_part6_lowPoints_responce3
-            text: 
+            text: (Fresh) Yeah, sure. That's also why your forehead is NOT covered
+              in sweat.
             ResponcePoints: -1
         - TextPartID: char1_day2_part7_lowPoints
-          text: 
-          animation: 
+          text: Just clean it please. That's what I'm paying you for, isn't it.
+          animation: default
           TextPartResponses:
           - ResponceTextID: char1_day2_part6_lowPoints_responce1
-            text: 
+            text: (Dry) The sweat of your victim, perhaps?
             ResponcePoints: 1
           - ResponceTextID: char1_day2_part6_lowPoints_responce2
-            text: 
+            text: (Bubbly) Awww, but it's not embarrassing to be a little sweaty.
+              It happens to all of us.
             ResponcePoints: 0
           - ResponceTextID: char1_day2_part6_lowPoints_responce3
-            text: 
+            text: (Fresh) Yeah, sure. That's also why your forehead is NOT covered
+              in sweat.
             ResponcePoints: -1
       - MinPointsForDialog: {x: 4, y: 100}
         DialogPart:
         - TextPartID: char1_day2_part4_highPoints
-          text: 
-          animation: 
+          text: My sweet Mortal, that is indeed a splendid suggestion!
+          animation: flirty
           TextPartResponses: []
         - TextPartID: char1_day2_part5_highPoints
-          text: 
-          animation: 
+          text: "I shall try it. A dinner party perhaps, or a soir\xE9e, or even...
+            a cheeky get-together."
+          animation: happy
           TextPartResponses: []
         - TextPartID: char1_day2_part6_highPoints
-          text: 
-          animation: 
+          text: I'd invite YOU of course but alas, you need to clean my cloak. I
+            apologize, dear One.
+          animation: sad
           TextPartResponses: []
         - TextPartID: char1_day2_part7_highPoints
+          text: I think there is a grass stain from my tumble and some sweat.
+          animation: default
+          TextPartResponses: []
+        - TextPartID: char1_day2_part8_highPoints
+          text: Please don't tell anyone that I can actually sweat. That would break
+            my dark, unbeating heart.
+          animation: sad
+          TextPartResponses:
+          - ResponceTextID: char1_day2_part8_highPoints_responce1
+            text: (Dry) I have no interest in gossiping.
+            ResponcePoints: 1
+          - ResponceTextID: char1_day2_part8_highPoints_responce2
+            text: (Bubbly) Aww, but why not? I think it would make you more approachable!
+            ResponcePoints: -1
+          - ResponceTextID: char1_day2_part8_highPoints_responce3
+            text: (Fresh) Yeah, I won't tell anyone. Probably...
+            ResponcePoints: 0
+        - TextPartID: char1_day2_part9_highPoints
+          text: I trust you won't tell anyone for you haven't given me any reason
+            to doubt you.
+          animation: happy
+          TextPartResponses: []
+        - TextPartID: char1_day2_part10_highPoints
+          text: I can't wait to see you again, my Dear.
+          animation: flirty
+          TextPartResponses: []
+  - dayIndex: 2
+    DialogParts:
+    - VariantDialogs:
+      - MinPointsForDialog: {x: 0, y: 100}
+        DialogPart:
+        - TextPartID: char1_day3_part1
           text: 
           animation: 
           TextPartResponses: []
-        - TextPartID: char1_day2_part8_highPoints
+        - TextPartID: char1_day3_part2
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char1_day3_part3
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char1_day3_part4
           text: 
           animation: 
           TextPartResponses:
-          - ResponceTextID: char1_day2_part8_highPoints_responce1
-            text: 
-            ResponcePoints: 1
-          - ResponceTextID: char1_day2_part8_highPoints_responce2
-            text: 
-            ResponcePoints: -1
-          - ResponceTextID: char1_day2_part8_highPoints_responce3
+          - ResponceTextID: char1_day3_part4_responce1
             text: 
             ResponcePoints: 0
-        - TextPartID: char1_day2_part9_highPoints
+          - ResponceTextID: char1_day3_part4_responce2
+            text: 
+            ResponcePoints: 1
+          - ResponceTextID: char1_day3_part4_responce3
+            text: 
+            ResponcePoints: -1
+        - TextPartID: char1_day3_part5
           text: 
           animation: 
           TextPartResponses: []
-        - TextPartID: char1_day2_part10_highPoints
+        - TextPartID: char1_day3_part6
+          text: 
+          animation: 
+          TextPartResponses:
+          - ResponceTextID: char1_day3_part6_responce1
+            text: 
+            ResponcePoints: -1
+          - ResponceTextID: char1_day3_part6_responce2
+            text: 
+            ResponcePoints: 0
+          - ResponceTextID: char1_day3_part6_responce3
+            text: 
+            ResponcePoints: 1
+    - VariantDialogs:
+      - MinPointsForDialog: {x: 0, y: 9}
+        DialogPart:
+        - TextPartID: char1_day3_part7_lowPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char1_day3_part8_lowPoints
+          text: 
+          animation: 
+          TextPartResponses:
+          - ResponceTextID: char1_day3_part8_lowPoints_responce1
+            text: 
+            ResponcePoints: -1
+          - ResponceTextID: char1_day3_part8_lowPoints_responce2
+            text: 
+            ResponcePoints: 1
+          - ResponceTextID: char1_day3_part8_lowPoints_responce3
+            text: 
+            ResponcePoints: 0
+        - TextPartID: char1_day3_part9_lowPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char1_day3_part10_lowPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+      - MinPointsForDialog: {x: 9, y: 100}
+        DialogPart:
+        - TextPartID: char1_day3_part7_highPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char1_day3_part8_highPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char1_day3_part9_highPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char1_day3_part10_highPoints
+          text: 
+          animation: 
+          TextPartResponses:
+          - ResponceTextID: char1_day3_part10_highPoints_responce1
+            text: 
+            ResponcePoints: 1
+          - ResponceTextID: char1_day3_part10_highPoints_responce2
+            text: 
+            ResponcePoints: -1
+          - ResponceTextID: char1_day3_part10_highPoints_responce3
+            text: 
+            ResponcePoints: 0
+        - TextPartID: char1_day3_part11_highPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char1_day3_part12_highPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char1_day3_part13_highPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char1_day3_part14_highPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char1_day3_part15_highPoints
           text: 
           animation: 
           TextPartResponses: []

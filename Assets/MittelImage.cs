@@ -66,7 +66,7 @@ public class MittelImage : MonoBehaviour, IPointerExitHandler, IPointerEnterHand
             _enabled = false;
             if (Img) Img.sprite = SelectedSprite;
             if (ImgSprite) ImgSprite.sprite = SelectedSprite;
-            if (!donDisable)
+            if (donDisable)
             {
                 foreach (MittelImage mi in Other)
                 {

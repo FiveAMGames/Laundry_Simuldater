@@ -5,7 +5,6 @@ using UnityEngine;
 using UnityEditor;
 using System.Linq;
 using System;
-using UnityEditor;
 
 
 
@@ -111,7 +110,9 @@ public class CSVReader : ScriptableObject
                 }            
             }
         }
+#if UNITY_EDITOR        
         EditorUtility.SetDirty(this);
+#endif
     }
 
 

@@ -229,7 +229,7 @@ MonoBehaviour:
       Text: A stroll that included vigorous running and jumping. And a very small
         tumble on my part.
       animation: sad
-    - ID: char1_day2_part3
+    - ID: char1_day2_part3_1
       Text: If you could take care of my hunting cloak, I would be most obliged.
       animation: happy
     - ID: char1_day2_part3_responce1

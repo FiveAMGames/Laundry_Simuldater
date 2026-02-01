@@ -18,8 +18,8 @@ MonoBehaviour:
   CharPortraitHappy: {fileID: 21300000, guid: 05d58173a8320824cadaafb4477f30b5, type: 3}
   CharPortraitSad: {fileID: 21300000, guid: 505e05d049103ce43aa140f3aaa30100, type: 3}
   CharPortraitFlirty: {fileID: 21300000, guid: 82d1d50ae56e06646b53464f00f28cee, type: 3}
-  GoodWork: Yay
-  BadWork: Nope
+  GoodWork: Fuck me! That's what I call a job well done.
+  BadWork: That looks a bit shit. Do better next time, soap-nerd!
   AllDialogs:
   - dayIndex: 0
     DialogParts:
@@ -114,4 +114,251 @@ MonoBehaviour:
         - TextPartID: char2_day1_part11_highPoints
           text: And trust me, you don't want to see me unhappy.
           animation: default
+          TextPartResponses: []
+  - dayIndex: 1
+    DialogParts:
+    - VariantDialogs:
+      - MinPointsForDialog: {x: 0, y: 100}
+        DialogPart:
+        - TextPartID: char2_day2_part1
+          text: 
+          animation: 
+          TextPartResponses:
+          - ResponceTextID: char2_day2_part1_responce1
+            text: 
+            ResponcePoints: -1
+          - ResponceTextID: char2_day2_part1_responce2
+            text: 
+            ResponcePoints: 0
+          - ResponceTextID: char2_day2_part1_responce3
+            text: 
+            ResponcePoints: 1
+        - TextPartID: char2_day2_part2
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char2_day2_part3
+          text: 
+          animation: 
+          TextPartResponses:
+          - ResponceTextID: char2_day2_part3_responce1
+            text: 
+            ResponcePoints: 1
+          - ResponceTextID: char2_day2_part3_responce2
+            text: 
+            ResponcePoints: 0
+          - ResponceTextID: char2_day2_part3_responce3
+            text: 
+            ResponcePoints: -1
+    - VariantDialogs:
+      - MinPointsForDialog: {x: 0, y: 4}
+        DialogPart:
+        - TextPartID: char2_day2_part4_lowPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char2_day2_part5_lowPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char2_day2_part6_lowPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char2_day2_part7_lowPoints
+          text: 
+          animation: 
+          TextPartResponses:
+          - ResponceTextID: char2_day2_part7_lowPoints_responce1
+            text: 
+            ResponcePoints: 0
+          - ResponceTextID: char2_day2_part7_lowPoints_responce2
+            text: 
+            ResponcePoints: -1
+          - ResponceTextID: char2_day2_part7_lowPoints_responce3
+            text: 
+            ResponcePoints: 1
+        - TextPartID: char2_day2_part8_lowPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char2_day2_part9_lowPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+      - MinPointsForDialog: {x: 4, y: 100}
+        DialogPart:
+        - TextPartID: char2_day2_part4_highPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char2_day2_part5_highPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char2_day2_part6_highPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char2_day2_part7_highPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char2_day2_part8_highPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char2_day2_part9_highPoints
+          text: 
+          animation: 
+          TextPartResponses:
+          - ResponceTextID: char2_day2_part9_highPoints_responce1
+            text: 
+            ResponcePoints: -1
+          - ResponceTextID: char2_day2_part9_highPoints_responce1
+            text: 
+            ResponcePoints: 1
+          - ResponceTextID: char2_day2_part9_highPoints_responce1
+            text: 
+            ResponcePoints: 0
+        - TextPartID: char2_day2_part10_highPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char2_day2_part11_highPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char2_day2_part12_highPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+  - dayIndex: 2
+    DialogParts:
+    - VariantDialogs:
+      - MinPointsForDialog: {x: 0, y: 100}
+        DialogPart:
+        - TextPartID: char2_day3_part1
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char2_day3_part2
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char2_day3_part3
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char2_day3_part4
+          text: 
+          animation: 
+          TextPartResponses:
+          - ResponceTextID: char2_day3_part4_responce1
+            text: 
+            ResponcePoints: 0
+          - ResponceTextID: char2_day3_part4_responce2
+            text: 
+            ResponcePoints: -1
+          - ResponceTextID: char2_day3_part4_responce3
+            text: 
+            ResponcePoints: 1
+        - TextPartID: char2_day3_part5
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char2_day3_part6
+          text: 
+          animation: 
+          TextPartResponses:
+          - ResponceTextID: char2_day3_part6_responce1
+            text: 
+            ResponcePoints: -1
+          - ResponceTextID: char2_day3_part6_responce2
+            text: 
+            ResponcePoints: 1
+          - ResponceTextID: char2_day3_part6_responce3
+            text: 
+            ResponcePoints: 0
+      - MinPointsForDialog: {x: 0, y: 9}
+        DialogPart:
+        - TextPartID: char2_day3_part7_lowPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char2_day3_part8_lowPoints
+          text: 
+          animation: 
+          TextPartResponses:
+          - ResponceTextID: char2_day3_part8_lowPoints_responce1
+            text: 
+            ResponcePoints: 0
+          - ResponceTextID: char2_day3_part8_lowPoints_responce2
+            text: 
+            ResponcePoints: 1
+          - ResponceTextID: char2_day3_part8_lowPoints_responce3
+            text: 
+            ResponcePoints: -1
+        - TextPartID: char2_day3_part9_lowPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char2_day3_part10_lowPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char2_day3_part11_lowPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+      - MinPointsForDialog: {x: 9, y: 100}
+        DialogPart:
+        - TextPartID: char2_day3_part7_highPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char2_day3_part8_highPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char2_day3_part9_highPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char2_day3_part10_highPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char2_day3_part11_highPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char2_day3_part12_highPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char2_day3_part13_highPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char2_day3_part14_highPoints
+          text: 
+          animation: 
+          TextPartResponses:
+          - ResponceTextID: char2_day3_part14_highPoints_responce1
+            text: 
+            ResponcePoints: 1
+          - ResponceTextID: char2_day3_part14_highPoints_responce2
+            text: 
+            ResponcePoints: 0
+          - ResponceTextID: char2_day3_part14_highPoints_responce3
+            text: 
+            ResponcePoints: -1
+        - TextPartID: char2_day3_part15_highPoints
+          text: 
+          animation: 
+          TextPartResponses: []
+        - TextPartID: char2_day3_part16_highPoints
+          text: 
+          animation: 
           TextPartResponses: []

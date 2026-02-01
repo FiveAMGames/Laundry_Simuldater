@@ -20,6 +20,7 @@ public class Logic : MonoBehaviour
     public GameObject DialogObject;
     public Image DialogPortrait;
     public TextMeshProUGUI DialogText;
+    public Image Waesche;
 
     public GameObject ButtonNext;
 
@@ -52,6 +53,8 @@ public class Logic : MonoBehaviour
         public Sprite Stain1Bad;
         public Sprite Stain2;
         public Sprite Stain2Bad;
+
+        public Sprite WaescheHaufen;
         public enum Vorwaeasche {acid, soap, salt }
         public Vorwaeasche vorwaescheType1;
         public Vorwaeasche vorwaescheType2;
@@ -103,6 +106,7 @@ public class Logic : MonoBehaviour
     public List<GameObject> TemperatureButtons;
 
     public GameObject WashingDone;
+    public Image WaescheWashing;
 
     [Header("Abgabe")]
     public GameObject AbgabeObject;
@@ -168,6 +172,10 @@ public class Logic : MonoBehaviour
                 break;
             }
         }
+
+        Outfit o = currentCharacter.CharIndex == 0 ? char1Outfits[currentDay] : char2Outfits[currentDay];
+        Waesche.sprite = o.WaescheHaufen;
+
         UpdateDialogue();
     }
 
@@ -309,17 +317,11 @@ public class Logic : MonoBehaviour
         Outfit o = currentCharacter.CharIndex == 0 ? char1Outfits[currentDay] : char2Outfits[currentDay];       
         if (o.vorwaescheType1 == type) 
         {
-            if (currentCharacter.CharIndex == 0) char1Points++;
-            else char2Points++;
-
             Stain1BadWashingObject.gameObject.SetActive(false);
             vorwaesche1selected = true;
         }
         else if (o.vorwaescheType2 == type) 
         {
-            if (currentCharacter.CharIndex == 0) char1Points++;
-            else char2Points++;
-
             Stain1BadWashingObject.gameObject.SetActive(false);
             vorwaesche2selected = true;
         }
@@ -343,6 +345,11 @@ public class Logic : MonoBehaviour
             if (currentCharacter.CharIndex == 0) char1Points--;
             else char2Points--;
             badVorwaesche = true;
+        }
+        else 
+        {
+            if (currentCharacter.CharIndex == 0) char1Points++;
+            else char2Points++;
         }
         bool enough = TextureCheckScript.SamplePanorama();
         if (enough) 
@@ -374,6 +381,10 @@ public class Logic : MonoBehaviour
         {
             go.SetActive(false);
         }
+
+        Outfit o = currentCharacter.CharIndex == 0 ? char1Outfits[currentDay] : char2Outfits[currentDay];
+        WaescheWashing.sprite = o.WaescheHaufen;
+
     }
     public void ClickWaschMittel(Outfit.Waesche type) 
     {
