@@ -400,17 +400,12 @@ public class Logic : MonoBehaviour
     public void ClickDoneVorwaesche() 
     {
         audioSource.PlayOneShot(buttons);
-        if (!vorwaesche1selected || !vorwaesche2selected) 
+        if (!vorwaesche1selected || !vorwaesche2selected)
         {
-            if (currentCharacter.CharIndex == 0) char1Points--;
-            else char2Points--;
             badVorwaesche = true;
         }
-        else 
-        {
-            if (currentCharacter.CharIndex == 0) char1Points++;
-            else char2Points++;
-        }
+        else badVorwaesche = false;
+
         bool enough = TextureCheckScript.SamplePanorama();
         if (enough) 
         {
@@ -453,13 +448,10 @@ public class Logic : MonoBehaviour
         Outfit o = currentCharacter.CharIndex == 0 ? char1Outfits[currentDay] : char2Outfits[currentDay];
         if (o.waescheType == type)
         {
-            if (currentCharacter.CharIndex == 0) char1Points++;
-            else char2Points++;
+            badWaeschemittel = false;
         }
         else
         {
-            if (currentCharacter.CharIndex == 0) char1Points--;
-            else char2Points--;
             badWaeschemittel = true;
         }
 
@@ -484,13 +476,10 @@ public class Logic : MonoBehaviour
 
         if (o.temperatureType == type)
         {
-            if (currentCharacter.CharIndex == 0) char1Points++;
-            else char2Points++;
+            badTemperature = false;
         }
         else
         {
-            if (currentCharacter.CharIndex == 0) char1Points--;
-            else char2Points--;
             badTemperature = true;
         }
         WashingDone.SetActive(true);
@@ -511,6 +500,20 @@ public class Logic : MonoBehaviour
         WashingObject.SetActive(false);
         AbgabeObject.SetActive(true);
         WashingDone.SetActive(false);
+
+
+        if ((badWaeschemittel || badVorwaesche || badTemperature)) 
+        {
+            if (currentCharacter.CharIndex == 0) char1Points--;
+            else char2Points--;
+        }
+        else 
+        {
+            if (currentCharacter.CharIndex == 0) char1Points++;
+            else char2Points++;
+        }
+
+
 
         AbgabeText.text = (badWaeschemittel || badVorwaesche || badTemperature) ? currentCharacter.BadWork : currentCharacter.GoodWork;
         AbgabeCharacterImage.sprite = (badWaeschemittel || badVorwaesche || badTemperature) ? currentCharacter.CharPortraitSad : currentCharacter.CharPortraitHappy;
@@ -596,13 +599,13 @@ public class Logic : MonoBehaviour
         currentState = State.finale;
         AbgabeObject.SetActive(false);
         Finale.SetActive(true);
-        char1Finale.SetActive(char1Points > 10);
-        char2Finale.SetActive(char2Points > 10);
+        char1Finale.SetActive(char1Points >= 5);
+        char2Finale.SetActive(char2Points >= 5);
 
         string t = FinaleSingle;
-        if (char1Points > 10 && char2Points < 11) t = FinaleChar1;
-        if (char2Points > 10 && char1Points < 11) t = FinaleChar2;
-        if (char1Points > 10 && char2Points >10) t = FinaleBoth;
+        if (char1Points >= 5 && char2Points < 5) t = FinaleChar1;
+        if (char2Points >= 5 && char1Points < 5) t = FinaleChar2;
+        if (char1Points >= 5 && char2Points >=5) t = FinaleBoth;
 
         FinaleText.text = t;
     }

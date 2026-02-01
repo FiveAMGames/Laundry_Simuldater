@@ -196,7 +196,7 @@ MonoBehaviour:
               something. I'm sure people would come in flocks.
             ResponcePoints: 1
     - VariantDialogs:
-      - MinPointsForDialog: {x: 0, y: 4}
+      - MinPointsForDialog: {x: 0, y: 3}
         DialogPart:
         - TextPartID: char1_day2_part4_lowPoints
           text: Thank you for your... input. But let's focus on the task at hand.
@@ -227,7 +227,7 @@ MonoBehaviour:
           text: Just clean it please. That's what I'm paying you for, isn't it.
           animation: default
           TextPartResponses: []
-      - MinPointsForDialog: {x: 4, y: 100}
+      - MinPointsForDialog: {x: 3, y: 100}
         DialogPart:
         - TextPartID: char1_day2_part4_highPoints
           text: My sweet Mortal, that is indeed a splendid suggestion!
@@ -327,7 +327,7 @@ MonoBehaviour:
               Was it gushing? Splattering?
             ResponcePoints: 1
     - VariantDialogs:
-      - MinPointsForDialog: {x: 0, y: 9}
+      - MinPointsForDialog: {x: 0, y: 4}
         DialogPart:
         - TextPartID: char1_day3_part7_lowPoints
           text: I don't want to bore you with any more details. Just know, the night
@@ -359,7 +359,7 @@ MonoBehaviour:
             that just got reminded of the sweet taste of blood.
           animation: flirty
           TextPartResponses: []
-      - MinPointsForDialog: {x: 9, y: 100}
+      - MinPointsForDialog: {x: 4, y: 100}
         DialogPart:
         - TextPartID: char1_day3_part7_highPoints
           text: I don't want to bore you with any more details. Just know, the night

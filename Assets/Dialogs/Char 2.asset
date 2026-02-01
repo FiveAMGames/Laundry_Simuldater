@@ -55,7 +55,18 @@ MonoBehaviour:
         - TextPartID: char2_day1_part5
           text: 'You know how Super Villains are: The bigger the laser, the better.'
           animation: default
-          TextPartResponses: []
+          TextPartResponses:
+          - ResponceTextID: char2_day1_part5_responce1
+            text: (Dry) Super Villains. Most of them are just rich brats, not understanding
+              the intricacies of crime.
+            ResponcePoints: 1
+          - ResponceTextID: char2_day1_part5_responce2
+            text: (Bubbly) Gotta love a big laser! And a dirty henchwoman.
+            ResponcePoints: 0
+          - ResponceTextID: char2_day1_part5_responce3
+            text: (Fresh) Well, you need a big laser to scare the shit out of these
+              plebs.
+            ResponcePoints: -1
     - VariantDialogs:
       - MinPointsForDialog: {x: 0, y: 0}
         DialogPart:
@@ -162,7 +173,7 @@ MonoBehaviour:
               become a villain instead.
             ResponcePoints: -1
     - VariantDialogs:
-      - MinPointsForDialog: {x: 0, y: 4}
+      - MinPointsForDialog: {x: 0, y: 3}
         DialogPart:
         - TextPartID: char2_day2_part4_lowPoints
           text: Me replacing her? Tss, that's not how it works, soap-nerd.
@@ -200,7 +211,7 @@ MonoBehaviour:
           text: But that's your problem now. Take care of it for me, okay sweetcheeks?
           animation: happy
           TextPartResponses: []
-      - MinPointsForDialog: {x: 4, y: 100}
+      - MinPointsForDialog: {x: 3, y: 100}
         DialogPart:
         - TextPartID: char2_day2_part4_highPoints
           text: You think I should become a Super Villain? That's insane... But maybe
@@ -234,11 +245,13 @@ MonoBehaviour:
           - ResponceTextID: char2_day2_part9_highPoints_responce1
             text: (Dry) I'll just clean the stains for you, I don't need a backstory.
             ResponcePoints: -1
-          - ResponceTextID: char2_day2_part9_highPoints_responce1
-            text: (Dry) I'll just clean the stains for you, I don't need a backstory.
+          - ResponceTextID: char2_day2_part9_highPoints_responce2
+            text: (Bubbly) That's horrible! Your evil plans are a million times more
+              wicked than hers.
             ResponcePoints: 1
-          - ResponceTextID: char2_day2_part9_highPoints_responce1
-            text: (Dry) I'll just clean the stains for you, I don't need a backstory.
+          - ResponceTextID: char2_day2_part9_highPoints_responce3
+            text: (Fresh) Well, that's a stupid fucking idea. But cutting off his
+              fingers? Come on...
             ResponcePoints: 0
         - TextPartID: char2_day2_part10_highPoints
           text: Anyway, what's done is done. And I need you to get these stains out.
@@ -308,7 +321,7 @@ MonoBehaviour:
               Isn't that usually a secret or something?
             ResponcePoints: 0
     - VariantDialogs:
-      - MinPointsForDialog: {x: 0, y: 9}
+      - MinPointsForDialog: {x: 0, y: 4}
         DialogPart:
         - TextPartID: char2_day3_part7_lowPoints
           text: You know what, nevermind. I'm not gonna tell you my plan.
@@ -343,7 +356,7 @@ MonoBehaviour:
             shop.
           animation: default
           TextPartResponses: []
-      - MinPointsForDialog: {x: 9, y: 100}
+      - MinPointsForDialog: {x: 4, y: 100}
         DialogPart:
         - TextPartID: char2_day3_part7_highPoints
           text: Actually, I don't really have an evil plan yet.
