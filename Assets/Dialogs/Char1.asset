@@ -180,8 +180,8 @@ MonoBehaviour:
           animation: sad
           TextPartResponses: []
         - TextPartID: char1_day2_part3_1
-          text: 
-          animation: 
+          text: If you could take care of my hunting cloak, I would be most obliged.
+          animation: happy
           TextPartResponses:
           - ResponceTextID: char1_day2_part3_responce1
             text: (Dry) Maybe you shouldn't hunt. Successful vampires let their prey
@@ -226,18 +226,7 @@ MonoBehaviour:
         - TextPartID: char1_day2_part7_lowPoints
           text: Just clean it please. That's what I'm paying you for, isn't it.
           animation: default
-          TextPartResponses:
-          - ResponceTextID: char1_day2_part6_lowPoints_responce1
-            text: (Dry) The sweat of your victim, perhaps?
-            ResponcePoints: 1
-          - ResponceTextID: char1_day2_part6_lowPoints_responce2
-            text: (Bubbly) Awww, but it's not embarrassing to be a little sweaty.
-              It happens to all of us.
-            ResponcePoints: 0
-          - ResponceTextID: char1_day2_part6_lowPoints_responce3
-            text: (Fresh) Yeah, sure. That's also why your forehead is NOT covered
-              in sweat.
-            ResponcePoints: -1
+          TextPartResponses: []
       - MinPointsForDialog: {x: 4, y: 100}
         DialogPart:
         - TextPartID: char1_day2_part4_highPoints
@@ -287,119 +276,144 @@ MonoBehaviour:
       - MinPointsForDialog: {x: 0, y: 100}
         DialogPart:
         - TextPartID: char1_day3_part1
-          text: 
-          animation: 
+          text: You are a proper genius, sweet Mortal. I did what you recommended.
+          animation: flirty
           TextPartResponses: []
         - TextPartID: char1_day3_part2
-          text: 
-          animation: 
+          text: I hosted a lavishly decadent tupperware party. They practically BEGGED
+            me to grant them entrance.
+          animation: default
           TextPartResponses: []
         - TextPartID: char1_day3_part3
-          text: 
-          animation: 
+          text: Like sheep to the slaughter. It was positively divine!
+          animation: happy
           TextPartResponses: []
         - TextPartID: char1_day3_part4
-          text: 
-          animation: 
+          text: And I picked the plumpest one to join me for the after party... The
+            blood on my silken night-blouse is that was left of her.
+          animation: flirty
           TextPartResponses:
           - ResponceTextID: char1_day3_part4_responce1
-            text: 
+            text: (Dry) Sounds like a successful night.
             ResponcePoints: 0
           - ResponceTextID: char1_day3_part4_responce2
-            text: 
+            text: (Bubbly) Oh, it sounds wonderful! I'm so sad I missed it. Especially
+              the after party.
             ResponcePoints: 1
           - ResponceTextID: char1_day3_part4_responce3
-            text: 
+            text: (Fresh) Your silken night-blouse? A tupperware party??? Come on
+              dude, where's the carnage?
             ResponcePoints: -1
         - TextPartID: char1_day3_part5
-          text: 
-          animation: 
+          text: It was a titillating night... I haven't indulged in the pleasures
+            of flesh and blood in a long time.
+          animation: default
           TextPartResponses: []
         - TextPartID: char1_day3_part6
-          text: 
-          animation: 
+          text: You'll discover stains of my favorite massage oils on there too.
+            We were utterly naughty before, well... I killed her.
+          animation: flirty
           TextPartResponses:
           - ResponceTextID: char1_day3_part6_responce1
-            text: 
+            text: (Dry) I really, REALLY do not wish to hear more about your titillating
+              night.
             ResponcePoints: -1
           - ResponceTextID: char1_day3_part6_responce2
-            text: 
+            text: (Bubbly) Sounds like you had a lovely night. Her too, up until
+              the end at least.
             ResponcePoints: 0
           - ResponceTextID: char1_day3_part6_responce3
-            text: 
+            text: (Fresh) Yeah, that's more like it! Tell me more about the blood.
+              Was it gushing? Splattering?
             ResponcePoints: 1
     - VariantDialogs:
       - MinPointsForDialog: {x: 0, y: 9}
         DialogPart:
         - TextPartID: char1_day3_part7_lowPoints
-          text: 
-          animation: 
+          text: I don't want to bore you with any more details. Just know, the night
+            was a big success, thanks to you.
+          animation: default
           TextPartResponses: []
         - TextPartID: char1_day3_part8_lowPoints
-          text: 
-          animation: 
+          text: Maybe I'll invite you to one of my parties one day.
+          animation: flirty
           TextPartResponses:
           - ResponceTextID: char1_day3_part8_lowPoints_responce1
-            text: 
+            text: (Dry) I will decline.
             ResponcePoints: -1
           - ResponceTextID: char1_day3_part8_lowPoints_responce2
-            text: 
+            text: '(Bubbly) That would be amazing. I love parties, tupperware, and
+              sexy vampires! '
             ResponcePoints: 1
           - ResponceTextID: char1_day3_part8_lowPoints_responce3
-            text: 
+            text: (Fresh) I might show up, as long as it isn't a fucking tupperware
+              party.
             ResponcePoints: 0
         - TextPartID: char1_day3_part9_lowPoints
-          text: 
-          animation: 
+          text: We'll see what the future brings... Or at least I will. You humans
+            have preposterously short life-spans, right?
+          animation: happy
           TextPartResponses: []
         - TextPartID: char1_day3_part10_lowPoints
-          text: 
-          animation: 
+          text: Especially if there are ravenous vampires lurking around. Vampires
+            that just got reminded of the sweet taste of blood.
+          animation: flirty
           TextPartResponses: []
       - MinPointsForDialog: {x: 9, y: 100}
         DialogPart:
         - TextPartID: char1_day3_part7_highPoints
-          text: 
-          animation: 
+          text: I don't want to bore you with any more details. Just know, the night
+            was a big success. Thanks to you, my Dear.
+          animation: happy
           TextPartResponses: []
         - TextPartID: char1_day3_part8_highPoints
-          text: 
-          animation: 
+          text: There was a one thing though that left a bad taste in my mouth after
+            all.
+          animation: sad
           TextPartResponses: []
         - TextPartID: char1_day3_part9_highPoints
-          text: 
-          animation: 
+          text: I was missing you, my Dear. Your wit, your dauntlessness, your bewitching
+            eyes...
+          animation: default
           TextPartResponses: []
         - TextPartID: char1_day3_part10_highPoints
-          text: 
-          animation: 
+          text: Thoughts of you follow me, wherever I go. Like the scent of detergent,
+            softly lingering in the ether.
+          animation: flirty
           TextPartResponses:
           - ResponceTextID: char1_day3_part10_highPoints_responce1
-            text: 
+            text: (Dry) And just like ink on a white shirt, you will never get rid
+              of me.
             ResponcePoints: 1
           - ResponceTextID: char1_day3_part10_highPoints_responce2
-            text: 
+            text: (Bubbly) Did you just compare me to... laundry detergent? That's
+              not how you romance a hottie like me.
             ResponcePoints: -1
           - ResponceTextID: char1_day3_part10_highPoints_responce3
-            text: 
+            text: (Fresh) You lost me with the detergent thing, sorry. Don't you
+              wanna talk about blood again?
             ResponcePoints: 0
         - TextPartID: char1_day3_part11_highPoints
-          text: 
-          animation: 
+          text: That is the dauntlessness I was talking about. Who would dare to
+            speak to a Vampire Elder that way?
+          animation: happy
           TextPartResponses: []
         - TextPartID: char1_day3_part12_highPoints
-          text: 
-          animation: 
+          text: I take great delight in your company and in being your customer.
+            I am certain that you will get rid of these oil and blood stains.
+          animation: flirty
           TextPartResponses: []
         - TextPartID: char1_day3_part13_highPoints
-          text: 
-          animation: 
+          text: But I'm also plagued by dark thoughts, my Dear.
+          animation: sad
           TextPartResponses: []
         - TextPartID: char1_day3_part14_highPoints
-          text: 
-          animation: 
+          text: To know that you, a human, will have to perish one day... Accepting
+            that feels almost insurmountable.
+          animation: sad
           TextPartResponses: []
         - TextPartID: char1_day3_part15_highPoints
-          text: 
-          animation: 
+          text: But regardless, I will leave you to your work. I'm sure I will be
+            greatly satisfied as always, dear One.
+          animation: flirty
           TextPartResponses: []

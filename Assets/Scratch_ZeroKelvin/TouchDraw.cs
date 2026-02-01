@@ -25,10 +25,12 @@ public class TouchDraw : MonoBehaviour
 
     void Update(){
         if(Input.GetMouseButtonDown(0)){
+            Logic.Instance.PlayScrubbingSound();
                 StartLine();
         }
         if(Input.GetMouseButtonUp(0)){
             FinishLine();
+            Logic.Instance.StopScrubbingSound();
         }
     }
     public void StartLine(){

@@ -23,10 +23,20 @@ public class MittelImage : MonoBehaviour, IPointerExitHandler, IPointerEnterHand
 
     public List<MittelImage> Other;
     public bool _enabled = true;
+    
+
+
 
     private void OnEnable()
     {
         Img.sprite = defaultSprite;
+        _enabled = false;
+        Invoke("Enable", 0.5f);
+    }
+
+
+    public void Enable() 
+    {
         _enabled = true;
     }
 
@@ -47,8 +57,11 @@ public class MittelImage : MonoBehaviour, IPointerExitHandler, IPointerEnterHand
             if (ImgSprite) ImgSprite.sprite = HoverSprite;
             foreach (MittelImage mi in Other)
             {
-                if (mi.Img) mi.Img.sprite = mi.defaultSprite;
-                else mi.ImgSprite.sprite = mi.defaultSprite;
+                if (mi._enabled)
+                {
+                    if (mi.Img) mi.Img.sprite = mi.defaultSprite;
+                    else mi.ImgSprite.sprite = mi.defaultSprite;
+                }
             }
         }
     }
@@ -66,12 +79,15 @@ public class MittelImage : MonoBehaviour, IPointerExitHandler, IPointerEnterHand
             _enabled = false;
             if (Img) Img.sprite = SelectedSprite;
             if (ImgSprite) ImgSprite.sprite = SelectedSprite;
-            if (donDisable)
+            if (donDisable || !isVorwaesche)
             {
                 foreach (MittelImage mi in Other)
                 {
-                    if (mi.Img) mi.Img.sprite = mi.GreySprite;
-                    else mi.ImgSprite.sprite = mi.GreySprite;
+                    if (mi._enabled)
+                    {
+                        if (mi.Img) mi.Img.sprite = mi.GreySprite;
+                        else mi.ImgSprite.sprite = mi.GreySprite;
+                    }
                     mi._enabled = false;
                 }
             }

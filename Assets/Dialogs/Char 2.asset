@@ -44,19 +44,18 @@ MonoBehaviour:
           - ResponceTextID: char2_day1_part2_responce3
             text: (Fresh) Motor oil, synthetic blend. Stubborn, but I'll get it out.
             ResponcePoints: 1
-        - TextPartID: char2_day1_part2
-          text: I got some oil on this work-overall. Can you get it out?
-          animation: sad
-          TextPartResponses:
-          - ResponceTextID: char2_day1_part3
-            text: Yeah, I needed to fix somethin' on my Mistress's orbital laser.
-            ResponcePoints: 0
-          - ResponceTextID: char2_day1_part4
-            text: Got quite dirty in the process.
-            ResponcePoints: 0
-          - ResponceTextID: char2_day1_part5
-            text: 'You know how Super Villains are: The bigger the laser, the better.'
-            ResponcePoints: 0
+        - TextPartID: char2_day1_part3
+          text: Yeah, I needed to fix somethin' on my Mistress's orbital laser.
+          animation: happy
+          TextPartResponses: []
+        - TextPartID: char2_day1_part4
+          text: Got quite dirty in the process.
+          animation: flirty
+          TextPartResponses: []
+        - TextPartID: char2_day1_part5
+          text: 'You know how Super Villains are: The bigger the laser, the better.'
+          animation: default
+          TextPartResponses: []
     - VariantDialogs:
       - MinPointsForDialog: {x: 0, y: 0}
         DialogPart:
@@ -77,6 +76,15 @@ MonoBehaviour:
           - ResponceTextID: char2_day1_part8_lowPoints_responce3
             text: (Fresh) Incompetent? Annoying?
             ResponcePoints: 1
+        - TextPartID: char2_day1_part9_lowPoints
+          text: Demanding.
+          animation: flirty
+          TextPartResponses: []
+        - TextPartID: char2_day1_part10_lowPoints
+          text: Anyway, I'm out. Do your job well and I'll return with more shit
+            to clean.
+          animation: default
+          TextPartResponses: []
       - MinPointsForDialog: {x: 1, y: 10}
         DialogPart:
         - TextPartID: char2_day1_part6_highPoints
@@ -121,117 +129,129 @@ MonoBehaviour:
       - MinPointsForDialog: {x: 0, y: 100}
         DialogPart:
         - TextPartID: char2_day2_part1
-          text: 
-          animation: 
+          text: Ugh...
+          animation: sad
           TextPartResponses:
           - ResponceTextID: char2_day2_part1_responce1
-            text: 
+            text: (Dry) Hello.
             ResponcePoints: -1
           - ResponceTextID: char2_day2_part1_responce2
-            text: 
+            text: (Bubbly) Oh, you look kinda sad. What's wrong?
             ResponcePoints: 0
           - ResponceTextID: char2_day2_part1_responce3
-            text: 
+            text: (Fresh) You look like shit. What happened?
             ResponcePoints: 1
         - TextPartID: char2_day2_part2
-          text: 
-          animation: 
+          text: Being a henchwoman is just the fucking worst. I can deal with the
+            dirt, the insults, the violence, even the irregular working hours.
+          animation: default
           TextPartResponses: []
         - TextPartID: char2_day2_part3
-          text: 
-          animation: 
+          text: But the evil schemes this woman comes up with... They're just dumb!
+          animation: sad
           TextPartResponses:
           - ResponceTextID: char2_day2_part3_responce1
-            text: 
+            text: (Dry) Sounds like you should get rid of her. Or replace her.
             ResponcePoints: 1
           - ResponceTextID: char2_day2_part3_responce2
-            text: 
+            text: (Bubbly) Oh, that's horrible. I'm sorry to hear... You should switch
+              roles with her. That'll teach her.
             ResponcePoints: 0
           - ResponceTextID: char2_day2_part3_responce3
-            text: 
+            text: (Fresh) Usually henchwomen don't complain so much. Maybe you should
+              become a villain instead.
             ResponcePoints: -1
     - VariantDialogs:
       - MinPointsForDialog: {x: 0, y: 4}
         DialogPart:
         - TextPartID: char2_day2_part4_lowPoints
-          text: 
-          animation: 
+          text: Me replacing her? Tss, that's not how it works, soap-nerd.
+          animation: happy
           TextPartResponses: []
         - TextPartID: char2_day2_part5_lowPoints
-          text: 
-          animation: 
+          text: Anyway, my Mistress' last ingenious plan was to punish the pizza-guy
+            next to our secret lair.
+          animation: happy
           TextPartResponses: []
         - TextPartID: char2_day2_part6_lowPoints
-          text: 
-          animation: 
+          text: He discontinued her favorite pizza, so she kidnapped his baby.
+          animation: default
           TextPartResponses: []
         - TextPartID: char2_day2_part7_lowPoints
-          text: 
-          animation: 
+          text: 'Now I have to watch that brat until the guy surrenders or dies or
+            whatever. Fucking GREAT idea, if you ask me. '
+          animation: sad
           TextPartResponses:
           - ResponceTextID: char2_day2_part7_lowPoints_responce1
-            text: 
+            text: (Dry) I didn't ask. But that explains the stains.
             ResponcePoints: 0
           - ResponceTextID: char2_day2_part7_lowPoints_responce2
-            text: 
+            text: (Bubbly) Ah baby?! Omg that's sooo cute!
             ResponcePoints: -1
           - ResponceTextID: char2_day2_part7_lowPoints_responce3
-            text: 
+            text: (Fresh) So you have to take care of the baby now? Gross...
             ResponcePoints: 1
         - TextPartID: char2_day2_part8_lowPoints
-          text: 
-          animation: 
+          text: It's fucking annyoing... I got drool and babyfood stains all over
+            my work-clothes.
+          animation: sad
           TextPartResponses: []
         - TextPartID: char2_day2_part9_lowPoints
-          text: 
-          animation: 
+          text: But that's your problem now. Take care of it for me, okay sweetcheeks?
+          animation: happy
           TextPartResponses: []
       - MinPointsForDialog: {x: 4, y: 100}
         DialogPart:
         - TextPartID: char2_day2_part4_highPoints
-          text: 
-          animation: 
+          text: You think I should become a Super Villain? That's insane... But maybe
+            you're on to something.
+          animation: flirty
           TextPartResponses: []
         - TextPartID: char2_day2_part5_highPoints
-          text: 
-          animation: 
+          text: I sure as fuck would be better at making evil plans. You know what
+            she did?
+          animation: happy
           TextPartResponses: []
         - TextPartID: char2_day2_part6_highPoints
-          text: 
-          animation: 
+          text: She was angry at the pizza-guy next door because he discontinued
+            her favorite pizza.
+          animation: default
           TextPartResponses: []
         - TextPartID: char2_day2_part7_highPoints
-          text: 
-          animation: 
+          text: She could've blown up the shop, poisoned the marinara sauce, cut
+            off his fingers, anything...
+          animation: happy
           TextPartResponses: []
         - TextPartID: char2_day2_part8_highPoints
-          text: 
-          animation: 
+          text: But she decided to kidnap his baby. And now I have to take care of
+            it.
+          animation: default
           TextPartResponses: []
         - TextPartID: char2_day2_part9_highPoints
-          text: 
-          animation: 
+          text: I mean, look at my clothes! They're full of baby food and drool!!!
+          animation: sad
           TextPartResponses:
           - ResponceTextID: char2_day2_part9_highPoints_responce1
-            text: 
+            text: (Dry) I'll just clean the stains for you, I don't need a backstory.
             ResponcePoints: -1
           - ResponceTextID: char2_day2_part9_highPoints_responce1
-            text: 
+            text: (Dry) I'll just clean the stains for you, I don't need a backstory.
             ResponcePoints: 1
           - ResponceTextID: char2_day2_part9_highPoints_responce1
-            text: 
+            text: (Dry) I'll just clean the stains for you, I don't need a backstory.
             ResponcePoints: 0
         - TextPartID: char2_day2_part10_highPoints
-          text: 
-          animation: 
+          text: Anyway, what's done is done. And I need you to get these stains out.
+          animation: default
           TextPartResponses: []
         - TextPartID: char2_day2_part11_highPoints
-          text: 
-          animation: 
+          text: I'm glad I can count on you. You really are good at your job, soap-nerd.
+          animation: happy
           TextPartResponses: []
         - TextPartID: char2_day2_part12_highPoints
-          text: 
-          animation: 
+          text: I got a thing for nerds, ya know. I like how they get nervous and
+            shit. It's cute.
+          animation: flirty
           TextPartResponses: []
   - dayIndex: 2
     DialogParts:
@@ -239,126 +259,144 @@ MonoBehaviour:
       - MinPointsForDialog: {x: 0, y: 100}
         DialogPart:
         - TextPartID: char2_day3_part1
-          text: 
-          animation: 
+          text: Yo, I did it! I got rid of that incompetent roach of a Super Villain.
+          animation: happy
           TextPartResponses: []
         - TextPartID: char2_day3_part2
-          text: 
-          animation: 
+          text: I didn't kill her or anything. I just locked her in one of her torture-labyrinths.
+            Which I built FIY.
+          animation: sad
           TextPartResponses: []
         - TextPartID: char2_day3_part3
-          text: 
-          animation: 
+          text: She'll never find her way out of it, ha! And I'm the new Villain
+            in town.
+          animation: flirty
           TextPartResponses: []
         - TextPartID: char2_day3_part4
-          text: 
-          animation: 
+          text: I got a Super Villain overall now too. I don't fuck with spandex.
+          animation: happy
           TextPartResponses:
           - ResponceTextID: char2_day3_part4_responce1
-            text: 
+            text: (Dry) A bit uninspired but overalls are easier to clean anyway.
             ResponcePoints: 0
           - ResponceTextID: char2_day3_part4_responce2
-            text: 
+            text: (Bubbly) An overall? Really? Isn't that a bit boring? There are
+              such cool spandex suits out there...
             ResponcePoints: -1
           - ResponceTextID: char2_day3_part4_responce3
-            text: 
+            text: (Fresh) So what do you fuck with?
             ResponcePoints: 1
         - TextPartID: char2_day3_part5
-          text: 
-          animation: 
+          text: Well, I... Wanted to talk about the stains on my overall, actually.
+            Look, there's a bunch of sweat and blood on it.
+          animation: default
           TextPartResponses: []
         - TextPartID: char2_day3_part6
-          text: 
-          animation: 
+          text: I like the look of it but this thing reaks. I need it cleaned before
+            I execute my next evil plan. Which...
+          animation: happy
           TextPartResponses:
           - ResponceTextID: char2_day3_part6_responce1
-            text: 
+            text: (Dry) I do not wish to hear your evil plan. I will not be an accessory
+              to a crime.
             ResponcePoints: -1
           - ResponceTextID: char2_day3_part6_responce2
-            text: 
+            text: (Bubbly) Oh, yes! Tell me your evil plan. I NEED to know!!!
             ResponcePoints: 1
           - ResponceTextID: char2_day3_part6_responce3
-            text: 
+            text: (Fresh) Oh sick, are you seriously gonna tell me your evil plan?
+              Isn't that usually a secret or something?
             ResponcePoints: 0
+    - VariantDialogs:
       - MinPointsForDialog: {x: 0, y: 9}
         DialogPart:
         - TextPartID: char2_day3_part7_lowPoints
-          text: 
-          animation: 
+          text: You know what, nevermind. I'm not gonna tell you my plan.
+          animation: default
           TextPartResponses: []
         - TextPartID: char2_day3_part8_lowPoints
-          text: 
-          animation: 
+          text: Which I definitely have. And that is super elaborate and like super
+            dark and twisted...
+          animation: sad
           TextPartResponses:
           - ResponceTextID: char2_day3_part8_lowPoints_responce1
-            text: 
+            text: (Dry) Okay.
             ResponcePoints: 0
           - ResponceTextID: char2_day3_part8_lowPoints_responce2
-            text: 
+            text: (Bubbly) Aw man... You sure? I bet it IS really cool and elaborate
+              and twisted.
             ResponcePoints: 1
           - ResponceTextID: char2_day3_part8_lowPoints_responce3
-            text: 
+            text: (Fresh) That's so lame, dude. Why tease it then?
             ResponcePoints: -1
         - TextPartID: char2_day3_part9_lowPoints
-          text: 
-          animation: 
+          text: Maybe it was my PLAN to have you guess. Ya know, another scheme from
+            the Blue Collared Menace.
+          animation: happy
           TextPartResponses: []
         - TextPartID: char2_day3_part10_lowPoints
-          text: 
-          animation: 
+          text: Which is my Super Villain name btw. Blue... Collared... Menace...
+          animation: flirty
           TextPartResponses: []
         - TextPartID: char2_day3_part11_lowPoints
-          text: 
-          animation: 
+          text: So get these stains out or my next plan might involve a certain laundry
+            shop.
+          animation: default
           TextPartResponses: []
       - MinPointsForDialog: {x: 9, y: 100}
         DialogPart:
         - TextPartID: char2_day3_part7_highPoints
-          text: 
-          animation: 
+          text: Actually, I don't really have an evil plan yet.
+          animation: default
           TextPartResponses: []
         - TextPartID: char2_day3_part8_highPoints
-          text: 
-          animation: 
+          text: Turns out, I'm a great henchwoman but a fucking horrible schemer.
+          animation: sad
           TextPartResponses: []
         - TextPartID: char2_day3_part9_highPoints
-          text: 
-          animation: 
+          text: My old Mistress was terrible at it too, don't get me wrong. But it's
+            actually a lot harder than I thought.
+          animation: default
           TextPartResponses: []
         - TextPartID: char2_day3_part10_highPoints
-          text: 
-          animation: 
+          text: That's also the reason I came to you. I feel like you're smart.
+          animation: happy
           TextPartResponses: []
         - TextPartID: char2_day3_part11_highPoints
-          text: 
-          animation: 
+          text: And being a business-person or whatever is not easy. Not in this
+            shit economy.
+          animation: default
           TextPartResponses: []
         - TextPartID: char2_day3_part12_highPoints
-          text: 
-          animation: 
+          text: Sooo, what I'm saying is... Do you maybe wanna work together sometime?
+          animation: flirty
           TextPartResponses: []
         - TextPartID: char2_day3_part13_highPoints
-          text: 
-          animation: 
+          text: I know you got your laundry thing going and I still need you to get
+            rid of these blood and sweat stains.
+          animation: default
           TextPartResponses: []
         - TextPartID: char2_day3_part14_highPoints
-          text: 
-          animation: 
+          text: But maybe you have time for a little side hustle?
+          animation: happy
           TextPartResponses:
           - ResponceTextID: char2_day3_part14_highPoints_responce1
-            text: 
+            text: (Dry) Interesting proposition. Maybe I do have time for a side
+              hustle in crime.
             ResponcePoints: 1
           - ResponceTextID: char2_day3_part14_highPoints_responce2
-            text: 
+            text: (Bubbly) Working together with you sounds fun! But I'm more of
+              a lover than a fighter, I think.
             ResponcePoints: 0
           - ResponceTextID: char2_day3_part14_highPoints_responce3
-            text: 
+            text: (Fresh) So I'm supposed to be your henchling? Fuck no...
             ResponcePoints: -1
         - TextPartID: char2_day3_part15_highPoints
-          text: 
-          animation: 
+          text: In any case, you helped me out last time. Saying I should replace
+            my Ex-Mistress and all.
+          animation: default
           TextPartResponses: []
         - TextPartID: char2_day3_part16_highPoints
-          text: 
-          animation: 
+          text: For a nerd, you're kinda cool. And you smell like soap. I like that.
+          animation: happy
           TextPartResponses: []

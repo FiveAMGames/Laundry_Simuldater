@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Logic : MonoBehaviour
 {
@@ -82,11 +83,15 @@ public class Logic : MonoBehaviour
     public GameObject ScratchMoreObject;
     bool vorwaesche1selected = false;
     bool vorwaesche2selected = false;
+    int vowaescheRandomSelectedCount = 0;
     bool badVorwaesche = false;
 
     public RenderTextureColorCheck TextureCheckScript;
     public Image TemprtureTag;
     public Image WolleSportTag;
+    public Vector3 TagPositionChar1;
+    public Vector3 TagPositionChar2;
+    public GameObject TagPosition;
 
     public Sprite Degree30;
     public Sprite Degree40;
@@ -115,6 +120,48 @@ public class Logic : MonoBehaviour
     public Image AbgabeOutfitImage;
     public Image AbgabeStain1Image;
     public Image AbgabeStain2Image;
+
+    public Image Voerwaesche1Abgabe;
+    public GameObject Vorwaesche1AbgabeBad;
+    public Image Voerwaesche2Abgabe;
+    public GameObject Vorwaesche2AbgabeBad;
+
+    public Sprite AcidSprite;
+    public Sprite SoapSprite;
+    public Sprite SaltSprite;
+
+    public Image WaescheAbgabe;
+    public GameObject WaescheAbgabeBad;
+    public Sprite ColorMittelSprite;
+    public Sprite SportMittelSprite;
+    public Sprite DelicateMittelSprite;
+    public Sprite WhiteMittelSprite;
+
+    public Image TempratureAbgabe;
+    public GameObject TemperatureAbgabeBad;
+
+
+    [Header("Finale")]
+    public GameObject Finale;
+    public TextMeshProUGUI FinaleText;
+    public GameObject char1Finale;
+    public GameObject char2Finale;
+
+    public string FinaleSingle;
+    public string FinaleChar1;
+    public string FinaleChar2;
+    public string FinaleBoth;
+
+
+
+    [Header("Sounds")]
+    public AudioSource audioSource;
+    public AudioClip buttons;
+    public AudioClip chooseAnswer;
+    public AudioClip grabBottle;
+    public AudioClip scrabbinSound;
+
+
 
     bool badWaeschemittel;
     bool badTemperature;
@@ -256,6 +303,7 @@ public class Logic : MonoBehaviour
     {
         if (!hasResponses) 
         {
+            audioSource.PlayOneShot(buttons);
             textPartIndex++;
             UpdateDialogue();
         }        
@@ -265,6 +313,7 @@ public class Logic : MonoBehaviour
     {
         if (hasResponses) 
         {
+            audioSource.PlayOneShot(buttons);
             bool char1 = currentCharacter.CharIndex == 0;
             if (char1) char1Points += Responses[index].points;
             else char2Points += Responses[index].points;
@@ -275,6 +324,10 @@ public class Logic : MonoBehaviour
         }
     
     }
+    public void ResponseSound() 
+    {
+        audioSource.PlayOneShot(chooseAnswer);
+    }
 
     public void OpenScratching() 
     {
@@ -283,6 +336,8 @@ public class Logic : MonoBehaviour
         ScratchingGameObject.SetActive(true);
         vorwaesche1selected = false;
         vorwaesche2selected = false;
+        vowaescheRandomSelectedCount = 0;
+
         Stain1BadWashingObject.gameObject.SetActive(true);
         Stain2BadWashingObject.gameObject.SetActive(true);
 
@@ -301,6 +356,8 @@ public class Logic : MonoBehaviour
 
         }
 
+
+        TagPosition.transform.position = currentCharacter.CharIndex == 0 ? TagPositionChar1 : TagPositionChar2;
         TemprtureTag.sprite = Degree30;
         if (o.temperatureType == Outfit.Temperatur.forty) TemprtureTag.sprite = Degree40;
         if (o.temperatureType == Outfit.Temperatur.sixty) TemprtureTag.sprite = Degree60;
@@ -314,7 +371,10 @@ public class Logic : MonoBehaviour
 
     public void SelectVorwaesche(Outfit.Vorwaeasche type) 
     {
-        Outfit o = currentCharacter.CharIndex == 0 ? char1Outfits[currentDay] : char2Outfits[currentDay];       
+        audioSource.PlayOneShot(grabBottle);
+
+        Outfit o = currentCharacter.CharIndex == 0 ? char1Outfits[currentDay] : char2Outfits[currentDay];
+        vowaescheRandomSelectedCount++;
         if (o.vorwaescheType1 == type) 
         {
             Stain1BadWashingObject.gameObject.SetActive(false);
@@ -322,24 +382,24 @@ public class Logic : MonoBehaviour
         }
         else if (o.vorwaescheType2 == type) 
         {
-            Stain1BadWashingObject.gameObject.SetActive(false);
+            Stain2BadWashingObject.gameObject.SetActive(false);
             vorwaesche2selected = true;
         }
-        else 
+        if (o.Stain2 == null)
         {
-            if (currentCharacter.CharIndex == 0) char1Points--;
-            else char2Points--;
+            vowaescheRandomSelectedCount = 2;
+            vorwaesche2selected = true;
         }
-        if (o.Stain2 == null) vorwaesche2selected = true;
     }
 
     public bool CheckIfAllVorwaescheAreSelected() 
     {
-        return (vorwaesche1selected == true && vorwaesche2selected == true);
+        return (vowaescheRandomSelectedCount == 2);
     }
 
     public void ClickDoneVorwaesche() 
     {
+        audioSource.PlayOneShot(buttons);
         if (!vorwaesche1selected || !vorwaesche2selected) 
         {
             if (currentCharacter.CharIndex == 0) char1Points--;
@@ -361,12 +421,13 @@ public class Logic : MonoBehaviour
 
     public void CloseScratchMore() 
     {
+        audioSource.PlayOneShot(buttons);
         ScratchMoreObject.SetActive(false);        
     }
 
     public void OpenWasching() 
     {
-        Debug.Log("open washing");
+        StopScrubbingSound();
         currentState = State.wasching;
         ScratchingGameObject.SetActive(false);
         WashingObject.SetActive(true);
@@ -388,6 +449,7 @@ public class Logic : MonoBehaviour
     }
     public void ClickWaschMittel(Outfit.Waesche type) 
     {
+        audioSource.PlayOneShot(grabBottle);
         Outfit o = currentCharacter.CharIndex == 0 ? char1Outfits[currentDay] : char2Outfits[currentDay];
         if (o.waescheType == type)
         {
@@ -413,6 +475,7 @@ public class Logic : MonoBehaviour
 
     public void ClickTemperature(int i) 
     {
+        audioSource.PlayOneShot(buttons);
         Outfit o = currentCharacter.CharIndex == 0 ? char1Outfits[currentDay] : char2Outfits[currentDay];
 
         Outfit.Temperatur type = Outfit.Temperatur.thirty;
@@ -443,6 +506,7 @@ public class Logic : MonoBehaviour
 
     public void OpenAbgabe() 
     {
+        audioSource.PlayOneShot(buttons);
         currentState = State.abgabe;
         WashingObject.SetActive(false);
         AbgabeObject.SetActive(true);
@@ -464,9 +528,43 @@ public class Logic : MonoBehaviour
             AbgabeStain1Image.gameObject.SetActive(true);
             AbgabeStain2Image.gameObject.SetActive(o.Stain2 != null);
         }
+
+        Sprite voerwaesche = AcidSprite;
+        if (o.vorwaescheType1 == Outfit.Vorwaeasche.salt) voerwaesche = SaltSprite;
+        else if (o.vorwaescheType1 == Outfit.Vorwaeasche.soap) voerwaesche = SoapSprite;
+
+        Voerwaesche1Abgabe.sprite = voerwaesche;
+        if (o.Stain2 != null)
+        {
+            voerwaesche = AcidSprite;
+            if (o.vorwaescheType2 == Outfit.Vorwaeasche.salt) voerwaesche = SaltSprite;
+            else if (o.vorwaescheType2 == Outfit.Vorwaeasche.soap) voerwaesche = SoapSprite;
+            Voerwaesche2Abgabe.sprite = voerwaesche;
+            Voerwaesche2Abgabe.gameObject.SetActive(true);
+        }
+        else Voerwaesche2Abgabe.gameObject.SetActive(false);
+
+        Sprite waesche = ColorMittelSprite;
+        if (o.waescheType == Outfit.Waesche.sport) waesche = SportMittelSprite;
+        else if (o.waescheType == Outfit.Waesche.weiss) waesche = WhiteMittelSprite;
+        else if (o.waescheType == Outfit.Waesche.wolle) waesche = DelicateMittelSprite;
+        WaescheAbgabe.sprite = waesche;
+
+        Sprite tempr = Degree30;
+        if (o.temperatureType == Outfit.Temperatur.forty) tempr = Degree40;
+        else if (o.temperatureType == Outfit.Temperatur.sixty) tempr = Degree60;
+
+        TempratureAbgabe.sprite = tempr;
+
+        Vorwaesche1AbgabeBad.SetActive(!vorwaesche1selected);
+        Vorwaesche2AbgabeBad.SetActive(!vorwaesche2selected);
+
+        WaescheAbgabeBad.SetActive(badWaeschemittel);
+        TemperatureAbgabeBad.SetActive(badTemperature);
     }
     public void CloseAbgabe() 
     {
+        audioSource.PlayOneShot(buttons);
         AbgabeObject.SetActive(false);
 
         badTemperature = false;
@@ -488,9 +586,42 @@ public class Logic : MonoBehaviour
             }
             else 
             {
-            //TODO OUTRO
+                OpenFinale();
             }
         }
+    }
+
+    public void OpenFinale() 
+    {
+        currentState = State.finale;
+        AbgabeObject.SetActive(false);
+        Finale.SetActive(true);
+        char1Finale.SetActive(char1Points > 10);
+        char2Finale.SetActive(char2Points > 10);
+
+        string t = FinaleSingle;
+        if (char1Points > 10 && char2Points < 11) t = FinaleChar1;
+        if (char2Points > 10 && char1Points < 11) t = FinaleChar2;
+        if (char1Points > 10 && char2Points >10) t = FinaleBoth;
+
+        FinaleText.text = t;
+    }
+
+    public void ClickReplay() 
+    {
+        audioSource.PlayOneShot(buttons);
+        SceneManager.LoadScene(0);
+    }
+
+    public void PlayScrubbingSound() 
+    {
+        audioSource.clip = scrabbinSound;
+        audioSource.loop = true;
+        audioSource.Play();
+    }
+    public void StopScrubbingSound()
+    {
+        audioSource.Stop();
     }
 
 }
