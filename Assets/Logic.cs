@@ -11,6 +11,8 @@ public class Logic : MonoBehaviour
     public enum State { menu, dialogue, scratching, wasching, abgabe, finale}
     public State currentState;
 
+    public Scratch scratchScript;
+
     public int currentDay;
     int char1Points = 0;
     int char2Points = 0;
@@ -79,6 +81,9 @@ public class Logic : MonoBehaviour
 
     public SpriteRenderer Stain2Object;
     public SpriteRenderer Stain2BadWashingObject;
+
+    public SpriteRenderer Stain1MaskObject;
+    public SpriteRenderer Stain2MaskObject;
 
     public GameObject ScratchMoreObject;
     bool vorwaesche1selected = false;
@@ -356,7 +361,6 @@ public class Logic : MonoBehaviour
 
         }
 
-
         TagPosition.transform.position = currentCharacter.CharIndex == 0 ? TagPositionChar1 : TagPositionChar2;
         TemprtureTag.sprite = Degree30;
         if (o.temperatureType == Outfit.Temperatur.forty) TemprtureTag.sprite = Degree40;
@@ -366,6 +370,9 @@ public class Logic : MonoBehaviour
         if (o.waescheType == Outfit.Waesche.wolle) WolleSportTag.sprite = Wolle;
         else if (o.waescheType == Outfit.Waesche.sport) WolleSportTag.sprite = Sport;
         else if (o.waescheType == Outfit.Waesche.weiss || o.waescheType == Outfit.Waesche.farbe) WolleSportTag.gameObject.SetActive(false);
+
+        scratchScript.Clear();
+        scratchScript.CaptureStainArea();
 
     }
 
