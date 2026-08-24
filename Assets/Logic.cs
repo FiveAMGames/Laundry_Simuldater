@@ -53,11 +53,16 @@ public class Logic : MonoBehaviour
     {
         public Sprite Sprite;
         public Sprite Stain1;
+        public Sprite Stain1White;
         public Sprite Stain1Bad;
         public Sprite Stain2;
+        public Sprite Stain2White;
         public Sprite Stain2Bad;
 
         public Sprite WaescheHaufen;
+
+        public GameObject OutfitMaskPrefab;
+
         public enum Vorwaeasche {acid, soap, salt }
         public Vorwaeasche vorwaescheType1;
         public Vorwaeasche vorwaescheType2;
@@ -104,6 +109,13 @@ public class Logic : MonoBehaviour
     public Sprite Wolle;
     public Sprite Sport;
 
+    public Texture2D VorwaescheAcidSprite;
+    public Texture2D VorwaescheSoapSprite;
+    public Texture2D VorwaescheSaltSprite;
+
+    public Texture2D DefaultCursor;
+
+    public Transform OutfitMaskParent;
 
     [Header("Washing")]
     public GameObject WashingObject;
@@ -117,7 +129,7 @@ public class Logic : MonoBehaviour
 
     public GameObject WashingDone;
     public Image WaescheWashing;
-
+   
     [Header("Abgabe")]
     public GameObject AbgabeObject;
     public TextMeshProUGUI AbgabeText;
@@ -350,6 +362,7 @@ public class Logic : MonoBehaviour
         Outfit o = currentCharacter.CharIndex == 0 ? char1Outfits[currentDay] : char2Outfits[currentDay];
         OutfitImage.sprite = o.Sprite;
         Stain1Object.sprite = o.Stain1;
+        Stain1MaskObject.sprite = o.Stain1White;
         Stain2Object.gameObject.SetActive(false);
 
         Stain1BadWashingObject.sprite = o.Stain1Bad;
@@ -358,6 +371,7 @@ public class Logic : MonoBehaviour
             Stain2Object.gameObject.SetActive(true);
             Stain2Object.sprite = o.Stain2;
             Stain2BadWashingObject.sprite = o.Stain2Bad;
+            Stain2MaskObject.sprite = o.Stain2White;
 
         }
 
@@ -370,6 +384,10 @@ public class Logic : MonoBehaviour
         if (o.waescheType == Outfit.Waesche.wolle) WolleSportTag.sprite = Wolle;
         else if (o.waescheType == Outfit.Waesche.sport) WolleSportTag.sprite = Sport;
         else if (o.waescheType == Outfit.Waesche.weiss || o.waescheType == Outfit.Waesche.farbe) WolleSportTag.gameObject.SetActive(false);
+
+
+        Instantiate(o.OutfitMaskPrefab, OutfitMaskParent);
+
 
         scratchScript.Clear();
         scratchScript.CaptureStainArea();
@@ -397,6 +415,35 @@ public class Logic : MonoBehaviour
             vowaescheRandomSelectedCount = 2;
             vorwaesche2selected = true;
         }
+
+
+
+        Vector2 hotspot = new Vector2(-0.5f, 0.5f);
+
+        switch (type)
+        {
+            case Outfit.Vorwaeasche.acid:
+                cursorSet(VorwaescheAcidSprite);
+                break;
+            case Outfit.Vorwaeasche.soap:
+                cursorSet(VorwaescheSoapSprite);
+                break;
+            case Outfit.Vorwaeasche.salt:
+                cursorSet(VorwaescheSaltSprite);
+                break;
+            default:
+                break;
+        }
+    }
+
+
+    void cursorSet(Texture2D tex)
+    {
+        CursorMode mode = CursorMode.ForceSoftware;
+        float xspot = tex.width / 2;
+        float yspot = tex.height / 2;
+        Vector2 hotSpot = new Vector2(xspot, yspot);
+        Cursor.SetCursor(tex, hotSpot, mode);
     }
 
     public bool CheckIfAllVorwaescheAreSelected() 
@@ -416,6 +463,7 @@ public class Logic : MonoBehaviour
         bool enough = TextureCheckScript.SamplePanorama();
         if (enough) 
         {
+            Cursor.SetCursor(DefaultCursor, Vector2.zero, CursorMode.Auto);
             OpenWasching();
         }
         else ScratchMoreObject.SetActive(true);
@@ -429,6 +477,12 @@ public class Logic : MonoBehaviour
 
     public void OpenWasching() 
     {
+
+        if (OutfitMaskParent.childCount > 0) 
+        {
+            Destroy(OutfitMaskParent.GetChild(0).gameObject);
+        }
+
         StopScrubbingSound();
         currentState = State.wasching;
         ScratchingGameObject.SetActive(false);

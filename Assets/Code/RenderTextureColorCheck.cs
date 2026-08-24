@@ -9,9 +9,6 @@ public class RenderTextureColorCheck : MonoBehaviour
     public float requiredScratchPercent = 0.8f;
 
     [Range(0f, 1f)]
-    public float stainThreshold = 0.1f;
-
-    [Range(0f, 1f)]
     public float scratchThreshold = 0.1f;
 
     [Header("Performance")]
@@ -68,64 +65,42 @@ public class RenderTextureColorCheck : MonoBehaviour
             stainTexture.GetPixels32();
 
 
-        byte stainLimit =
-            (byte)(stainThreshold * 255f);
 
         byte scratchLimit =
             (byte)(scratchThreshold * 255f);
 
 
-        int totalStainPixels = 0;
-        int scratchedStainPixels = 0;
-
+        float totalStainWeight = 0f;
+        float scratchedStainWeight = 0f;
 
         for (int i = 0; i < stainPixels.Length; i++)
         {
-            // Ignore everything outside the stain.
-            if (stainPixels[i].r < stainLimit)
-                continue;
+            // 0 = no stain, 1 = fully inside stain.
+            float stainAmount = stainPixels[i].r / 255f;
 
+            // 0 = untouched, 1 = fully scratched.
+            float scratchAmount = scratchPixels[i].r / 255f;
 
-            totalStainPixels++;
+            totalStainWeight += stainAmount;
 
-
-            if (scratchPixels[i].r >= scratchLimit)
-            {
-                scratchedStainPixels++;
-            }
+            // Only scratching that overlaps the stain contributes.
+            scratchedStainWeight += stainAmount * scratchAmount;
         }
-
 
         float scratchedPercent = 0f;
 
-        if (totalStainPixels > 0)
+        if (totalStainWeight > 0f)
         {
             scratchedPercent =
-                (float)scratchedStainPixels /
-                totalStainPixels;
+                scratchedStainWeight /
+                totalStainWeight;
         }
 
-
         Debug.Log(
-            $"Stain scratched: {scratchedPercent:P1} " +
-            $"({scratchedStainPixels}/{totalStainPixels})"
+            $"Stain scratched: {scratchedPercent:P1}"
         );
 
-
-        Destroy(scratchTexture);
-        Destroy(stainTexture);
-
-        RenderTexture.ReleaseTemporary(
-            smallScratch
-        );
-
-        RenderTexture.ReleaseTemporary(
-            smallStain
-        );
-
-
-        return scratchedPercent >=
-               requiredScratchPercent;
+        return scratchedPercent >= requiredScratchPercent;
     }
 
 

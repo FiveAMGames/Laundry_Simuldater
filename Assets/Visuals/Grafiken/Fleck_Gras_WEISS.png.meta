@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ef3b015328b0e9f49b246cc9821f481f
+guid: 8bb6554564259104dba3b53747abd4db
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 600646084827346658
-    second: Fleck_Wein_0
+      213: -850618728060126698
+    second: Fleck_Gras_WEISS_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -84,19 +84,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
     buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -111,6 +98,19 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
     buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -152,13 +152,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fleck_Wein_0
+      name: Fleck_Gras_WEISS_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 23
         y: 0
-        width: 236
-        height: 248
+        width: 209
+        height: 256
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2e6fcd98e6ce55800800000000000000
-      internalID: 600646084827346658
+      spriteID: 61a7eaa06cef134f0800000000000000
+      internalID: -850618728060126698
       vertices: []
       indices: 
       edges: []
@@ -187,7 +187,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Fleck_Wein_0: 600646084827346658
+      Fleck_Gras_WEISS_0: -850618728060126698
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

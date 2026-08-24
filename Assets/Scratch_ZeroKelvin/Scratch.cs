@@ -44,6 +44,15 @@ public class Scratch : MonoBehaviour
         scratchCamera.aspect = mainCamera.aspect;
         scratchCamera.rect = mainCamera.rect;
 
+        stainMaskCamera.transform.position = mainCamera.transform.position;
+        stainMaskCamera.transform.rotation = mainCamera.transform.rotation;
+
+        stainMaskCamera.orthographic = mainCamera.orthographic;
+        stainMaskCamera.orthographicSize = mainCamera.orthographicSize;
+
+        stainMaskCamera.aspect = mainCamera.aspect;
+        stainMaskCamera.rect = mainCamera.rect;
+
 
         if (scratchTexture == null)
             CreateRenderTexture();
@@ -146,9 +155,9 @@ public class Scratch : MonoBehaviour
 
         scratchTexture = null;
 
-        if (stainAreaTexture != null)
+        if (stainAreaTexture != null )
         {
-            if (stainMaskCamera.targetTexture == stainAreaTexture)
+            if (stainMaskCamera && stainMaskCamera.targetTexture == stainAreaTexture)
                 stainMaskCamera.targetTexture = null;
 
             stainAreaTexture.Release();
