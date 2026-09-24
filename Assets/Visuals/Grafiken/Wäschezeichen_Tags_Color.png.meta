@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4bff4b602a9884abbb32112fe4e23bdb
+guid: 6d0c3b5051f8f40b38c9fa11c38719f1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6706463542986527316
-    second: "Wa\u0308schezeichen_Tags_Wolle_0"
+      213: 8822684969756415561
+    second: "Wa\u0308schezeichen_Tags_Color_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Wa\u0308schezeichen_Tags_Wolle_0"
+      name: "Wa\u0308schezeichen_Tags_Color_0"
       rect:
         serializedVersion: 2
-        x: 2
-        y: 4
-        width: 60
-        height: 57
+        x: 3
+        y: 3
+        width: 59
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cad2e25a0fadde2a0800000000000000
-      internalID: -6706463542986527316
+      spriteID: 94652834c39707a70800000000000000
+      internalID: 8822684969756415561
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "Wa\u0308schezeichen_Tags_Wolle_0": -6706463542986527316
+      "Wa\u0308schezeichen_Tags_Color_0": 8822684969756415561
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
