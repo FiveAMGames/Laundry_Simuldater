@@ -108,6 +108,8 @@ public class Logic : MonoBehaviour
     public Sprite Degree60;
     public Sprite Wolle;
     public Sprite Sport;
+    public Sprite Weiss;
+    public Sprite Farbe;
 
     public Texture2D VorwaescheAcidSprite;
     public Texture2D VorwaescheSoapSprite;
@@ -383,6 +385,8 @@ public class Logic : MonoBehaviour
         WolleSportTag.gameObject.SetActive(true);
         if (o.waescheType == Outfit.Waesche.wolle) WolleSportTag.sprite = Wolle;
         else if (o.waescheType == Outfit.Waesche.sport) WolleSportTag.sprite = Sport;
+        else if (o.waescheType == Outfit.Waesche.weiss) WolleSportTag.sprite = Weiss;
+        else if (o.waescheType == Outfit.Waesche.farbe) WolleSportTag.sprite = Farbe;
         else if (o.waescheType == Outfit.Waesche.weiss || o.waescheType == Outfit.Waesche.farbe) WolleSportTag.gameObject.SetActive(false);
 
 

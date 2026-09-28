@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4bff4b602a9884abbb32112fe4e23bdb
+guid: 57b97745cc6f34d1893b08e8fd62fabd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6706463542986527316
-    second: "Wa\u0308schezeichen_Tags_Wolle_0"
+      213: -7602833336405309297
+    second: Schwamm_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -24,7 +24,7 @@ TextureImporter:
     heightScale: 0.25
     normalMapFilter: 0
     flipGreenChannel: 0
-  isReadable: 0
+  isReadable: 1
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -57,7 +57,7 @@ TextureImporter:
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 8
+  textureType: 7
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 128
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "Wa\u0308schezeichen_Tags_Wolle_0"
+      name: Schwamm_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 4
-        width: 60
-        height: 57
+        x: 9
+        y: 28
+        width: 227
+        height: 211
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cad2e25a0fadde2a0800000000000000
-      internalID: -6706463542986527316
+      spriteID: f884011bc5f4d7690800000000000000
+      internalID: -7602833336405309297
       vertices: []
       indices: 
       edges: []
@@ -164,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "Wa\u0308schezeichen_Tags_Wolle_0": -6706463542986527316
+      Schwamm_0: -7602833336405309297
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
