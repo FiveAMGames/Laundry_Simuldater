@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class Logic : MonoBehaviour
 {
     public static Logic Instance;
-    public enum State { menu, dialogue, scratching, wasching, abgabe, finale}
+    public enum State { menu, dialogue, scratching, wasching, abgabe, finale }
     public State currentState;
 
     public Scratch scratchScript;
@@ -28,7 +28,7 @@ public class Logic : MonoBehaviour
     public GameObject ButtonNext;
 
     [System.Serializable]
-    public class DialogResponse 
+    public class DialogResponse
     {
         public GameObject ResponseGameObject;
         public TextMeshProUGUI ResponseText;
@@ -49,7 +49,7 @@ public class Logic : MonoBehaviour
     public CharacterDialog char2;
 
     [System.Serializable]
-    public class Outfit 
+    public class Outfit
     {
         public Sprite Sprite;
         public Sprite Stain1;
@@ -63,14 +63,14 @@ public class Logic : MonoBehaviour
 
         public GameObject OutfitMaskPrefab;
 
-        public enum Vorwaeasche {acid, soap, salt }
+        public enum Vorwaeasche { acid, soap, salt }
         public Vorwaeasche vorwaescheType1;
         public Vorwaeasche vorwaescheType2;
 
-        public enum Temperatur {thirty, forty, sixty}
+        public enum Temperatur { thirty, forty, sixty }
         public Temperatur temperatureType;
 
-        public enum Waesche {farbe, sport, wolle, weiss}
+        public enum Waesche { farbe, sport, wolle, weiss }
         public Waesche waescheType;
     }
 
@@ -90,11 +90,19 @@ public class Logic : MonoBehaviour
     public SpriteRenderer Stain1MaskObject;
     public SpriteRenderer Stain2MaskObject;
 
+    public TouchDraw drawScript;
+
     public GameObject ScratchMoreObject;
     bool vorwaesche1selected = false;
     bool vorwaesche2selected = false;
     int vowaescheRandomSelectedCount = 0;
     bool badVorwaesche = false;
+
+    public GameObject ScratchingChooseYourWeaponObject;
+    public GameObject ScratchingScrubItObject;
+    public GameObject ScratchingDoneButton;
+    public TextMeshProUGUI ScratchingWeaponsText;
+    bool ScratchingWeaponIsChosen = false;
 
     public RenderTextureColorCheck TextureCheckScript;
     public Image TemprtureTag;
@@ -131,7 +139,7 @@ public class Logic : MonoBehaviour
 
     public GameObject WashingDone;
     public Image WaescheWashing;
-   
+
     [Header("Abgabe")]
     public GameObject AbgabeObject;
     public TextMeshProUGUI AbgabeText;
@@ -180,13 +188,14 @@ public class Logic : MonoBehaviour
     public AudioClip grabBottle;
     public AudioClip scrabbinSound;
 
-
+    public AudioSource audioSourceMusic;
+    float toggleTimer = 0f;
 
     bool badWaeschemittel;
     bool badTemperature;
 
     [ContextMenu("Test")]
-    public void Test() 
+    public void Test()
     {
         StartDialogue(currentCharacter);
     }
@@ -200,19 +209,32 @@ public class Logic : MonoBehaviour
         ScratchingGameObject.SetActive(false);
         WashingObject.SetActive(false);
         AbgabeObject.SetActive(false);
-        
+
     }
 
     private void Update()
     {
-        if (currentState == State.menu && Input.anyKeyDown) 
+        if (currentState == State.menu && Input.anyKeyDown)
         {
             StartDialogue(char1);
+        }
+        if (toggleTimer < 0.5f) toggleTimer += Time.deltaTime;
+
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKey(KeyCode.M) && toggleTimer >= 0.5f)
+        {
+            toggleTimer = 0f;
+            ToggleMusic();
         }
     }
 
 
-    public void StartDialogue(CharacterDialog character) 
+    void ToggleMusic()
+    {
+        audioSourceMusic.enabled = !audioSourceMusic.enabled;
+    }
+
+
+    public void StartDialogue(CharacterDialog character)
     {
         currentState = State.dialogue;
 
@@ -223,13 +245,13 @@ public class Logic : MonoBehaviour
         variantIndex = 0;
         textPartIndex = 0;
         hasResponses = false;
-        
-        
+
+
         currentCharacter = character;
         currentDialog = character.AllDialogs[currentDay];
         int points = character.CharIndex == 0 ? char1Points : char2Points;
 
-        for (int i = 0; i < currentDialog.DialogParts[dayPartIndex].VariantDialogs.Count; i++) 
+        for (int i = 0; i < currentDialog.DialogParts[dayPartIndex].VariantDialogs.Count; i++)
         {
             if (currentDialog.DialogParts[dayPartIndex].VariantDialogs[i].MinPointsForDialog.x >= points &&
                 currentDialog.DialogParts[dayPartIndex].VariantDialogs[i].MinPointsForDialog.y < points)
@@ -245,19 +267,19 @@ public class Logic : MonoBehaviour
         UpdateDialogue();
     }
 
-    void SetUpResponses() 
+    void SetUpResponses()
     {
         ButtonNext.SetActive(false);
-        for (int i = 0; i < currentDialog.DialogParts[dayPartIndex].VariantDialogs[variantIndex].DialogPart[textPartIndex].TextPartResponses.Count; i++) 
+        for (int i = 0; i < currentDialog.DialogParts[dayPartIndex].VariantDialogs[variantIndex].DialogPart[textPartIndex].TextPartResponses.Count; i++)
         {
             Responses[i].ResponseGameObject.SetActive(true);
             Responses[i].ResponseText.text = currentDialog.DialogParts[dayPartIndex].VariantDialogs[variantIndex].DialogPart[textPartIndex].TextPartResponses[i].text;
             Responses[i].points = currentDialog.DialogParts[dayPartIndex].VariantDialogs[variantIndex].DialogPart[textPartIndex].TextPartResponses[i].ResponcePoints;
         }
-        
+
     }
 
-    public void UpdateDialogue() 
+    public void UpdateDialogue()
     {
         ButtonNext.SetActive(true);
         foreach (DialogResponse dr in Responses)
@@ -273,7 +295,7 @@ public class Logic : MonoBehaviour
             Sprite emotion = currentCharacter.CharPortraitDefault;
             DialogPortrait.sprite = currentCharacter.CharPortraitDefault;
 
-            if (currentDialog.DialogParts[dayPartIndex].VariantDialogs[variantIndex].DialogPart[textPartIndex].animation == "sad") 
+            if (currentDialog.DialogParts[dayPartIndex].VariantDialogs[variantIndex].DialogPart[textPartIndex].animation == "sad")
             {
                 DialogPortrait.sprite = currentCharacter.CharPortraitSad;
             }
@@ -291,26 +313,26 @@ public class Logic : MonoBehaviour
                 SetUpResponses();
             }
         }
-        else 
+        else
         {
             textPartIndex = 0;
             dayPartIndex++;
-            if (currentDialog.DialogParts.Count > dayPartIndex) 
+            if (currentDialog.DialogParts.Count > dayPartIndex)
             {
                 int points = currentCharacter.CharIndex == 0 ? char1Points : char2Points;
                 for (int i = 0; i < currentDialog.DialogParts[dayPartIndex].VariantDialogs.Count; i++)
                 {
-                    
+
                     if (currentDialog.DialogParts[dayPartIndex].VariantDialogs[i].MinPointsForDialog.x <= points &&
                         currentDialog.DialogParts[dayPartIndex].VariantDialogs[i].MinPointsForDialog.y > points)
                     {
                         variantIndex = i;
                     }
-                    
+
                 }
                 UpdateDialogue();
             }
-            else 
+            else
             {
                 OpenScratching();
             }
@@ -318,19 +340,19 @@ public class Logic : MonoBehaviour
     }
 
 
-    public void DialogClickNext() 
+    public void DialogClickNext()
     {
-        if (!hasResponses) 
+        if (!hasResponses)
         {
             audioSource.PlayOneShot(buttons);
             textPartIndex++;
             UpdateDialogue();
-        }        
+        }
     }
 
-    public void ClickOnResponse(int index) 
+    public void ClickOnResponse(int index)
     {
-        if (hasResponses) 
+        if (hasResponses)
         {
             audioSource.PlayOneShot(buttons);
             bool char1 = currentCharacter.CharIndex == 0;
@@ -341,18 +363,22 @@ public class Logic : MonoBehaviour
             textPartIndex++;
             UpdateDialogue();
         }
-    
+
     }
-    public void ResponseSound() 
+    public void ResponseSound()
     {
         audioSource.PlayOneShot(chooseAnswer);
     }
 
-    public void OpenScratching() 
+    public void OpenScratching()
     {
         currentState = State.scratching;
         DialogObject.SetActive(false);
         ScratchingGameObject.SetActive(true);
+        ScratchingChooseYourWeaponObject.SetActive(true);
+        ScratchingScrubItObject.SetActive(false);
+        ScratchingDoneButton.SetActive(false);
+        ScratchingWeaponIsChosen = false;
         vorwaesche1selected = false;
         vorwaesche2selected = false;
         vowaescheRandomSelectedCount = 0;
@@ -368,14 +394,18 @@ public class Logic : MonoBehaviour
         Stain2Object.gameObject.SetActive(false);
 
         Stain1BadWashingObject.sprite = o.Stain1Bad;
-        if(o.Stain2 != null) 
+        string scratchingWeaponText = "Choose your ";
+        if (o.Stain2 != null)
         {
             Stain2Object.gameObject.SetActive(true);
             Stain2Object.sprite = o.Stain2;
             Stain2BadWashingObject.sprite = o.Stain2Bad;
             Stain2MaskObject.sprite = o.Stain2White;
-
+            scratchingWeaponText += "weapons: 0/2";
         }
+        else scratchingWeaponText += "weapon: 0/1";
+
+        ScratchingWeaponsText.text = scratchingWeaponText;
 
         TagPosition.transform.position = currentCharacter.CharIndex == 0 ? TagPositionChar1 : TagPositionChar2;
         TemprtureTag.sprite = Degree30;
@@ -398,18 +428,18 @@ public class Logic : MonoBehaviour
 
     }
 
-    public void SelectVorwaesche(Outfit.Vorwaeasche type) 
+    public void SelectVorwaesche(Outfit.Vorwaeasche type)
     {
         audioSource.PlayOneShot(grabBottle);
 
         Outfit o = currentCharacter.CharIndex == 0 ? char1Outfits[currentDay] : char2Outfits[currentDay];
         vowaescheRandomSelectedCount++;
-        if (o.vorwaescheType1 == type) 
+        if (o.vorwaescheType1 == type)
         {
             Stain1BadWashingObject.gameObject.SetActive(false);
             vorwaesche1selected = true;
         }
-        else if (o.vorwaescheType2 == type) 
+        else if (o.vorwaescheType2 == type)
         {
             Stain2BadWashingObject.gameObject.SetActive(false);
             vorwaesche2selected = true;
@@ -420,23 +450,38 @@ public class Logic : MonoBehaviour
             vorwaesche2selected = true;
         }
 
-
+        if (vowaescheRandomSelectedCount == 2)
+        {
+            ScratchingChooseYourWeaponObject.SetActive(false);
+            ScratchingScrubItObject.SetActive(true);
+            ScratchingDoneButton.SetActive(true);
+            ScratchingWeaponIsChosen = true;
+            drawScript.StartScratching();
+        }
+        else
+        {
+            string scratchingWeaponText = "Choose your weapons: 1/2";
+            ScratchingWeaponsText.text = scratchingWeaponText;
+        }
 
         Vector2 hotspot = new Vector2(-0.5f, 0.5f);
 
-        switch (type)
+        if (vowaescheRandomSelectedCount == 2)
         {
-            case Outfit.Vorwaeasche.acid:
-                cursorSet(VorwaescheAcidSprite);
-                break;
-            case Outfit.Vorwaeasche.soap:
-                cursorSet(VorwaescheSoapSprite);
-                break;
-            case Outfit.Vorwaeasche.salt:
-                cursorSet(VorwaescheSaltSprite);
-                break;
-            default:
-                break;
+            switch (type)
+            {
+                case Outfit.Vorwaeasche.acid:
+                    cursorSet(VorwaescheAcidSprite);
+                    break;
+                case Outfit.Vorwaeasche.soap:
+                    cursorSet(VorwaescheSoapSprite);
+                    break;
+                case Outfit.Vorwaeasche.salt:
+                    cursorSet(VorwaescheSaltSprite);
+                    break;
+                default:
+                    break;
+            }
         }
     }
 
@@ -450,12 +495,12 @@ public class Logic : MonoBehaviour
         Cursor.SetCursor(tex, hotSpot, mode);
     }
 
-    public bool CheckIfAllVorwaescheAreSelected() 
+    public bool CheckIfAllVorwaescheAreSelected()
     {
         return (vowaescheRandomSelectedCount == 2);
     }
 
-    public void ClickDoneVorwaesche() 
+    public void ClickDoneVorwaesche()
     {
         audioSource.PlayOneShot(buttons);
         if (!vorwaesche1selected || !vorwaesche2selected)
@@ -465,7 +510,7 @@ public class Logic : MonoBehaviour
         else badVorwaesche = false;
 
         bool enough = TextureCheckScript.SamplePanorama();
-        if (enough) 
+        if (enough)
         {
             Cursor.SetCursor(DefaultCursor, Vector2.zero, CursorMode.Auto);
             OpenWasching();
@@ -473,16 +518,16 @@ public class Logic : MonoBehaviour
         else ScratchMoreObject.SetActive(true);
     }
 
-    public void CloseScratchMore() 
+    public void CloseScratchMore()
     {
         audioSource.PlayOneShot(buttons);
-        ScratchMoreObject.SetActive(false);        
+        ScratchMoreObject.SetActive(false);
     }
 
-    public void OpenWasching() 
+    public void OpenWasching()
     {
 
-        if (OutfitMaskParent.childCount > 0) 
+        if (OutfitMaskParent.childCount > 0)
         {
             Destroy(OutfitMaskParent.GetChild(0).gameObject);
         }
@@ -498,7 +543,7 @@ public class Logic : MonoBehaviour
         MashineClosedDoor.SetActive(false);
         MashineOpenedDoor.SetActive(true);
 
-        foreach(GameObject go in TemperatureButtons) 
+        foreach (GameObject go in TemperatureButtons)
         {
             go.SetActive(false);
         }
@@ -507,7 +552,7 @@ public class Logic : MonoBehaviour
         WaescheWashing.sprite = o.WaescheHaufen;
 
     }
-    public void ClickWaschMittel(Outfit.Waesche type) 
+    public void ClickWaschMittel(Outfit.Waesche type)
     {
         audioSource.PlayOneShot(grabBottle);
         Outfit o = currentCharacter.CharIndex == 0 ? char1Outfits[currentDay] : char2Outfits[currentDay];
@@ -530,7 +575,7 @@ public class Logic : MonoBehaviour
         }
     }
 
-    public void ClickTemperature(int i) 
+    public void ClickTemperature(int i)
     {
         audioSource.PlayOneShot(buttons);
         Outfit o = currentCharacter.CharIndex == 0 ? char1Outfits[currentDay] : char2Outfits[currentDay];
@@ -550,7 +595,7 @@ public class Logic : MonoBehaviour
         WashingDone.SetActive(true);
     }
 
-    public void CloseWashingDone() 
+    public void CloseWashingDone()
     {
         WashingDone.SetActive(false);
         WashingObject.SetActive(false);
@@ -558,7 +603,7 @@ public class Logic : MonoBehaviour
         Debug.Log("close washing");
     }
 
-    public void OpenAbgabe() 
+    public void OpenAbgabe()
     {
         audioSource.PlayOneShot(buttons);
         currentState = State.abgabe;
@@ -567,12 +612,12 @@ public class Logic : MonoBehaviour
         WashingDone.SetActive(false);
 
 
-        if ((badWaeschemittel || badVorwaesche || badTemperature)) 
+        if ((badWaeschemittel || badVorwaesche || badTemperature))
         {
             if (currentCharacter.CharIndex == 0) char1Points--;
             else char2Points--;
         }
-        else 
+        else
         {
             if (currentCharacter.CharIndex == 0) char1Points++;
             else char2Points++;
@@ -591,7 +636,7 @@ public class Logic : MonoBehaviour
 
         AbgabeStain1Image.gameObject.SetActive(false);
         AbgabeStain2Image.gameObject.SetActive(false);
-        if (badWaeschemittel || badVorwaesche || badTemperature) 
+        if (badWaeschemittel || badVorwaesche || badTemperature)
         {
             AbgabeStain1Image.gameObject.SetActive(true);
             AbgabeStain2Image.gameObject.SetActive(o.Stain2 != null);
@@ -630,7 +675,7 @@ public class Logic : MonoBehaviour
         WaescheAbgabeBad.SetActive(badWaeschemittel);
         TemperatureAbgabeBad.SetActive(badTemperature);
     }
-    public void CloseAbgabe() 
+    public void CloseAbgabe()
     {
         audioSource.PlayOneShot(buttons);
         AbgabeObject.SetActive(false);
@@ -641,25 +686,25 @@ public class Logic : MonoBehaviour
         vorwaesche1selected = false;
         vorwaesche2selected = false;
 
-        if (currentCharacter.CharIndex == 0) 
+        if (currentCharacter.CharIndex == 0)
         {
             StartDialogue(char2);
         }
-        else 
+        else
         {
             currentDay++;
-            if (currentDay < 3) 
+            if (currentDay < 3)
             {
                 StartDialogue(char1);
             }
-            else 
+            else
             {
                 OpenFinale();
             }
         }
     }
 
-    public void OpenFinale() 
+    public void OpenFinale()
     {
         currentState = State.finale;
         AbgabeObject.SetActive(false);
@@ -670,18 +715,18 @@ public class Logic : MonoBehaviour
         string t = FinaleSingle;
         if (char1Points >= 5 && char2Points < 5) t = FinaleChar1;
         if (char2Points >= 5 && char1Points < 5) t = FinaleChar2;
-        if (char1Points >= 5 && char2Points >=5) t = FinaleBoth;
+        if (char1Points >= 5 && char2Points >= 5) t = FinaleBoth;
 
         FinaleText.text = t;
     }
 
-    public void ClickReplay() 
+    public void ClickReplay()
     {
         audioSource.PlayOneShot(buttons);
         SceneManager.LoadScene(0);
     }
 
-    public void PlayScrubbingSound() 
+    public void PlayScrubbingSound()
     {
         audioSource.clip = scrabbinSound;
         audioSource.loop = true;
@@ -689,7 +734,7 @@ public class Logic : MonoBehaviour
     }
     public void StopScrubbingSound()
     {
-        audioSource.Stop();
+        if (audioSource) audioSource.Stop();
     }
 
 }

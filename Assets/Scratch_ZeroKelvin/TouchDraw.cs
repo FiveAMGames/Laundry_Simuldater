@@ -19,9 +19,10 @@ public class TouchDraw : MonoBehaviour
     [Header("Drawing")]
     public float minimumPointDistance = 0.015f;
 
-
+    bool active = false;
     private void OnEnable()
     {
+        active = false;
         drawing = null;
 
         foreach (GameObject go in allTheLines)
@@ -36,6 +37,10 @@ public class TouchDraw : MonoBehaviour
         drawnLineRenderers.Clear();
     }
 
+    public void StartScratching() 
+    {
+        active = true;
+    }
 
     private void OnDisable()
     {
@@ -51,18 +56,21 @@ public class TouchDraw : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (active)
         {
-            Logic.Instance?.PlayScrubbingSound();
+            if (Input.GetMouseButtonDown(0))
+            {
+                Logic.Instance?.PlayScrubbingSound();
 
-            StartLine();
-        }
+                StartLine();
+            }
 
-        if (Input.GetMouseButtonUp(0))
-        {
-            FinishLine();
+            if (Input.GetMouseButtonUp(0))
+            {
+                FinishLine();
 
-            Logic.Instance?.StopScrubbingSound();
+                Logic.Instance?.StopScrubbingSound();
+            }
         }
     }
 

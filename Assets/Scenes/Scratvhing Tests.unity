@@ -130,6 +130,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &122522342 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6756509414159682634, guid: 62b138cb32d596349b93cc1928e0102f, type: 3}
+  m_PrefabInstance: {fileID: 1098130354608643483}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &135649999 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3198879706673646754, guid: 09cd5dd4d504c9d42aad2fcdf5c2edc0, type: 3}
@@ -388,6 +393,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &591368107 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4538050802929210895, guid: 62b138cb32d596349b93cc1928e0102f, type: 3}
+  m_PrefabInstance: {fileID: 1098130354608643483}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &615608733 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1364272473015040792, guid: b29ed811a801df0418685c7ba263fac4, type: 3}
@@ -1138,7 +1148,12 @@ MonoBehaviour:
   Stain2BadWashingObject: {fileID: 2707072814075141471}
   Stain1MaskObject: {fileID: 1420268365}
   Stain2MaskObject: {fileID: 1361532591}
+  drawScript: {fileID: 1567898593}
   ScratchMoreObject: {fileID: 2715171015455088146}
+  ScratchingChooseYourWeaponObject: {fileID: 1182179095}
+  ScratchingScrubItObject: {fileID: 122522342}
+  ScratchingDoneButton: {fileID: 591368107}
+  ScratchingWeaponsText: {fileID: 1550862698}
   TextureCheckScript: {fileID: 1051438775}
   TemprtureTag: {fileID: 2398086728032140621}
   WolleSportTag: {fileID: 6563033964954764813}
@@ -1228,6 +1243,7 @@ MonoBehaviour:
   chooseAnswer: {fileID: 8300000, guid: 69feec88da04b494d81ed9d233506abc, type: 3}
   grabBottle: {fileID: 8300000, guid: fdff1c411b1f5a6478a00d84866b403c, type: 3}
   scrabbinSound: {fileID: 8300000, guid: a842631a642e0344b96ccad67adfb872, type: 3}
+  audioSourceMusic: {fileID: 963194229}
 --- !u!82 &1051438778
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1383,6 +1399,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1182179095 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4962800510929655830, guid: 62b138cb32d596349b93cc1928e0102f, type: 3}
+  m_PrefabInstance: {fileID: 1098130354608643483}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1192653013 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3455342151014345568, guid: faa42efe5a02bd34690a75e35cce6063, type: 3}
@@ -1645,6 +1666,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1550862698 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1417969013841329379, guid: 62b138cb32d596349b93cc1928e0102f, type: 3}
+  m_PrefabInstance: {fileID: 1098130354608643483}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1567898593 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9210027896958548345, guid: 62b138cb32d596349b93cc1928e0102f, type: 3}
+  m_PrefabInstance: {fileID: 1098130354608643483}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 999ed65fbcff35e46b3e126521652940, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1588110613
@@ -2119,10 +2162,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dialog
       objectReference: {fileID: 0}
-    - target: {fileID: 3455342151014345568, guid: faa42efe5a02bd34690a75e35cce6063, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3857009557206960191, guid: faa42efe5a02bd34690a75e35cce6063, type: 3}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2405,6 +2444,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1417969013841329379, guid: 62b138cb32d596349b93cc1928e0102f, type: 3}
+      propertyPath: m_text
+      value: 'Choose your weapon: 0/2'
+      objectReference: {fileID: 0}
     - target: {fileID: 3386983689476044837, guid: 62b138cb32d596349b93cc1928e0102f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2427,7 +2470,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5145485377674158661, guid: 62b138cb32d596349b93cc1928e0102f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6481164193334307997, guid: 62b138cb32d596349b93cc1928e0102f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2763,7 +2806,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9161857680470542713, guid: 07998386c9c6fc440a1d8659313972e6, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
