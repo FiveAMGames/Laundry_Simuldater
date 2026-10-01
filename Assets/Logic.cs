@@ -723,6 +723,7 @@ public class Logic : MonoBehaviour
     public void ClickReplay()
     {
         audioSource.PlayOneShot(buttons);
+        WebFormScript.instance.SetStats();
         SceneManager.LoadScene(0);
     }
 
